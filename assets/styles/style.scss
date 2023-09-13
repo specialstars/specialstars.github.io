@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 $primary-color: #f6f7cf;
 $primary-text-color: #2c2c2c;
@@ -91,7 +91,7 @@ a {
         background-color: rgba($secondary-color, 0.1);
       }
       &:active {
-        transform: scale(0.95);
+        opacity: 0.9;
       }
     }
   }
@@ -111,7 +111,7 @@ a {
       align-items: start;
       h1 {
         font-size: 3rem;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 2rem;
         span {
           background-color: rgba($secondary-color, 0.1);
@@ -121,7 +121,7 @@ a {
       }
       p {
         font-size: 1.2rem;
-        font-weight: 500;
+        font-weight: 400;
         margin-bottom: 2rem;
         line-height: 1.7;
       }
@@ -153,6 +153,9 @@ a {
         padding: 0.8rem 1rem;
         margin: 0;
         border-radius: 0;
+        a {
+          font-weight: 300;
+        }
         &:first-child {
           border-radius: 0.7rem 0.7rem 0 0;
         }
