@@ -143,6 +143,25 @@ a {
   }
 }
 
+/* __ Team Page __ */
+.__team-page {
+  /* > Hero section */
+  .__hero-section {
+    width: 100%;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+  /* > List section */
+  .__title {
+    width: 100%;
+    padding: 1rem;
+    background-color: $secondary-color;
+    color: $secondary-text-color;
+  }
+  .__list-section {
+  }
+}
+
 @media screen and (max-width: 768px) {
   .__navbar {
     .__menu {
@@ -177,7 +196,7 @@ a {
         h1 {
           font-size: 2.4rem;
         }
-        p{
+        p {
           font-size: 1rem;
           line-height: 1.84;
         }

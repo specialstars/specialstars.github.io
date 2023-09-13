@@ -135,6 +135,22 @@ a {
      object-fit: cover;
 }
 
+/* __ Team Page __ */
+.__team-page {
+  /* > Hero section */
+  /* > List section */
+}
+.__team-page .__hero-section {
+  width: 100%;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+.__team-page .__title {
+  width: 100%;
+  padding: 1rem;
+  background-color: #0085a6;
+  color: #fff;
+}
 @media screen and (max-width: 768px) {
   .__navbar .__menu {
     padding-top: 0.6rem;
