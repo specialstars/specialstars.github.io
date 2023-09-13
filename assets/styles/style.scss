@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 
 $primary-color: #f6f7cf;
 $primary-text-color: #2c2c2c;
@@ -49,8 +49,16 @@ a {
     align-items: center;
     img {
       object-fit: cover;
-      width: 40px;
+      width: 50px;
       border-radius: 0.2rem;
+    }
+    h1 {
+      font-size: 1.2rem;
+      margin: 0;
+      font-weight: 300;
+      span {
+        color: $secondary-color;
+      }
     }
   }
   .__menu-btn {
@@ -74,6 +82,7 @@ a {
       border-radius: 1rem;
       background-color: rgba($secondary-color, 0.05);
       font-size: 0.9rem;
+      border-bottom: 1px solid rgba($secondary-color, 0.2);
       &.active {
         background-color: rgba($secondary-color, 0.5);
         color: $secondary-text-color;
@@ -94,17 +103,21 @@ a {
   .__hero-section {
     width: 100%;
     min-height: 100vh;
-    padding: 3rem 0;
+    padding: 3rem 1rem;
     .__details {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: start;
-      padding: 0 1rem 0 5rem;
       h1 {
         font-size: 3rem;
         font-weight: 700;
         margin-bottom: 2rem;
+        span {
+          background-color: rgba($secondary-color, 0.1);
+          border-radius: 0.5rem;
+          padding: 0 0.3rem;
+        }
       }
       p {
         font-size: 1.2rem;
@@ -114,6 +127,8 @@ a {
       }
       .btn {
         font-weight: 500;
+        padding: 0.6rem 2rem;
+        font-size: 1rem;
       }
     }
     .__designs {
@@ -150,7 +165,7 @@ a {
 
   .__home-page {
     .__hero-section {
-      padding: 0;
+      padding: 0 1rem;
       .__details {
         padding: 1rem;
         order: 2;
