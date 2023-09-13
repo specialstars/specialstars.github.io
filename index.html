@@ -19,16 +19,37 @@
 
 <body>
     <!-- __ Navigation Bar -->
-    <div class="__navbar d-flex justify-content-between">
-        <div class="__logo navbar-brand">
-            <img src="assets/images/logo.jpg" alt="Special Stars Organization">
+    <div class="__navbar navbar navbar-expand-md">
+        <div class="container-fluid">
+            <div class="__logo navbar-brand">
+                <img src="assets/images/logo.jpg" alt="Special Stars Organization">
+            </div>
+            <button class="__menu-btn navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="__menu collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <!-- <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div> -->
+                </ul>
+            </div>
         </div>
-        <ul class="__menu list-unstyled">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
+
     </div>
 
     <!-- __ Home Page -->
