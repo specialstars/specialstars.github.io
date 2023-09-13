@@ -109,6 +109,7 @@ a {
   font-size: 3rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  line-height: 1.3;
 }
 .__home-page .__hero-section .__details h1 span {
   background-color: rgba(0, 133, 166, 0.1);
@@ -161,6 +162,16 @@ a {
   .__home-page .__hero-section .__details {
     padding: 1rem;
     order: 2;
+  }
+  .__home-page .__hero-section .__details h1 {
+    font-size: 2.4rem;
+  }
+  .__home-page .__hero-section .__details p {
+    font-size: 1rem;
+    line-height: 1.84;
+  }
+  .__home-page .__hero-section .__details .btn {
+    padding: 0.45rem 2rem;
   }
   .__home-page .__hero-section .__designs {
     text-align: center;

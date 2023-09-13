@@ -113,6 +113,7 @@ a {
         font-size: 3rem;
         font-weight: 600;
         margin-bottom: 2rem;
+        line-height: 1.3;
         span {
           background-color: rgba($secondary-color, 0.1);
           border-radius: 0.5rem;
@@ -172,6 +173,16 @@ a {
       .__details {
         padding: 1rem;
         order: 2;
+        h1 {
+          font-size: 2.4rem;
+        }
+        p{
+          font-size: 1rem;
+          line-height: 1.84;
+        }
+        .btn {
+          padding: 0.45rem 2rem;
+        }
       }
       .__designs {
         text-align: center;
