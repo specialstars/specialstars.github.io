@@ -11,7 +11,7 @@
       let header = document.querySelectorAll(".__navbar")[0];
       let headerHeight = header.offsetHeight;
       let scrollTop = window.pageYOffset || window.scrollTop;
-      if (scrollTop > headerHeight + 100) {
+      if (scrollTop > headerHeight + 70) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");

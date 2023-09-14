@@ -4,7 +4,7 @@ $primary-color: #f6f7cf;
 $primary-text-color: #2c2c2c;
 $secondary-color: #0085a6;
 $secondary-text-color: #fff;
-$soft-color: darken(#fff, 2%);
+$soft-color: darken($primary-color, 4%);
 
 * {
   margin: 0;
@@ -35,8 +35,6 @@ a {
 
 /* __ Navigation Bar __ */
 .__navbar {
-  top: 0;
-  left: 0;
   width: 100%;
   min-height: 55px;
   max-height: 60px;
@@ -47,9 +45,13 @@ a {
   user-select: none;
   &.scrolled {
     position: sticky;
-    background-color: $soft-color;
-    .__menu > ul {
-      background-color: $soft-color;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    .__logo {
+      img {
+        width: 36px;
+      }
     }
   }
   .__logo {
@@ -58,7 +60,7 @@ a {
     img {
       object-fit: cover;
       width: 50px;
-      border-radius: 10rem;
+      border-radius: 0.5rem;
     }
     h1 {
       font-size: 1.2rem;
@@ -112,7 +114,7 @@ a {
   /* > Hero Section */
   .__hero-section {
     width: 100%;
-    padding: 4rem 1rem;
+    padding: 3.5rem 1rem;
     .__details {
       display: flex;
       flex-direction: column;
