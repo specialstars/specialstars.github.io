@@ -104,7 +104,7 @@ a {
   .__hero-section {
     width: 100%;
     min-height: calc(100vh - 50px);
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
     background: url(../images/banner-hero.png) no-repeat bottom;
     background-size: cover;
     .__details {
@@ -212,6 +212,7 @@ a {
       & > ul {
         max-width: 300px;
         border-radius: 0.8rem;
+        background-color: #fff;
       }
       & > ul > li {
         padding: 0.8rem 1rem;
@@ -233,14 +234,15 @@ a {
   .__home-page {
     .__hero-section {
       padding: 0 1rem;
+      background: none;
       .__details {
-        padding: 1rem;
+        padding: 2rem 1rem;
         order: 2;
         h1 {
-          font-size: 2.4rem;
+          font-size: 2rem;
         }
         p {
-          font-size: 1rem;
+          font-size: 0.9rem;
           line-height: 1.84;
         }
         .btn {
