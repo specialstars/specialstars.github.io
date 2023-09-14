@@ -84,7 +84,7 @@ a {
   margin: 0 10px;
   padding: 3px 15px;
   border-radius: 1rem;
-  background-color: rgba(0, 133, 166, 0.05);
+  background-color: rgba(0, 133, 166, 0.025);
   font-size: 0.9rem;
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
@@ -152,27 +152,38 @@ a {
   border-radius: 0.7rem;
   padding: 2rem;
 }
-.__home-page .__a-section .container p {
-  font-size: 0.9rem;
-}
 
-/* __ Team Page __ */
-.__team-page {
+/* __ (About + Team + Contact) Pages __ */
+.__about-page,
+.__team-page,
+.__contact-page {
   background-color: #f3f4be;
   /* > Hero section */
-  /* > List section */
 }
-.__team-page .__hero-section {
+.__about-page .__hero-section,
+.__team-page .__hero-section,
+.__contact-page .__hero-section {
+  position: relative;
   width: 100%;
   padding: 3rem 1rem;
 }
-.__team-page .__hero-section h1 {
+.__about-page .__hero-section h1,
+.__team-page .__hero-section h1,
+.__contact-page .__hero-section h1 {
   font-family: "PT Sans", sans-serif;
 }
-.__team-page .__hero-section p {
+.__about-page .__hero-section p,
+.__team-page .__hero-section p,
+.__contact-page .__hero-section p {
   margin-top: 1rem;
   line-height: 1.7;
   font-size: 0.9rem;
+}
+
+/* __ About Page __ */
+/* __ Team Page __ */
+.__team-page {
+  /* > List section */
 }
 .__team-page .__list-section {
   background-color: #f8f9dc;
@@ -198,6 +209,11 @@ a {
 }
 .__team-page .__list-section .__lists .__list {
   text-align: center;
+  transition: all 0.1s ease-in-out;
+}
+.__team-page .__list-section .__lists .__list:hover {
+  transform: skewX(2deg);
+  opacity: 0.9;
 }
 .__team-page .__list-section .__lists .__list img {
   width: 85%;
@@ -221,6 +237,8 @@ a {
   color: #0085a6;
 }
 
+/* __ Contact Page __ */
+/* Media Queries */
 @media screen and (max-width: 766px) {
   .__navbar .__menu {
     padding-top: 0.6rem;
@@ -272,6 +290,9 @@ a {
   }
   .__home-page .__hero-section .__designs img {
     max-width: 200px;
+  }
+  .__home-page .__a-section .container p {
+    font-size: 0.9rem;
   }
   .__team-page .__hero-section h1 {
     font-size: 2.4rem;

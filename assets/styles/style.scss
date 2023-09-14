@@ -88,7 +88,7 @@ a {
       margin: 0 10px;
       padding: 3px 15px;
       border-radius: 1rem;
-      background-color: rgba($secondary-color, 0.05);
+      background-color: rgba($secondary-color, 0.025);
       font-size: 0.9rem;
       border-bottom: 1px solid rgba(#333, 0.1);
       &.active {
@@ -146,7 +146,8 @@ a {
         object-fit: cover;
       }
     }
-  } /* > A Section */
+  }
+  /* > A Section */
   .__a-section {
     width: 100%;
     padding: 4rem 2rem;
@@ -155,18 +156,18 @@ a {
       background-color: rgba($secondary-color, 0.05);
       border-radius: 0.7rem;
       padding: 2rem;
-      p {
-        font-size: 0.9rem;
-      }
     }
   }
 }
 
-/* __ Team Page __ */
-.__team-page {
+/* __ (About + Team + Contact) Pages __ */
+.__about-page,
+.__team-page,
+.__contact-page {
   background-color: darken($primary-color, 4%);
   /* > Hero section */
   .__hero-section {
+    position: relative;
     width: 100%;
     padding: 3rem 1rem;
     h1 {
@@ -178,6 +179,14 @@ a {
       font-size: 0.9rem;
     }
   }
+}
+
+/* __ About Page __ */
+.__about-page {
+}
+
+/* __ Team Page __ */
+.__team-page {
   /* > List section */
   .__list-section {
     background-color: lighten($primary-color, 3%);
@@ -201,6 +210,11 @@ a {
       justify-content: center;
       .__list {
         text-align: center;
+        transition: all 0.1s ease-in-out;
+        &:hover {
+          transform: skewX(2deg);
+          opacity: 0.9;
+        }
         img {
           width: 85%;
           object-fit: cover;
@@ -226,6 +240,11 @@ a {
   }
 }
 
+/* __ Contact Page __ */
+.__contact-page {
+}
+
+/* Media Queries */
 @media screen and (max-width: 766px) {
   .__navbar {
     .__menu {
@@ -279,6 +298,13 @@ a {
         text-align: center;
         img {
           max-width: 200px;
+        }
+      }
+    }
+    .__a-section {
+      .container {
+        p {
+          font-size: 0.9rem;
         }
       }
     }
