@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=PT+Sans:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -142,15 +142,60 @@ a {
 }
 .__team-page .__hero-section {
   width: 100%;
+  border-top: 1px solid rgba(44, 44, 44, 0.1);
   padding: 3rem 1rem;
-  text-align: center;
 }
-.__team-page .__title {
+.__team-page .__hero-section h1 {
+  font-family: "PT Sans", sans-serif;
+}
+.__team-page .__hero-section p {
+  margin-top: 1rem;
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+.__team-page .__list-section .__title {
   width: 100%;
-  padding: 1rem;
+  padding: 2.5rem;
   background-color: #0085a6;
   color: #fff;
+  margin-top: 2rem;
 }
+.__team-page .__list-section .__title h3 {
+  font-size: 1.4rem;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-family: "PT Sans", sans-serif;
+}
+.__team-page .__list-section .__lists {
+  padding: 2rem 0;
+  row-gap: 1rem;
+  justify-content: center;
+}
+.__team-page .__list-section .__lists .__list {
+  text-align: center;
+}
+.__team-page .__list-section .__lists .__list img {
+  width: 85%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 3/3;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(0, 133, 166, 0.1);
+}
+.__team-page .__list-section .__lists .__list h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0.8rem;
+  font-family: "PT Sans", sans-serif;
+}
+.__team-page .__list-section .__lists .__list p {
+  font-size: 0.7rem;
+  margin-top: -0.5rem;
+  font-weight: 500;
+  color: #0085a6;
+}
+
 @media screen and (max-width: 768px) {
   .__navbar .__menu {
     padding-top: 0.6rem;
@@ -195,5 +240,8 @@ a {
   }
   .__home-page .__hero-section .__designs img {
     max-width: 100px;
+  }
+  .__team-page .__list-section .__lists .__list img {
+    width: 60%;
   }
 }

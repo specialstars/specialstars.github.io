@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=PT+Sans:wght@700&display=swap");
 
 $primary-color: #f6f7cf;
 $primary-text-color: #2c2c2c;
@@ -148,17 +148,58 @@ a {
   /* > Hero section */
   .__hero-section {
     width: 100%;
+    border-top: 1px solid rgba($primary-text-color, 0.1);
     padding: 3rem 1rem;
-    text-align: center;
+    h1 {font-family: "PT Sans", sans-serif;}
+    p {
+      margin-top: 1rem;
+      line-height: 1.7;
+      font-size: 0.9rem;
+    }
   }
   /* > List section */
-  .__title {
-    width: 100%;
-    padding: 1rem;
-    background-color: $secondary-color;
-    color: $secondary-text-color;
-  }
   .__list-section {
+    .__title {
+      width: 100%;
+      padding: 2.5rem;
+      background-color: $secondary-color;
+      color: $secondary-text-color;
+      margin-top: 2rem;
+      h3 {
+        font-size: 1.4rem;
+        margin: 0;
+        text-align: center;
+        font-weight: 700;
+        font-family: "PT Sans", sans-serif;
+      }
+    }
+    .__lists {
+      padding: 2rem 0;
+      row-gap: 1rem;
+      justify-content: center;
+      .__list {
+        text-align: center;
+        img {
+          width: 85%;
+          object-fit: cover;
+          aspect-ratio: 3 / 3;
+          border-radius: 0.7rem;
+          border: 1px solid rgba($secondary-color, 0.1);
+        }
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 700;
+          margin-top: 0.8rem;
+          font-family: "PT Sans", sans-serif;
+        }
+        p {
+          font-size: 0.7rem;
+          margin-top: -0.5rem;
+          font-weight: 500;
+          color: $secondary-color;
+        }
+      }
+    }
   }
 }
 
@@ -208,6 +249,18 @@ a {
         text-align: center;
         img {
           max-width: 100px;
+        }
+      }
+    }
+  }
+
+  .__team-page {
+    .__list-section {
+      .__lists {
+        .__list {
+          img {
+            width: 60%;
+          }
         }
       }
     }
