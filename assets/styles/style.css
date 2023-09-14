@@ -99,8 +99,6 @@ a {
   width: 100%;
   min-height: calc(100vh - 50px);
   padding: 4rem 1rem;
-  background: url(../images/banner-hero.png) no-repeat bottom;
-  background-size: cover;
 }
 .__home-page .__hero-section .__details {
   display: flex;
@@ -222,17 +220,17 @@ a {
   }
   .__home-page .__hero-section {
     padding: 0 1rem;
-    background: none;
   }
   .__home-page .__hero-section .__details {
     padding: 2rem 1rem;
     order: 2;
   }
   .__home-page .__hero-section .__details h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    line-height: 1.58;
   }
   .__home-page .__hero-section .__details p {
-    font-size: 0.9rem;
+    font-size: 0.87rem;
     line-height: 1.84;
   }
   .__home-page .__hero-section .__details .btn {

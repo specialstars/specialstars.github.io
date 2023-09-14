@@ -105,8 +105,6 @@ a {
     width: 100%;
     min-height: calc(100vh - 50px);
     padding: 4rem 1rem;
-    background: url(../images/banner-hero.png) no-repeat bottom;
-    background-size: cover;
     .__details {
       display: flex;
       flex-direction: column;
@@ -150,7 +148,6 @@ a {
   /* > Hero section */
   .__hero-section {
     width: 100%;
-    // border-top: 1px solid rgba($primary-text-color, 0.1
     padding: 3rem 1rem;
     h1 {font-family: "PT Sans", sans-serif;}
     p {
@@ -234,15 +231,15 @@ a {
   .__home-page {
     .__hero-section {
       padding: 0 1rem;
-      background: none;
       .__details {
         padding: 2rem 1rem;
         order: 2;
         h1 {
-          font-size: 2rem;
+          font-size: 2.2rem;
+          line-height: 1.58;
         }
         p {
-          font-size: 0.9rem;
+          font-size: 0.87rem;
           line-height: 1.84;
         }
         .btn {
