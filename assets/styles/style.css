@@ -68,6 +68,10 @@ a {
 .__navbar .__menu-btn:focus {
   box-shadow: none;
   border-color: rgba(51, 51, 51, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.__navbar .__menu {
+  transition: all 0.2s ease-in-out;
 }
 .__navbar .__menu > ul {
   background-color: #f6f7cf;
@@ -94,10 +98,10 @@ a {
 /* __ Home Page __ */
 .__home-page {
   /* > Hero Section */
+  /* > A Section */
 }
 .__home-page .__hero-section {
   width: 100%;
-  min-height: calc(100vh - 50px);
   padding: 4rem 1rem;
 }
 .__home-page .__hero-section .__details {
@@ -133,6 +137,10 @@ a {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.__home-page .__a-section {
+  width: 100%;
+  padding: 2rem 1rem;
 }
 
 /* __ Team Page __ */

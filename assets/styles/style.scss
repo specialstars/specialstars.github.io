@@ -71,9 +71,11 @@ a {
     &:focus {
       box-shadow: none;
       border-color: rgba(51, 51, 51, 0.4);
+      background-color: rgba(255, 255, 255, 0.4);
     }
   }
   .__menu {
+    transition: all 0.2s ease-in-out;
     & > ul {
       background-color: $primary-color;
     }
@@ -103,7 +105,6 @@ a {
   /* > Hero Section */
   .__hero-section {
     width: 100%;
-    min-height: calc(100vh - 50px);
     padding: 4rem 1rem;
     .__details {
       display: flex;
@@ -140,6 +141,10 @@ a {
         object-fit: cover;
       }
     }
+  } /* > A Section */
+  .__a-section {
+    width: 100%;
+    padding: 2rem 1rem;
   }
 }
 
