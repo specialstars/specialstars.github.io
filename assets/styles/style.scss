@@ -4,6 +4,7 @@ $primary-color: #f6f7cf;
 $primary-text-color: #2c2c2c;
 $secondary-color: #0085a6;
 $secondary-text-color: #fff;
+$soft-color: darken(#fff, 2%);
 
 * {
   margin: 0;
@@ -34,7 +35,6 @@ a {
 
 /* __ Navigation Bar __ */
 .__navbar {
-  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -45,17 +45,24 @@ a {
   color: $primary-text-color;
   z-index: 1000;
   user-select: none;
+  &.scrolled {
+    position: sticky;
+    background-color: $soft-color;
+    .__menu > ul {
+      background-color: $soft-color;
+    }
+  }
   .__logo {
     display: flex;
     align-items: center;
     img {
       object-fit: cover;
       width: 50px;
-      border-radius: 0.2rem;
+      border-radius: 10rem;
     }
     h1 {
       font-size: 1.2rem;
-      margin: 0;
+      margin: 0 1rem;
       font-weight: 300;
       span {
         color: $secondary-color;
@@ -144,7 +151,13 @@ a {
   } /* > A Section */
   .__a-section {
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
+    background-color: $soft-color;
+    .container {
+      background-color: rgba($secondary-color, 0.1);
+      border-radius: 0.7rem;
+      padding: 2rem;
+    }
   }
 }
 
@@ -191,6 +204,7 @@ a {
           object-fit: cover;
           aspect-ratio: 3 / 3;
           border-radius: 0.7rem;
+          background-color: $primary-color;
           border: 1px solid rgba($secondary-color, 0.1);
         }
         h3 {
@@ -241,7 +255,7 @@ a {
       padding: 0 1rem;
       text-align: center;
       .__details {
-        padding: 2rem 1rem;
+        padding: 0.3rem 1rem 5rem 1rem;
         order: 2;
         h1 {
           width: 100%;
@@ -262,7 +276,7 @@ a {
       .__designs {
         text-align: center;
         img {
-          max-width: 100px;
+          max-width: 200px;
         }
       }
     }

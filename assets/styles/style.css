@@ -26,7 +26,6 @@ a {
 
 /* __ Navigation Bar __ */
 .__navbar {
-  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -40,6 +39,13 @@ a {
      -moz-user-select: none;
           user-select: none;
 }
+.__navbar.scrolled {
+  position: sticky;
+  background-color: #fafafa;
+}
+.__navbar.scrolled .__menu > ul {
+  background-color: #fafafa;
+}
 .__navbar .__logo {
   display: flex;
   align-items: center;
@@ -48,11 +54,11 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   width: 50px;
-  border-radius: 0.2rem;
+  border-radius: 10rem;
 }
 .__navbar .__logo h1 {
   font-size: 1.2rem;
-  margin: 0;
+  margin: 0 1rem;
   font-weight: 300;
 }
 .__navbar .__logo h1 span {
@@ -140,7 +146,13 @@ a {
 }
 .__home-page .__a-section {
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
+  background-color: #fafafa;
+}
+.__home-page .__a-section .container {
+  background-color: rgba(0, 133, 166, 0.1);
+  border-radius: 0.7rem;
+  padding: 2rem;
 }
 
 /* __ Team Page __ */
@@ -189,6 +201,7 @@ a {
      object-fit: cover;
   aspect-ratio: 3/3;
   border-radius: 0.7rem;
+  background-color: #f6f7cf;
   border: 1px solid rgba(0, 133, 166, 0.1);
 }
 .__team-page .__list-section .__lists .__list h3 {
@@ -232,7 +245,7 @@ a {
     text-align: center;
   }
   .__home-page .__hero-section .__details {
-    padding: 2rem 1rem;
+    padding: 0.3rem 1rem 5rem 1rem;
     order: 2;
   }
   .__home-page .__hero-section .__details h1 {
@@ -254,7 +267,7 @@ a {
     text-align: center;
   }
   .__home-page .__hero-section .__designs img {
-    max-width: 100px;
+    max-width: 200px;
   }
   .__team-page .__list-section .__lists .__list img {
     width: 60%;
