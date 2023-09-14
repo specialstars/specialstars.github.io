@@ -26,8 +26,10 @@ a {
 
 /* __ Navigation Bar __ */
 .__navbar {
+  top: 0;
+  left: 0;
   width: 100%;
-  min-height: 55px;
+  height: 60px;
   max-height: 60px;
   padding: 0;
   background-color: #f6f7cf;
@@ -39,12 +41,7 @@ a {
 }
 .__navbar.scrolled {
   position: sticky;
-  top: 0;
-  left: 0;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
-.__navbar.scrolled .__logo img {
-  width: 36px;
 }
 .__navbar .__logo {
   display: flex;
@@ -66,6 +63,8 @@ a {
 }
 .__navbar .__menu-btn {
   border-color: transparent;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 .__navbar .__menu-btn .navbar-toggler-icon {
   width: 1.25em;
@@ -73,8 +72,7 @@ a {
 }
 .__navbar .__menu-btn:focus {
   box-shadow: none;
-  border-color: rgba(51, 51, 51, 0.4);
-  background-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(51, 51, 51, 0.2);
 }
 .__navbar .__menu {
   transition: all 0.2s ease-in-out;
@@ -88,7 +86,7 @@ a {
   border-radius: 1rem;
   background-color: rgba(0, 133, 166, 0.05);
   font-size: 0.9rem;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
 .__navbar .__menu > ul > li.active {
   background-color: rgba(0, 133, 166, 0.5);

@@ -35,8 +35,10 @@ a {
 
 /* __ Navigation Bar __ */
 .__navbar {
+  top: 0;
+  left: 0;
   width: 100%;
-  min-height: 55px;
+  height: 60px;
   max-height: 60px;
   padding: 0;
   background-color: $primary-color;
@@ -45,14 +47,7 @@ a {
   user-select: none;
   &.scrolled {
     position: sticky;
-    top: 0;
-    left: 0;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    .__logo {
-      img {
-        width: 36px;
-      }
-    }
   }
   .__logo {
     display: flex;
@@ -73,14 +68,15 @@ a {
   }
   .__menu-btn {
     border-color: transparent;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
     .navbar-toggler-icon {
       width: 1.25em;
       height: 1.25em;
     }
     &:focus {
       box-shadow: none;
-      border-color: rgba(51, 51, 51, 0.4);
-      background-color: rgba(255, 255, 255, 0.4);
+      border-color: rgba(51, 51, 51, 0.2);
     }
   }
   .__menu {
@@ -94,7 +90,7 @@ a {
       border-radius: 1rem;
       background-color: rgba($secondary-color, 0.05);
       font-size: 0.9rem;
-      border-bottom: 1px solid rgba(#333, 0.2);
+      border-bottom: 1px solid rgba(#333, 0.1);
       &.active {
         background-color: rgba($secondary-color, 0.5);
         color: $secondary-text-color;
@@ -289,7 +285,7 @@ a {
       h1 {
         font-size: 2.4rem;
       }
-      p{
+      p {
         font-size: 0.87rem;
       }
     }
