@@ -103,8 +103,10 @@ a {
   /* > Hero Section */
   .__hero-section {
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 50px);
     padding: 3rem 1rem;
+    background: url(../images/banner-hero.png) no-repeat bottom;
+    background-size: cover;
     .__details {
       display: flex;
       flex-direction: column;
@@ -148,7 +150,7 @@ a {
   /* > Hero section */
   .__hero-section {
     width: 100%;
-    border-top: 1px solid rgba($primary-text-color, 0.1);
+    // border-top: 1px solid rgba($primary-text-color, 0.1
     padding: 3rem 1rem;
     h1 {font-family: "PT Sans", sans-serif;}
     p {

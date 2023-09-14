@@ -97,8 +97,10 @@ a {
 }
 .__home-page .__hero-section {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 50px);
   padding: 3rem 1rem;
+  background: url(../images/banner-hero.png) no-repeat bottom;
+  background-size: cover;
 }
 .__home-page .__hero-section .__details {
   display: flex;
@@ -142,7 +144,6 @@ a {
 }
 .__team-page .__hero-section {
   width: 100%;
-  border-top: 1px solid rgba(44, 44, 44, 0.1);
   padding: 3rem 1rem;
 }
 .__team-page .__hero-section h1 {
