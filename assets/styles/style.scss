@@ -4,7 +4,7 @@ $primary-color: #f6f7cf;
 $primary-text-color: #2c2c2c;
 $secondary-color: #0085a6;
 $secondary-text-color: #fff;
-$soft-color: darken($primary-color, 4%);
+$soft-color: darken($primary-color, 2%);
 
 * {
   margin: 0;
@@ -149,12 +149,15 @@ a {
   } /* > A Section */
   .__a-section {
     width: 100%;
-    padding: 4rem 1rem;
+    padding: 4rem 2rem;
     background-color: $soft-color;
     .container {
-      background-color: rgba($secondary-color, 0.1);
+      background-color: rgba($secondary-color, 0.05);
       border-radius: 0.7rem;
       padding: 2rem;
+      p {
+        font-size: 0.9rem;
+      }
     }
   }
 }
@@ -227,8 +230,8 @@ a {
     .__menu {
       padding-top: 0.6rem;
       & > ul {
-        max-width: 300px;
-        border-radius: 0.8rem;
+        max-width: 250px;
+        border-radius: 0.4rem;
         background-color: #fff;
       }
       & > ul > li {
@@ -239,10 +242,10 @@ a {
           font-weight: 300;
         }
         &:first-child {
-          border-radius: 0.7rem 0.7rem 0 0;
+          border-radius: 0.4rem 0.4rem 0 0;
         }
         &:last-child {
-          border-radius: 0 0 0.7rem 0.7rem;
+          border-radius: 0 0 0.4rem 0.4rem;
         }
       }
     }

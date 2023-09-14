@@ -144,13 +144,16 @@ a {
 }
 .__home-page .__a-section {
   width: 100%;
-  padding: 4rem 1rem;
-  background-color: #f3f4be;
+  padding: 4rem 2rem;
+  background-color: #f4f6c6;
 }
 .__home-page .__a-section .container {
-  background-color: rgba(0, 133, 166, 0.1);
+  background-color: rgba(0, 133, 166, 0.05);
   border-radius: 0.7rem;
   padding: 2rem;
+}
+.__home-page .__a-section .container p {
+  font-size: 0.9rem;
 }
 
 /* __ Team Page __ */
@@ -220,8 +223,8 @@ a {
     padding-top: 0.6rem;
   }
   .__navbar .__menu > ul {
-    max-width: 300px;
-    border-radius: 0.8rem;
+    max-width: 250px;
+    border-radius: 0.4rem;
     background-color: #fff;
   }
   .__navbar .__menu > ul > li {
@@ -233,10 +236,10 @@ a {
     font-weight: 300;
   }
   .__navbar .__menu > ul > li:first-child {
-    border-radius: 0.7rem 0.7rem 0 0;
+    border-radius: 0.4rem 0.4rem 0 0;
   }
   .__navbar .__menu > ul > li:last-child {
-    border-radius: 0 0 0.7rem 0.7rem;
+    border-radius: 0 0 0.4rem 0.4rem;
   }
   .__home-page .__hero-section {
     padding: 0 1rem;
