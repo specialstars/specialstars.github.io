@@ -145,11 +145,14 @@ a {
 
 /* __ Team Page __ */
 .__team-page {
+  background-color: darken($primary-color, 4%);
   /* > Hero section */
   .__hero-section {
     width: 100%;
     padding: 3rem 1rem;
-    h1 {font-family: "PT Sans", sans-serif;}
+    h1 {
+      font-family: "PT Sans", sans-serif;
+    }
     p {
       margin-top: 1rem;
       line-height: 1.7;
@@ -163,7 +166,7 @@ a {
       padding: 2.5rem;
       background-color: $secondary-color;
       color: $secondary-text-color;
-      margin-top: 2rem; 
+      margin-top: 2rem;
       h3 {
         font-size: 1.4rem;
         margin: 0;
@@ -202,7 +205,7 @@ a {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
   .__navbar {
     .__menu {
       padding-top: 0.6rem;
@@ -231,16 +234,21 @@ a {
   .__home-page {
     .__hero-section {
       padding: 0 1rem;
+      text-align: center;
       .__details {
         padding: 2rem 1rem;
         order: 2;
         h1 {
+          width: 100%;
           font-size: 2.2rem;
           line-height: 1.58;
         }
         p {
           font-size: 0.87rem;
           line-height: 1.84;
+        }
+        .__action {
+          justify-content: center;
         }
         .btn {
           padding: 0.45rem 2rem;

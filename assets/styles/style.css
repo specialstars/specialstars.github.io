@@ -137,6 +137,7 @@ a {
 
 /* __ Team Page __ */
 .__team-page {
+  background-color: #f3f4be;
   /* > Hero section */
   /* > List section */
 }
@@ -195,7 +196,7 @@ a {
   color: #0085a6;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
   .__navbar .__menu {
     padding-top: 0.6rem;
   }
@@ -220,18 +221,23 @@ a {
   }
   .__home-page .__hero-section {
     padding: 0 1rem;
+    text-align: center;
   }
   .__home-page .__hero-section .__details {
     padding: 2rem 1rem;
     order: 2;
   }
   .__home-page .__hero-section .__details h1 {
+    width: 100%;
     font-size: 2.2rem;
     line-height: 1.58;
   }
   .__home-page .__hero-section .__details p {
     font-size: 0.87rem;
     line-height: 1.84;
+  }
+  .__home-page .__hero-section .__details .__action {
+    justify-content: center;
   }
   .__home-page .__hero-section .__details .btn {
     padding: 0.45rem 2rem;
