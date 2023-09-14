@@ -307,6 +307,27 @@ a {
 }
 
 /* __ Contact Page __ */
+/* __ Footer __ */
+.__footer {
+  width: 100%;
+  padding: 3rem 2rem;
+  background-color: #0085a6;
+  color: #fff;
+}
+.__footer p {
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+  line-height: 1.5rem;
+}
+.__footer img {
+  width: 25px;
+  height: 25px;
+  margin-left: 1rem;
+}
+.__footer a:first-child img {
+  margin-left: 0;
+}
+
 /* Media Queries */
 @media screen and (max-width: 766px) {
   .__navbar .__menu {
