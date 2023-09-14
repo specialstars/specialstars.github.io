@@ -88,7 +88,7 @@ a {
   border-radius: 1rem;
   background-color: rgba(0, 133, 166, 0.05);
   font-size: 0.9rem;
-  border-bottom: 1px solid rgba(0, 133, 166, 0.2);
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }
 .__navbar .__menu > ul > li.active {
   background-color: rgba(0, 133, 166, 0.5);
@@ -268,6 +268,12 @@ a {
   }
   .__home-page .__hero-section .__designs img {
     max-width: 200px;
+  }
+  .__team-page .__hero-section h1 {
+    font-size: 2.4rem;
+  }
+  .__team-page .__hero-section p {
+    font-size: 0.87rem;
   }
   .__team-page .__list-section .__lists .__list img {
     width: 60%;
