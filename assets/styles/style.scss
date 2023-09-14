@@ -180,6 +180,7 @@ a {
   }
   /* > List section */
   .__list-section {
+    background-color: lighten($primary-color, 3%);
     .__title {
       width: 100%;
       padding: 2.5rem;
