@@ -36,7 +36,8 @@ const $firebase_config = {
  storageBucket: "specialstars-dev.appspot.com",
  messagingSenderId: "930978839693",
  appId: "1:930978839693:web:280b4a16f438ee86b636c4",
- databaseURL: "https://specialstars-dev-default-rtdb.asia-southeast1.firebasedatabase.app/"
+ databaseURL:
+  "https://specialstars-dev-default-rtdb.asia-southeast1.firebasedatabase.app/",
 };
 $firebase_init = $firebase_init($firebase_config);
 $firebase_database = $firebase_database($firebase_init);
@@ -82,7 +83,13 @@ function createPostElement(postId, title, body, author, picture, tags, date) {
             <div class="__body col-md-7">
                 <h4>${title}</h4>
                 <p>${body}</p>
-                <a href="#" class="btn btn-primary btn-sm">Read More</a>
+                <div>
+                    <div class="d-flex">
+                        <span class="date me-2">${new Date(date).toDateString()}</span>
+                        <span class="tags">${tags}</span>
+                    </div>
+                    <a href="#" class="btn btn-primary btn-sm mt-2">Read More</a>
+                </div>
             </div>
         </div>
     `;
