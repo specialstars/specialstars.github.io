@@ -7,7 +7,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #f6f7cf;
+  background-color: #F7F7F7;
   color: #2c2c2c;
 }
 
@@ -32,12 +32,10 @@ a {
   height: 60px;
   max-height: 60px;
   padding: 0;
-  background-color: #f6f7cf;
+  background-color: #F7F7F7;
   color: #2c2c2c;
   z-index: 1000;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .__navbar.scrolled {
   position: sticky;
@@ -48,14 +46,13 @@ a {
   align-items: center;
 }
 .__navbar .__logo img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 50px;
   border-radius: 0.5rem;
 }
 .__navbar .__logo h1 {
   font-size: 1.2rem;
-  margin: 0 1rem;
+  margin: 0 0.2rem;
   font-weight: 300;
 }
 .__navbar .__logo h1 span {
@@ -78,7 +75,7 @@ a {
   transition: all 0.2s ease-in-out;
 }
 .__navbar .__menu > ul {
-  background-color: #f6f7cf;
+  background-color: #F7F7F7;
 }
 .__navbar .__menu > ul > li {
   margin: 0 10px;
@@ -89,7 +86,7 @@ a {
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
 }
 .__navbar .__menu > ul > li.active {
-  background-color: rgba(0, 133, 166, 0.5);
+  background-color: rgba(0, 133, 166, 0.8);
   color: #fff;
 }
 .__navbar .__menu > ul > li:not(.active):hover {
@@ -141,13 +138,12 @@ a {
 .__home-page .__hero-section .__designs img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .__home-page .__a-section {
   width: 100%;
   padding: 4rem 2rem;
-  background-color: #f4f6c6;
+  background-color: #f2f2f2;
 }
 .__home-page .__a-section .container {
   background-color: rgba(0, 133, 166, 0.05);
@@ -178,9 +174,8 @@ a {
   position: relative;
 }
 .__home-page .__c-section .__title h3 {
-  width: -moz-fit-content;
   width: fit-content;
-  background-color: #f6f7cf;
+  background-color: #F7F7F7;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -211,22 +206,25 @@ a {
 .__home-page .__c-section .__media .row > div .__header img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   aspect-ratio: 3/3;
 }
 .__home-page .__c-section .__media .row > div .__body {
   padding: 1.4rem;
 }
 .__home-page .__c-section .__media .row > div .__body p {
+  max-height: 7rem;
   font-size: 0.88rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 /* __ (About + Team + Contact) Pages __ */
 .__about-page,
 .__team-page,
 .__contact-page {
-  background-color: #f3f4be;
+  background-color: #ededed;
   /* > Hero section */
 }
 .__about-page .__hero-section,
@@ -255,7 +253,7 @@ a {
   /* > List section */
 }
 .__team-page .__list-section {
-  background-color: #f8f9dc;
+  background-color: white;
 }
 .__team-page .__list-section .__title {
   width: 100%;
@@ -286,11 +284,10 @@ a {
 }
 .__team-page .__list-section .__lists .__list img {
   width: 85%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   aspect-ratio: 3/3;
   border-radius: 0.7rem;
-  background-color: #f6f7cf;
+  background-color: #F7F7F7;
   border: 1px solid rgba(0, 133, 166, 0.1);
 }
 .__team-page .__list-section .__lists .__list h3 {

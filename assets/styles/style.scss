@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=PT+Sans:wght@700&display=swap");
 
-$primary-color: #f6f7cf;
+$primary-color: #F7F7F7;
 $primary-text-color: #2c2c2c;
 $secondary-color: #0085a6;
 $secondary-text-color: #fff;
-$soft-color: darken($primary-color, 2%);
+$soft-color: darken(#F7F7F7, 2%);
 
 * {
   margin: 0;
@@ -59,7 +59,7 @@ a {
     }
     h1 {
       font-size: 1.2rem;
-      margin: 0 1rem;
+      margin: 0 0.2rem;
       font-weight: 300;
       span {
         color: $secondary-color;
@@ -92,7 +92,7 @@ a {
       font-size: 0.9rem;
       border-bottom: 1px solid rgba(#333, 0.1);
       &.active {
-        background-color: rgba($secondary-color, 0.5);
+        background-color: rgba($secondary-color, 0.8);
         color: $secondary-text-color;
       }
       &:not(.active):hover {
@@ -219,7 +219,15 @@ a {
         .__body {
           padding: 1.4rem;
           p {
+            max-height: 7rem;
             font-size: 0.88rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            mask-image: linear-gradient(
+              to bottom,
+              rgba(0, 0, 0, 1),
+              rgba(0, 0, 0, 0)
+            );
           }
         }
       }
