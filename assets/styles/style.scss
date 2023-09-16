@@ -225,9 +225,8 @@ a {
       padding: 1.4rem;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       p {
-       max-height: 7rem;
+       max-height: 8rem;
        margin: 1rem 0;
        font-size: 0.88rem;
        overflow: hidden;
@@ -243,7 +242,7 @@ a {
       }
       .date,
       .tags {
-       font-size: 0.8rem;
+       font-size: 0.7rem;
        background-color: rgba($secondary-color, 0.1);
        padding: 0.2rem 0.5rem;
        border-radius: 0.5rem;

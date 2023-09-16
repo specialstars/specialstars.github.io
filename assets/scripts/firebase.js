@@ -77,9 +77,31 @@ function writeNewPost(username, picture, title, body) {
 /**
  * Creates a post element.
  */
-function createPostElement(postId, title, body, author, picture, tags, date) {
+function createPostElement(data, title, body, author, picture, tags, date) {
  let postElement = document.createElement("div");
  postElement.classList.add("col-md-6");
+
+ // Put <br/> when there is a 1. 2. 3. lists
+ body = body.replace(
+  /\d\.\s/g,
+  "<br/><br/><br/><span class='text-success'>$&</span>"
+ );
+
+ // Put <br/> grammatically
+ body = body
+  .replace(/([.?!])\s*(?=[A-Z])/g, "$1|")
+  .split("|")
+  .join("<br/><br/>");
+
+ // set class text-danger to all words that starts with @
+ body = body.replace(/@([a-z0-9_]+)/gi, '<span class="text-danger">$&</span>');
+
+ // replace all hashtags with links
+ body = body.replace(
+  /#([a-z0-9_]+)/gi,
+  '<a class="text-primary" href="https://www.google.com/search?q=%23$1" target="_blank">#$1</a>'
+ );
+
  postElement.innerHTML = `
         <div class="row">
             <div class="__header col-md-5">
@@ -88,14 +110,16 @@ function createPostElement(postId, title, body, author, picture, tags, date) {
             <div class="__body col-md-7">
                 <h4>${title}</h4>
                 <p>${body}</p>
-                <div>
+                <div class="mt-auto">
                     <div class="d-flex">
                         <span class="date me-2">${new Date(
                          date
                         ).toDateString()}</span>
                         <span class="tags">${tags}</span>
                     </div>
-                    <a href="#" class="btn btn-primary btn-sm mt-2">Read More</a>
+                    <a href="#" class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalMediaShowMore" onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.parentElement.querySelector('h4').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.parentElement.querySelector('span.tags').innerHTML;">
+                    Read More
+                    </a>
                 </div>
             </div>
         </div>
@@ -138,7 +162,9 @@ function startDatabaseQueries() {
  */
 window.addEventListener("load", () => {
  if (document.querySelector(".__c-section .__media")) {
+  // Start listening for posts.
   startDatabaseQueries();
+  // Loading Effect on Scroll
   if (window.IntersectionObserver) {
    const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -148,7 +174,7 @@ window.addEventListener("load", () => {
       setTimeout(() => {
        __media.classList.remove("d-none");
        __mediaLoading.style.display = "none";
-      }, 1000);
+      }, 500);
      }
     });
    });
