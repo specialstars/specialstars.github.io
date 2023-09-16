@@ -24,6 +24,13 @@ a {
   background-color: #005c73 !important;
 }
 
+.svg-highlighted {
+  background-color: rgba(0, 133, 166, 0.1);
+  fill: #0085a6;
+  border-radius: 0.3rem;
+  margin-right: 0.3rem;
+}
+
 /* __ Navigation Bar __ */
 .__navbar {
   position: sticky;
@@ -105,6 +112,7 @@ a {
   /* > A Section */
   /* > B Section */
   /* > C Section */
+  /* > FAQ Section */
 }
 .__home-page .__hero-section {
   position: relative;
@@ -192,6 +200,7 @@ a {
 }
 .__home-page .__c-section .__title {
   position: relative;
+  margin-bottom: 1rem;
 }
 .__home-page .__c-section .__title h3 {
   width: fit-content;
@@ -270,6 +279,18 @@ a {
   padding: 0.2rem 0.5rem;
   border-radius: 0.5rem;
   margin: 0.2rem 0;
+}
+.__home-page .__faq-section {
+  padding: 1rem 2rem 5rem 2rem;
+}
+.__home-page .__faq-section .row img {
+  width: 100%;
+}
+.__home-page .__faq-section .row .__faq-lists button {
+  font-weight: 600;
+}
+.__home-page .__faq-section .row .__faq-lists button:focus {
+  box-shadow: none !important;
 }
 
 /* __ (About + Team + Contact) Pages __ */

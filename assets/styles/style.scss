@@ -33,6 +33,13 @@ a {
  }
 }
 
+.svg-highlighted {
+ background-color: rgba($secondary-color, 0.1);
+ fill: $secondary-color;
+ border-radius: 0.3rem;
+ margin-right: 0.3rem;
+}
+
 /* __ Navigation Bar __ */
 .__navbar {
  position: sticky;
@@ -204,6 +211,7 @@ a {
   padding: 5rem 2rem 7rem 2rem;
   .__title {
    position: relative;
+   margin-bottom: 1rem;
    h3 {
     width: fit-content;
     background-color: $primary-color;
@@ -284,6 +292,23 @@ a {
        margin: 0.2rem 0;
       }
      }
+    }
+   }
+  }
+ }
+ /* > FAQ Section */
+ .__faq-section {
+  padding: 1rem 2rem 5rem 2rem;
+  .row {
+   img {
+    width: 100%;
+   }
+   .__faq-lists {
+    button {
+     font-weight: 600;
+    }
+    button:focus {
+     box-shadow: none !important;
     }
    }
   }
