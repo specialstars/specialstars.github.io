@@ -145,11 +145,6 @@ a {
   padding: 4rem 2rem;
   background-color: #f2f2f2;
 }
-.__home-page .__a-section .container {
-  background-color: rgba(0, 133, 166, 0.05);
-  border-radius: 0.7rem;
-  padding: 2rem;
-}
 .__home-page .__b-section {
   width: 100%;
   padding: 4rem 2rem;
@@ -168,7 +163,7 @@ a {
 }
 .__home-page .__c-section {
   width: 100%;
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 5rem 2rem 7rem 2rem;
 }
 .__home-page .__c-section .__title {
   position: relative;

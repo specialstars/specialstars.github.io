@@ -152,11 +152,6 @@ a {
   width: 100%;
   padding: 4rem 2rem;
   background-color: $soft-color;
-  .container {
-   background-color: rgba($secondary-color, 0.05);
-   border-radius: 0.7rem;
-   padding: 2rem;
-  }
  }
  /* > B Section */
  .__b-section {
@@ -178,7 +173,7 @@ a {
  /* > C Section */
  .__c-section {
   width: 100%;
-  padding: 2rem 2rem 4rem 2rem;
+  padding: 5rem 2rem 7rem 2rem;
   .__title {
    position: relative;
    h3 {
