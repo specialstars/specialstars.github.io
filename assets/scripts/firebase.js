@@ -85,7 +85,9 @@ function createPostElement(postId, title, body, author, picture, tags, date) {
                 <p>${body}</p>
                 <div>
                     <div class="d-flex">
-                        <span class="date me-2">${new Date(date).toDateString()}</span>
+                        <span class="date me-2">${new Date(
+                         date
+                        ).toDateString()}</span>
                         <span class="tags">${tags}</span>
                     </div>
                     <a href="#" class="btn btn-primary btn-sm mt-2">Read More</a>
@@ -113,6 +115,8 @@ function startDatabaseQueries() {
     var tags = posts[post].tags;
     var date = posts[post].date;
     // Create element for each post.
+    if (document.getElementById("__mediaLoading"))
+     document.getElementById("__mediaLoading").style.display = "none";
     createPostElement(post, title, body, author, picture, tags, date);
    }
   });
@@ -125,11 +129,18 @@ function startDatabaseQueries() {
  fetchPosts(recentPostsRef);
 }
 
-// Bindings on load.
-window.addEventListener(
- "load",
- function () {
-  startDatabaseQueries();
- },
- false
-);
+// Load
+window.addEventListener("load", () => {
+ startDatabaseQueries();
+});
+// Instersection Observer
+const $io = new IntersectionObserver((entries) => {
+ entries.forEach((entry) => {
+  if (entry.isIntersecting) {
+   entry.target.classList.remove("visibility-hidden");
+  } else {
+   entry.target.classList.add("visibility-hidden");
+  }
+ });
+});
+$io.observe(document.querySelector(".__c-section .__media"));
