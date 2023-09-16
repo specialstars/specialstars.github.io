@@ -1,5 +1,5 @@
 /**
- * Copyright 2015 Google Inc. All Rights Reserved.
+ * Copyright 2023 & All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -133,24 +133,26 @@ function startDatabaseQueries() {
  fetchPosts(recentPostsRef);
 }
 
-// Load
+/**
+ * Load everything & intersecting __media
+ */
 window.addEventListener("load", () => {
- startDatabaseQueries();
-
- // Intersection Observer using for media only
- if (window.IntersectionObserver) {
-  const observer = new IntersectionObserver((entries) => {
-   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-     __media.classList.add("d-none");
-     __mediaLoading.style.display = "block";
-     setTimeout(() => {
-      __media.classList.remove("d-none");
-      __mediaLoading.style.display = "none";
-     }, 1000);
-    }
+ if (document.querySelector(".__c-section .__media")) {
+  startDatabaseQueries();
+  if (window.IntersectionObserver) {
+   const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+     if (entry.isIntersecting) {
+      __media.classList.add("d-none");
+      __mediaLoading.style.display = "block";
+      setTimeout(() => {
+       __media.classList.remove("d-none");
+       __mediaLoading.style.display = "none";
+      }, 1000);
+     }
+    });
    });
-  });
-  observer.observe(document.querySelector(".__c-section .__media"));
+   observer.observe(document.querySelector(".__c-section .__media"));
+  }
  }
 });
