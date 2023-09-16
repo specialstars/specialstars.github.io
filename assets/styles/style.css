@@ -424,7 +424,7 @@ a {
     border-radius: 0 0 0.4rem 0.4rem;
   }
   .__home-page .__hero-section {
-    padding: 0 1rem;
+    padding: 1rem;
     text-align: center;
   }
   .__home-page .__hero-section .__details {
@@ -456,6 +456,9 @@ a {
   }
   .__home-page .__a-section .container p {
     font-size: 0.9rem;
+  }
+  .__home-page .__c-section .__title h3 {
+    padding: 0 0.4rem;
   }
   .__home-page .__c-section .__media .row > .col-md-6 {
     width: 100% !important;
