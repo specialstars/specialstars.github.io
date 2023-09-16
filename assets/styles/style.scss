@@ -114,8 +114,28 @@ a {
 .__home-page {
  /* > Hero Section */
  .__hero-section {
+  position: relative;
   width: 100%;
   padding: 3.5rem 1rem;
+  &::after,
+  &::before {
+   content: "";
+   display: block;
+   position: absolute;
+   width: 12rem;
+   height: 12rem;
+   background-color: rgba($secondary-color, 0.07);
+   border-radius: 50%;
+   bottom: -6rem;
+   left: 1rem;
+   z-index: -1;
+  }
+  &::before {
+   width: 14rem;
+   height: 14rem;
+   left: 5rem;
+   bottom: 0;
+  }
   .__details {
    display: flex;
    flex-direction: column;
