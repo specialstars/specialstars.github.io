@@ -489,8 +489,13 @@ a {
   }
   .__c-section {
    .__title {
+    svg {
+     display: none;
+    }
     h3 {
-     padding: 0 0.4rem;
+     font-size: 1.2rem;
+     padding: 0 0.8rem;
+     line-height: 1.5;
     }
    }
    .__media {

@@ -457,8 +457,13 @@ a {
   .__home-page .__a-section .container p {
     font-size: 0.9rem;
   }
+  .__home-page .__c-section .__title svg {
+    display: none;
+  }
   .__home-page .__c-section .__title h3 {
-    padding: 0 0.4rem;
+    font-size: 1.2rem;
+    padding: 0 0.8rem;
+    line-height: 1.5;
   }
   .__home-page .__c-section .__media .row > .col-md-6 {
     width: 100% !important;
