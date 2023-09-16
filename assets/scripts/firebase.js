@@ -103,12 +103,12 @@ function createPostElement(data, title, body, author, picture, tags, date) {
  );
 
  postElement.innerHTML = `
-        <div class="row">
-            <div class="__header col-md-5">
+        <div class="row" data-bs-toggle="modal" data-bs-target="#modalMediaShowMore" onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.parentElement.querySelector('h5').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreImage').src = this.querySelector('.__header > img').src; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.parentElement.querySelector('span.tags').innerHTML;" title="Click here to see the full post">
+            <div class="__header col-md-6">
                 <img src=${picture} alt="&nbsp;">
             </div>
-            <div class="__body col-md-7">
-                <h4>${title}</h4>
+            <div class="__body col-md-6">
+                <h5>${title}</h5>
                 <p>${body}</p>
                 <div class="mt-auto">
                     <div class="d-flex">
@@ -117,9 +117,6 @@ function createPostElement(data, title, body, author, picture, tags, date) {
                         ).toDateString()}</span>
                         <span class="tags">${tags}</span>
                     </div>
-                    <a href="#" class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalMediaShowMore" onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.parentElement.querySelector('h4').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.parentElement.querySelector('span.tags').innerHTML;">
-                    Read More
-                    </a>
                 </div>
             </div>
         </div>
