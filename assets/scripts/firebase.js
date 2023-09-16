@@ -84,7 +84,7 @@ function createPostElement(data, title, body, author, picture, tags, date) {
  // Put <br/> when there is a 1. 2. 3. lists
  body = body.replace(
   /\d\.\s/g,
-  "<br/><br/><br/><span class='text-success'>$&</span>"
+  "<br/><br/><br/><mark class='text-success'>$&</mark> "
  );
 
  // Put <br/> grammatically
@@ -170,7 +170,7 @@ window.addEventListener("load", () => {
     entries.forEach((entry) => {
      if (entry.isIntersecting) {
       __media.classList.add("d-none");
-      __mediaLoading.style.display = "block";
+      __mediaLoading.style.display = "flex";
       setTimeout(() => {
        __media.classList.remove("d-none");
        __mediaLoading.style.display = "none";
