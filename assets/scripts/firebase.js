@@ -28,10 +28,10 @@ let $firebase_database_ref = ref;
 let $firebase_database_then = onValue;
 
 var __media = document.querySelectorAll(
- ".__c-section .__media #__mediaResults"
+ ".__home-page .__c-section .__media #__mediaResults"
 )[0];
 var __mediaLoading = document.querySelectorAll(
- ".__c-section .__media #__mediaLoading"
+ ".__home-page .__c-section .__media #__mediaLoading"
 )[0];
 
 const $firebase_config = {
@@ -132,6 +132,7 @@ function startDatabaseQueries() {
  var fetchPosts = function (postsRef) {
   $firebase_database_then(postsRef, function (data) {
    var posts = data.val();
+   if (__media) __media.innerHTML = "";
    // Iterate through posts.
    for (var post in posts) {
     var title = posts[post].title;
@@ -158,7 +159,7 @@ function startDatabaseQueries() {
  * Load everything & intersecting __media
  */
 window.addEventListener("load", () => {
- if (document.querySelector(".__c-section .__media")) {
+ if (document.querySelector(".__home-page .__c-section .__media")) {
   // Start listening for posts.
   startDatabaseQueries();
   // Loading Effect on Scroll
@@ -175,7 +176,9 @@ window.addEventListener("load", () => {
      }
     });
    });
-   observer.observe(document.querySelector(".__c-section .__media"));
+   observer.observe(
+    document.querySelector(".__home-page .__c-section .__media")
+   );
   }
  }
 });

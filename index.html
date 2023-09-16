@@ -89,9 +89,11 @@
         <!-- > A Section -->
         <div class="__a-section">
             <div class="container">
-                <h2><svg class="svg-highlighted" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                  </svg> Features</h2>
+                <h2><svg class="svg-highlighted" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                        fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                    </svg> Features</h2>
                 <p class="pt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam expedita eum nobis
                     reiciendis
                     similique dignissimos reprehenderit nesciunt voluptatibus repudiandae, architecto quas! Sint numquam
@@ -136,14 +138,24 @@
         <div class="__c-section">
             <div class="container">
                 <div class="__title">
-                    <h3><svg class="svg-highlighted" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
-                        <path d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z"/>
-                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/>
-                      </svg> Recent Posts & Events</h3>
+                    <h3><svg class="svg-highlighted" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                            fill="currentColor" class="bi bi-file-post" viewBox="0 0 16 16">
+                            <path
+                                d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z" />
+                            <path
+                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
+                        </svg> Recent Posts & Events</h3>
                 </div>
                 <!-- Recent Post & Events -->
                 <div class="__media" style="min-height: 250px;">
-                    <div class="row gap-4 row-gap-4" id="__mediaResults"></div>
+                    <div class="row gap-4 row-gap-4 d-none" id="__mediaResults">
+                        <div class="col-md-6" style="height: fit-content;">
+                            <div class="row" title="Loading...">
+                                <div class="col-md-6 p-0 h-100 bg-secondary" style="min-height: 300px;"></div>
+                                <div class="__body col-md-6"></div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row gap-4 row-gap-4 opacity-75" id="__mediaLoading">
                         <div class="col-md-6" style="height: fit-content;">
                             <div class="row">
@@ -219,21 +231,21 @@
                         <img src="assets/images/banner.jpg" alt="&nbsp;">
                     </div>
                     <div class="col-md-5">
-                        <h3><svg class="svg-highlighted" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-question" viewBox="0 0 16 16">
-                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
-                          </svg> FAQ</h3>
+                        <h3><svg class="svg-highlighted" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                fill="currentColor" class="bi bi-question" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+                            </svg> FAQ</h3>
                         <div class="__faq-lists mt-4 accordion accordion-flush" id="faqLists">
                             <!-- #1 -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq1" aria-expanded="false"
-                                        aria-controls="faq1">
+                                        data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
                                         What is Lorem Ipsum?
                                     </button>
                                 </h2>
-                                <div id="faq1" class="accordion-collapse collapse"
-                                    data-bs-parent="#faqLists">
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqLists">
                                     <div class="accordion-body">Lorem ipsum dolor sit, amet consectetur adipisicing
                                         elit. Porro ullam veritatis quo, suscipit, esse eaque tempora delectus, rem
                                         optio similique accusamus doloremque impedit nostrum dolores eos dolor qui.
@@ -244,13 +256,11 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq2" aria-expanded="false"
-                                        aria-controls="faq2">
+                                        data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
                                         Who is Lorem Ipsum?
                                     </button>
                                 </h2>
-                                <div id="faq2" class="accordion-collapse collapse"
-                                    data-bs-parent="#faqLists">
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqLists">
                                     <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Nemo accusantium est illo maiores saepe vitae eos nobis mollitia inventore
                                         praesentium temporibus tenetur velit sit voluptatem, veritatis facere optio
@@ -261,13 +271,11 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#faq3" aria-expanded="false"
-                                        aria-controls="faq3">
+                                        data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
                                         Why is Lorem Ipsum?
                                     </button>
                                 </h2>
-                                <div id="faq3" class="accordion-collapse collapse"
-                                    data-bs-parent="#faqLists">
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqLists">
                                     <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                         Corrupti quod, atque, perferendis debitis optio architecto omnis repellendus
                                         harum, tempore pariatur quia tempora fugit? In corrupti adipisci veniam, et
