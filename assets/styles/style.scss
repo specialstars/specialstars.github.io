@@ -41,8 +41,8 @@ a {
 }
 
 .__animation {
- -webkit-transform: translateY(70px);
- transform: translateY(70px);
+ -webkit-transform: translateY(100px);
+ transform: translateY(100px);
  -webkit-transition-delay: 0.3s;
  -o-transition-delay: 0.3s;
  transition-delay: 0.3s;
@@ -381,7 +381,6 @@ a {
    justify-content: center;
    .__list {
     text-align: center;
-    transition: all 0.1s ease-in-out;
     &:hover {
      opacity: 0.9;
     }
