@@ -27,7 +27,12 @@ let $firebase_database = getDatabase;
 let $firebase_database_ref = ref;
 let $firebase_database_then = onValue;
 
-var __media = document.querySelectorAll(".__c-section .__media .row")[0];
+var __media = document.querySelectorAll(
+ ".__c-section .__media #__mediaResults"
+)[0];
+var __mediaLoading = document.querySelectorAll(
+ ".__c-section .__media #__mediaLoading"
+)[0];
 
 const $firebase_config = {
  apiKey: "AIzaSyBm3d0-_5Ll3uYxaNeGiPizR9WTUYVmnTk",
@@ -115,8 +120,7 @@ function startDatabaseQueries() {
     var tags = posts[post].tags;
     var date = posts[post].date;
     // Create element for each post.
-    if (document.getElementById("__mediaLoading"))
-     document.getElementById("__mediaLoading").style.display = "none";
+    if (__mediaLoading) __mediaLoading.style.display = "none";
     createPostElement(post, title, body, author, picture, tags, date);
    }
   });
@@ -132,15 +136,21 @@ function startDatabaseQueries() {
 // Load
 window.addEventListener("load", () => {
  startDatabaseQueries();
+
+ // Intersection Observer using for media only
+ if (window.IntersectionObserver) {
+  const observer = new IntersectionObserver((entries) => {
+   entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+     __media.classList.add("d-none");
+     __mediaLoading.style.display = "block";
+     setTimeout(() => {
+      __media.classList.remove("d-none");
+      __mediaLoading.style.display = "none";
+     }, 1000);
+    }
+   });
+  });
+  observer.observe(document.querySelector(".__c-section .__media"));
+ }
 });
-// Instersection Observer
-const $io = new IntersectionObserver((entries) => {
- entries.forEach((entry) => {
-  if (entry.isIntersecting) {
-   entry.target.classList.remove("visibility-hidden");
-  } else {
-   entry.target.classList.add("visibility-hidden");
-  }
- });
-});
-$io.observe(document.querySelector(".__c-section .__media"));
