@@ -57,12 +57,13 @@ a {
  }
 }
 
-.tawk-icon-right,iframe img {
-    visibility: hidden !important;
-    opacity: 0 !important;
-    display: none !important;
-    transform: scale(0) !important;
-    background-color: red !important;
+.tawk-icon-right,
+iframe img {
+ visibility: hidden !important;
+ opacity: 0 !important;
+ display: none !important;
+ transform: scale(0) !important;
+ background-color: red !important;
 }
 
 /* __ Navigation Bar __ */
@@ -160,12 +161,11 @@ a {
   position: relative;
   width: 100%;
   padding: 3.5rem 1rem;
-  // top to bottom gradient
-    background: linear-gradient(
-     to left,
-     transparent,
-     rgba($secondary-color, 0.2)
-    );
+  background: linear-gradient(
+   to left,
+   transparent,
+   rgba($secondary-color, 0.2)
+  );
   .__details {
    display: flex;
    flex-direction: column;
@@ -209,7 +209,35 @@ a {
  .__a-section {
   width: 100%;
   padding: 4rem 2rem;
-  background-color: $soft-color;
+  background-color: #fff;
+  .__features {
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .main {
+            .icon {
+                width: 6rem;
+                height: 6rem;
+                padding: 2rem 0;
+                background-color: rgba($secondary-color, 0.2);
+                border-radius: 50%;
+                margin-bottom: 1rem;
+                svg {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    fill: $secondary-color;
+                }
+            }
+            span {
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+  }
  }
  /* > B Section */
  .__b-section {
