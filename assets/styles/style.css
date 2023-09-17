@@ -145,7 +145,7 @@ iframe img {
 /* __ Home Page __ */
 .__home-page {
   /* > Hero Section */
-  /* > A Section */
+  /* > Feature Section */
   /* > B Section */
   /* > FAQ Section */
 }
@@ -191,18 +191,18 @@ iframe img {
   background-color: rgba(0, 133, 166, 0.1);
   border-radius: 0.8rem;
 }
-.__home-page .__a-section {
+.__home-page .__feature-section {
   width: 100%;
   padding: 4rem 2rem;
   background-color: #fff;
 }
-.__home-page .__a-section .__features div {
+.__home-page .__feature-section .__features div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.__home-page .__a-section .__features div .main .icon {
+.__home-page .__feature-section .__features div .main .icon {
   width: 6rem;
   height: 6rem;
   padding: 2rem 0;
@@ -210,12 +210,12 @@ iframe img {
   border-radius: 50%;
   margin-bottom: 1rem;
 }
-.__home-page .__a-section .__features div .main .icon svg {
+.__home-page .__feature-section .__features div .main .icon svg {
   width: 2.5rem;
   height: 2.5rem;
   fill: #0085a6;
 }
-.__home-page .__a-section .__features div .main span {
+.__home-page .__feature-section .__features div .main span {
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -526,7 +526,7 @@ iframe img {
     max-width: 300px;
     aspect-ratio: 3/2;
   }
-  .__home-page .__a-section .container p {
+  .__home-page .__feature-section .container p {
     font-size: 0.9rem;
   }
   .__home-page .__media-section .__title svg,

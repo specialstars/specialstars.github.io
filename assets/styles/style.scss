@@ -205,38 +205,38 @@ iframe img {
    }
   }
  }
- /* > A Section */
- .__a-section {
+ /* > Feature Section */
+ .__feature-section {
   width: 100%;
   padding: 4rem 2rem;
   background-color: #fff;
   .__features {
-    div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        .main {
-            .icon {
-                width: 6rem;
-                height: 6rem;
-                padding: 2rem 0;
-                background-color: rgba($secondary-color, 0.2);
-                border-radius: 50%;
-                margin-bottom: 1rem;
-                svg {
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    fill: $secondary-color;
-                }
-            }
-            span {
-                font-size: 1.2rem;
-                font-weight: 600;
-                margin-bottom: 0.5rem;
-            }
-        }
+   div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .main {
+     .icon {
+      width: 6rem;
+      height: 6rem;
+      padding: 2rem 0;
+      background-color: rgba($secondary-color, 0.2);
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      svg {
+       width: 2.5rem;
+       height: 2.5rem;
+       fill: $secondary-color;
+      }
+     }
+     span {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+     }
     }
+   }
   }
  }
  /* > B Section */
@@ -535,7 +535,7 @@ iframe img {
     }
    }
   }
-  .__a-section {
+  .__feature-section {
    .container {
     p {
      font-size: 0.9rem;
