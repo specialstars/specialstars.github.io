@@ -48,11 +48,6 @@ a {
   transform: translateY(0px);
 }
 
-.tawk-icon img {
-  visibility: hidden;
-  opacity: 0;
-}
-
 /* __ Navigation Bar __ */
 .__navbar {
   position: sticky;
