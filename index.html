@@ -25,7 +25,7 @@
 
 <body>
     <!-- __ Navigation Bar -->
-    <div class="__navbar navbar navbar-expand-md">
+    <div class="__navbar navbar navbar-expand-xl">
         <div class="container-lg">
             <div class="__logo navbar-brand">
                 <a href="/">
@@ -45,18 +45,19 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="team.html">Our Team</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <!-- <li class="dropdown">
-                        <a class="dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="gallery.html" id="navbarGalleryDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
+                            Gallery
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarGalleryDropdown">
+                            <li><a class="dropdown-item" href="gallery.html?q=Dhaka">Dhaka</a></li>
+                            <li><a class="dropdown-item" href="gallery.html?q=Team+Meatup">Team Meetup</a></li>
+                            <li><a class="dropdown-item" href="gallery.html?q=Jamuna+Park">Jamuna Park</a></li>
                         </ul>
-                    </li> -->
+                    </li>
+                    <li><a href="updates.html">News & Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -76,7 +77,6 @@
                             needs. Join us in creating an inclusive world where everyone can thrive</p>
                         <div class="w-100 d-flex gap-3 __action">
                             <a href="about.html" class="btn btn-primary">Learn More</a>
-                            <a href="contact.html" class="btn btn-secondary">Join Us</a>
                         </div>
 
                     </div>
@@ -134,8 +134,8 @@
                 </div>
             </div>
         </div>
-        <!-- > C Section -->
-        <div class="__c-section">
+        <!-- > Media Section -->
+        <div class="__media-section">
             <div class="container">
                 <div class="__title">
                     <h3><svg class="svg-highlighted" xmlns="http://www.w3.org/2000/svg" width="26" height="26"
@@ -144,9 +144,8 @@
                                 d="M4 3.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8z" />
                             <path
                                 d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
-                        </svg> Recent Posts & Events</h3>
+                        </svg> Latest Updates</h3>
                 </div>
-                <!-- Recent Post & Events -->
                 <div class="__media" style="min-height: 250px;">
                     <div class="row gap-4 row-gap-4 d-none" id="__mediaResults">
                         <div class="col-md-6" style="height: fit-content;">
@@ -202,22 +201,22 @@
                     </div>
                 </div>
             </div>
-            <!-- Loading Effects -->
-            <div class="__media-show-more-box modal fade" id="modalMediaShowMore" tabindex="-1"
-                aria-labelledby="modalMediaShowMoreTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="modalMediaShowMoreTitle"></h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body p-0">
-                            <img id="modalMediaShowMoreImage" src="" alt="&nbsp;" class="w-100" />
-                            <div class="p-3" id="modalMediaShowMoreBody" style="white-space: break-spaces;"></div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
+        </div>
+        <!-- !! Full Post View Modal -->
+        <div class="__media-show-more-box modal fade" id="modalMediaShowMore" tabindex="-1"
+            aria-labelledby="modalMediaShowMoreTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalMediaShowMoreTitle"></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <img id="modalMediaShowMoreImage" src="" alt="&nbsp;" class="w-100" />
+                        <div class="p-3" id="modalMediaShowMoreBody" style="white-space: break-spaces;"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

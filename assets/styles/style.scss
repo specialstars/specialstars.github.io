@@ -130,6 +130,17 @@ a {
     opacity: 0.9;
    }
   }
+  .dropdown-item {
+   font-size: 0.9rem;
+   &:active,
+   &.active {
+    background-color: rgba($secondary-color, 0.8);
+    color: $secondary-text-color;
+   }
+   &:hover:not(.active) {
+    background-color: rgba($secondary-color, 0.2);
+   }
+  }
  }
 }
 
@@ -140,25 +151,6 @@ a {
   position: relative;
   width: 100%;
   padding: 3.5rem 1rem;
-  &::after,
-  &::before {
-   content: "";
-   display: block;
-   position: absolute;
-   width: 12rem;
-   height: 12rem;
-   background-color: rgba($secondary-color, 0.07);
-   border-radius: 50%;
-   bottom: -6rem;
-   left: 1rem;
-   z-index: -1;
-  }
-  &::before {
-   width: 14rem;
-   height: 14rem;
-   left: 5rem;
-   bottom: 0;
-  }
   .__details {
    display: flex;
    flex-direction: column;
@@ -221,8 +213,28 @@ a {
    }
   }
  }
- /* > C Section */
- .__c-section {
+ /* > FAQ Section */
+ .__faq-section {
+  padding: 1rem 2rem 5rem 2rem;
+  .row {
+   img {
+    width: 100%;
+   }
+   .__faq-lists {
+    button {
+     font-weight: 600;
+    }
+    button:focus {
+     box-shadow: none !important;
+    }
+   }
+  }
+ }
+}
+.__home-page,
+.__updates-page {
+ /* > Media Section */
+ .__media-section {
   width: 100%;
   padding: 5rem 2rem 7rem 2rem;
   .__title {
@@ -312,35 +324,20 @@ a {
    }
   }
  }
- /* > FAQ Section */
- .__faq-section {
-  padding: 1rem 2rem 5rem 2rem;
-  .row {
-   img {
-    width: 100%;
-   }
-   .__faq-lists {
-    button {
-     font-weight: 600;
-    }
-    button:focus {
-     box-shadow: none !important;
-    }
-   }
-  }
- }
 }
 
-/* __ (About + Team + Contact) Pages __ */
+/* __ (About + Team + Contact + Updates + Gallery) Pages __ */
 .__about-page,
 .__team-page,
-.__contact-page {
- background-color: darken($primary-color, 4%);
+.__contact-page,
+.__updates-page,
+.__gallery-page {
  /* > Hero section */
  .__hero-section {
   position: relative;
   width: 100%;
   padding: 3rem 1rem;
+  background-color: darken($primary-color, 4%);
   h1 {
    font-family: "PT Sans", sans-serif;
   }
@@ -435,7 +432,7 @@ a {
 }
 
 /* Media Queries */
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 1199px) {
  .__navbar {
   .__menu {
    padding-top: 0.6rem;
@@ -461,7 +458,8 @@ a {
    }
   }
  }
-
+}
+@media screen and (max-width: 766px) {
  .__home-page {
   .__hero-section {
    padding: 1rem;
@@ -501,7 +499,11 @@ a {
     }
    }
   }
-  .__c-section {
+ }
+
+ .__home-page,
+ .__updates-page {
+  .__media-section {
    .__title {
     svg {
      display: none;

@@ -27,11 +27,13 @@ let $firebase_database = getDatabase;
 let $firebase_database_ref = ref;
 let $firebase_database_then = onValue;
 
-var __media = document.querySelectorAll(
- ".__home-page .__c-section .__media #__mediaResults"
+var __mediaSection, __media, __mediaLoading;
+__mediaSection = document.querySelector(".__media-section .__media");
+__media = document.querySelectorAll(
+ ".__media-section .__media #__mediaResults"
 )[0];
-var __mediaLoading = document.querySelectorAll(
- ".__home-page .__c-section .__media #__mediaLoading"
+__mediaLoading = document.querySelectorAll(
+ ".__media-section .__media #__mediaLoading"
 )[0];
 
 const $firebase_config = {
@@ -103,7 +105,7 @@ function createPostElement(data, title, body, author, picture, tags, date) {
  );
 
  postElement.innerHTML = `
-        <div class="row" data-bs-toggle="modal" data-bs-target="#modalMediaShowMore" onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.parentElement.querySelector('h5').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreImage').src = this.querySelector('.__header > img').src; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.parentElement.querySelector('span.tags').innerHTML;" title="Click here to see the full post">
+        <div class="row" onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.parentElement.querySelector('h5').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreImage').src = this.querySelector('.__header > img').src; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.parentElement.querySelector('span.tags').innerHTML;" title="Click here to see the full post" data-bs-toggle="modal" data-bs-target="#modalMediaShowMore">
             <div class="__header col-md-6">
                 <img src=${picture} alt="&nbsp;">
             </div>
@@ -112,9 +114,7 @@ function createPostElement(data, title, body, author, picture, tags, date) {
                 <p>${body}</p>
                 <div class="mt-auto">
                     <div class="d-flex">
-                        <span class="date me-2">${new Date(
-                         date
-                        ).toDateString()}</span>
+                        <span class="date me-2">${date}</span>
                         <span class="tags">${tags}</span>
                     </div>
                 </div>
@@ -133,22 +133,24 @@ function startDatabaseQueries() {
   $firebase_database_then(postsRef, function (data) {
    var posts = data.val();
    if (__media) __media.innerHTML = "";
+   // limit to top 1 post only
+   if (document.querySelector(".__home-page"))
+    posts = Object.values(posts).slice(0, 2);
+
    // Iterate through posts.
    for (var post in posts) {
-    var title = posts[post].title;
-    var body = posts[post].body;
+    var title = posts[post].title || "Untitled";
+    var body = posts[post].body || "No Description is provided.";
     var author = posts[post].author || "A Member";
-    var picture = posts[post].picture;
-    var tags = posts[post].tags;
-    var date = posts[post].date;
+    var picture = posts[post].picture || "assets/images/banner.jpg";
+    var tags = posts[post].tags || "0";
+    var date = new Date(posts[post].date).toDateString();
+
     // Create element for each post.
     if (__mediaLoading) __mediaLoading.style.display = "none";
     createPostElement(post, title, body, author, picture, tags, date);
    }
   });
-
-  // postsRef.on("child_changed", function (data) {});
-  // postsRef.on("child_removed", function (data) {});
  };
 
  // Fetching and displaying all posts of each sections.
@@ -159,7 +161,7 @@ function startDatabaseQueries() {
  * Load everything & intersecting __media
  */
 window.addEventListener("load", () => {
- if (document.querySelector(".__home-page .__c-section .__media")) {
+ if (__mediaSection) {
   // Start listening for posts.
   startDatabaseQueries();
   // Loading Effect on Scroll
@@ -176,9 +178,7 @@ window.addEventListener("load", () => {
      }
     });
    });
-   observer.observe(
-    document.querySelector(".__home-page .__c-section .__media")
-   );
+   observer.observe(__mediaSection);
   }
  }
 });

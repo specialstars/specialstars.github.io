@@ -122,37 +122,28 @@ a {
 .__navbar .__menu > ul > li:active {
   opacity: 0.9;
 }
+.__navbar .__menu .dropdown-item {
+  font-size: 0.9rem;
+}
+.__navbar .__menu .dropdown-item:active, .__navbar .__menu .dropdown-item.active {
+  background-color: rgba(0, 133, 166, 0.8);
+  color: #fff;
+}
+.__navbar .__menu .dropdown-item:hover:not(.active) {
+  background-color: rgba(0, 133, 166, 0.2);
+}
 
 /* __ Home Page __ */
 .__home-page {
   /* > Hero Section */
   /* > A Section */
   /* > B Section */
-  /* > C Section */
   /* > FAQ Section */
 }
 .__home-page .__hero-section {
   position: relative;
   width: 100%;
   padding: 3.5rem 1rem;
-}
-.__home-page .__hero-section::after, .__home-page .__hero-section::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 12rem;
-  height: 12rem;
-  background-color: rgba(0, 133, 166, 0.07);
-  border-radius: 50%;
-  bottom: -6rem;
-  left: 1rem;
-  z-index: -1;
-}
-.__home-page .__hero-section::before {
-  width: 14rem;
-  height: 14rem;
-  left: 5rem;
-  bottom: 0;
 }
 .__home-page .__hero-section .__details {
   display: flex;
@@ -211,92 +202,6 @@ a {
   font-size: 0.9rem;
   padding: 1rem 0;
 }
-.__home-page .__c-section {
-  width: 100%;
-  padding: 5rem 2rem 7rem 2rem;
-}
-.__home-page .__c-section .__title {
-  position: relative;
-  margin-bottom: 1rem;
-}
-.__home-page .__c-section .__title h3 {
-  width: fit-content;
-  background-color: #f7f7f7;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-.__home-page .__c-section .__title::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #0085a6;
-  top: 1rem;
-  left: 0;
-  z-index: -1;
-}
-.__home-page .__c-section .__media {
-  padding-top: 2rem;
-}
-.__home-page .__c-section .__media > .row {
-  height: 100%;
-}
-.__home-page .__c-section .__media > .row > .col-md-6 {
-  width: 48% !important;
-}
-.__home-page .__c-section .__media > .row > div {
-  background-color: #fff;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
-.__home-page .__c-section .__media > .row > div > .row {
-  height: 100%;
-  cursor: pointer;
-}
-.__home-page .__c-section .__media > .row > div .__header {
-  padding: 0;
-  position: relative;
-}
-.__home-page .__c-section .__media > .row > div .__header img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.__home-page .__c-section .__media > .row > div .__header::after {
-  /* blurry */
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  top: 0;
-  left: 0;
-}
-.__home-page .__c-section .__media > .row > div .__body {
-  padding: 1.4rem;
-  display: flex;
-  flex-direction: column;
-}
-.__home-page .__c-section .__media > .row > div .__body p {
-  max-height: 6rem;
-  margin: 1rem 0;
-  font-size: 0.88rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
-}
-.__home-page .__c-section .__media > .row > div .__body .btn {
-  width: fit-content;
-}
-.__home-page .__c-section .__media > .row > div .__body .date,
-.__home-page .__c-section .__media > .row > div .__body .tags {
-  font-size: 0.7rem;
-  background-color: rgba(0, 133, 166, 0.1);
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.5rem;
-  margin: 0.2rem 0;
-}
 .__home-page .__faq-section {
   padding: 1rem 2rem 5rem 2rem;
 }
@@ -310,28 +215,144 @@ a {
   box-shadow: none !important;
 }
 
-/* __ (About + Team + Contact) Pages __ */
+.__home-page,
+.__updates-page {
+  /* > Media Section */
+}
+.__home-page .__media-section,
+.__updates-page .__media-section {
+  width: 100%;
+  padding: 5rem 2rem 7rem 2rem;
+}
+.__home-page .__media-section .__title,
+.__updates-page .__media-section .__title {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.__home-page .__media-section .__title h3,
+.__updates-page .__media-section .__title h3 {
+  width: fit-content;
+  background-color: #f7f7f7;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.__home-page .__media-section .__title::before,
+.__updates-page .__media-section .__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #0085a6;
+  top: 1rem;
+  left: 0;
+  z-index: -1;
+}
+.__home-page .__media-section .__media,
+.__updates-page .__media-section .__media {
+  padding-top: 2rem;
+}
+.__home-page .__media-section .__media > .row,
+.__updates-page .__media-section .__media > .row {
+  height: 100%;
+}
+.__home-page .__media-section .__media > .row > .col-md-6,
+.__updates-page .__media-section .__media > .row > .col-md-6 {
+  width: 48% !important;
+}
+.__home-page .__media-section .__media > .row > div,
+.__updates-page .__media-section .__media > .row > div {
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+.__home-page .__media-section .__media > .row > div > .row,
+.__updates-page .__media-section .__media > .row > div > .row {
+  height: 100%;
+  cursor: pointer;
+}
+.__home-page .__media-section .__media > .row > div .__header,
+.__updates-page .__media-section .__media > .row > div .__header {
+  padding: 0;
+  position: relative;
+}
+.__home-page .__media-section .__media > .row > div .__header img,
+.__updates-page .__media-section .__media > .row > div .__header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.__home-page .__media-section .__media > .row > div .__header::after,
+.__updates-page .__media-section .__media > .row > div .__header::after {
+  /* blurry */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+}
+.__home-page .__media-section .__media > .row > div .__body,
+.__updates-page .__media-section .__media > .row > div .__body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.__home-page .__media-section .__media > .row > div .__body p,
+.__updates-page .__media-section .__media > .row > div .__body p {
+  max-height: 6rem;
+  margin: 1rem 0;
+  font-size: 0.88rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+.__home-page .__media-section .__media > .row > div .__body .btn,
+.__updates-page .__media-section .__media > .row > div .__body .btn {
+  width: fit-content;
+}
+.__home-page .__media-section .__media > .row > div .__body .date,
+.__home-page .__media-section .__media > .row > div .__body .tags,
+.__updates-page .__media-section .__media > .row > div .__body .date,
+.__updates-page .__media-section .__media > .row > div .__body .tags {
+  font-size: 0.7rem;
+  background-color: rgba(0, 133, 166, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  margin: 0.2rem 0;
+}
+
+/* __ (About + Team + Contact + Updates + Gallery) Pages __ */
 .__about-page,
 .__team-page,
-.__contact-page {
-  background-color: #ededed;
+.__contact-page,
+.__updates-page,
+.__gallery-page {
   /* > Hero section */
 }
 .__about-page .__hero-section,
 .__team-page .__hero-section,
-.__contact-page .__hero-section {
+.__contact-page .__hero-section,
+.__updates-page .__hero-section,
+.__gallery-page .__hero-section {
   position: relative;
   width: 100%;
   padding: 3rem 1rem;
+  background-color: #ededed;
 }
 .__about-page .__hero-section h1,
 .__team-page .__hero-section h1,
-.__contact-page .__hero-section h1 {
+.__contact-page .__hero-section h1,
+.__updates-page .__hero-section h1,
+.__gallery-page .__hero-section h1 {
   font-family: "PT Sans", sans-serif;
 }
 .__about-page .__hero-section p,
 .__team-page .__hero-section p,
-.__contact-page .__hero-section p {
+.__contact-page .__hero-section p,
+.__updates-page .__hero-section p,
+.__gallery-page .__hero-section p {
   margin-top: 1rem;
   line-height: 1.7;
   font-size: 0.9rem;
@@ -414,7 +435,7 @@ a {
 }
 
 /* Media Queries */
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 1199px) {
   .__navbar .__menu {
     padding-top: 0.6rem;
   }
@@ -438,6 +459,8 @@ a {
   .__navbar .__menu > ul > li:last-child {
     border-radius: 0 0 0.4rem 0.4rem;
   }
+}
+@media screen and (max-width: 766px) {
   .__home-page .__hero-section {
     padding: 1rem;
     text-align: center;
@@ -472,15 +495,18 @@ a {
   .__home-page .__a-section .container p {
     font-size: 0.9rem;
   }
-  .__home-page .__c-section .__title svg {
+  .__home-page .__media-section .__title svg,
+  .__updates-page .__media-section .__title svg {
     display: none;
   }
-  .__home-page .__c-section .__title h3 {
+  .__home-page .__media-section .__title h3,
+  .__updates-page .__media-section .__title h3 {
     font-size: 1.2rem;
     padding: 0 0.8rem;
     line-height: 1.5;
   }
-  .__home-page .__c-section .__media .row > .col-md-6 {
+  .__home-page .__media-section .__media .row > .col-md-6,
+  .__updates-page .__media-section .__media .row > .col-md-6 {
     width: 100% !important;
   }
   .__team-page .__hero-section h1 {
