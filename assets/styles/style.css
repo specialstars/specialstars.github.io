@@ -48,6 +48,14 @@ a {
   transform: translateY(0px);
 }
 
+.tawk-icon-right, iframe img {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  display: none !important;
+  transform: scale(0) !important;
+  background-color: red !important;
+}
+
 /* __ Navigation Bar __ */
 .__navbar {
   position: sticky;
@@ -144,6 +152,7 @@ a {
   position: relative;
   width: 100%;
   padding: 3.5rem 1rem;
+  background: linear-gradient(to left, transparent, rgba(0, 133, 166, 0.2));
 }
 .__home-page .__hero-section .__details {
   display: flex;

@@ -57,6 +57,14 @@ a {
  }
 }
 
+.tawk-icon-right,iframe img {
+    visibility: hidden !important;
+    opacity: 0 !important;
+    display: none !important;
+    transform: scale(0) !important;
+    background-color: red !important;
+}
+
 /* __ Navigation Bar __ */
 .__navbar {
  position: sticky;
@@ -152,6 +160,12 @@ a {
   position: relative;
   width: 100%;
   padding: 3.5rem 1rem;
+  // top to bottom gradient
+    background: linear-gradient(
+     to left,
+     transparent,
+     rgba($secondary-color, 0.2)
+    );
   .__details {
    display: flex;
    flex-direction: column;
