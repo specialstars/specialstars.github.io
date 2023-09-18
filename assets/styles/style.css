@@ -132,6 +132,7 @@ a {
 
 /* __ Home Page __ */
 .__home-page {
+  /* > Hero and Feature Section */
   /* > Hero Section */
   /* > Feature Section */
   /* > B Section */
@@ -163,7 +164,7 @@ a {
 .__home-page .__hero-section .__details h1 span {
   background-color: rgba(0, 127, 255, 0.1);
   color: #0085a6;
-  padding: 0 0.3rem;
+  padding: 0.2rem 0.3rem;
   border-radius: 0.5rem;
 }
 .__home-page .__hero-section .__details p {
@@ -358,6 +359,7 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 .__home-page .__media-section .__media > .row > div .__body .btn,
 .__updates-page .__media-section .__media > .row > div .__body .btn {

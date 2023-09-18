@@ -148,6 +148,7 @@ a {
 
 /* __ Home Page __ */
 .__home-page {
+ /* > Hero and Feature Section */
  .__hero-and-feature-binding-color {
   width: 100%;
   background: radial-gradient(
@@ -176,7 +177,7 @@ a {
     span {
      background-color: rgba($third-color, 0.1);
      color: $secondary-color;
-     padding: 0 0.3rem;
+     padding: 0.2rem 0.3rem;
      border-radius: 0.5rem;
     }
    }
@@ -366,6 +367,11 @@ a {
        overflow: hidden;
        text-overflow: ellipsis;
        mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+       );
+       -webkit-mask-image: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 1),
         rgba(0, 0, 0, 0)
