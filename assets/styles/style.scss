@@ -34,7 +34,6 @@ a {
  box-shadow: $box-shadow;
  border: 0 !important;
 
-
  &:hover,
  &:active,
  &:focus {
@@ -149,16 +148,20 @@ a {
 
 /* __ Home Page __ */
 .__home-page {
+ .__hero-and-feature-binding-color {
+  width: 100%;
+  background: radial-gradient(
+   circle at center,
+   rgba($secondary-color, 0.05),
+   #fff
+  );
+ }
  /* > Hero Section */
  .__hero-section {
   position: relative;
   width: 100%;
   padding: 3.5rem 1rem;
-  background: linear-gradient(
-   to left,
-   transparent,
-   rgba($secondary-color, 0.2)
-  );
+  background: transparent;
   .__details {
    display: flex;
    flex-direction: column;
@@ -204,7 +207,8 @@ a {
  .__feature-section {
   width: 100%;
   padding: 4rem 2rem;
-  background-color: #fff;
+  background: rgba(#333, 0.05);
+  backdrop-filter: blur(10px);
   .__features {
    div {
     display: flex;

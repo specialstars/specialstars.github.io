@@ -137,11 +137,15 @@ a {
   /* > B Section */
   /* > FAQ Section */
 }
+.__home-page .__hero-and-feature-binding-color {
+  width: 100%;
+  background: radial-gradient(circle at center, rgba(0, 133, 166, 0.05), #fff);
+}
 .__home-page .__hero-section {
   position: relative;
   width: 100%;
   padding: 3.5rem 1rem;
-  background: linear-gradient(to left, transparent, rgba(0, 133, 166, 0.2));
+  background: transparent;
 }
 .__home-page .__hero-section .__details {
   display: flex;
@@ -184,7 +188,8 @@ a {
 .__home-page .__feature-section {
   width: 100%;
   padding: 4rem 2rem;
-  background-color: #fff;
+  background: rgba(51, 51, 51, 0.05);
+  backdrop-filter: blur(10px);
 }
 .__home-page .__feature-section .__features div {
   display: flex;
