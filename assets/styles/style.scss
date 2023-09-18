@@ -453,13 +453,12 @@ a {
 
 /* __ Footer __ */
 .__footer {
- width: 100%;
  .__section {
-    width: 100%;
-    padding: 2rem 0;
-    background-color: lighten($secondary-color, 5%);
-    color: $secondary-text-color;
-    min-height: 250px;
+  width: 100%;
+  padding: 2rem;
+  background-color: lighten($secondary-color, 5%);
+  color: $secondary-text-color;
+  min-height: 250px;
  }
  .__attribution {
   width: 100%;

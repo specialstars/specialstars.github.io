@@ -446,12 +446,9 @@ a {
 
 /* __ Contact Page __ */
 /* __ Footer __ */
-.__footer {
-  width: 100%;
-}
 .__footer .__section {
   width: 100%;
-  padding: 2rem 0;
+  padding: 2rem;
   background-color: #0099c0;
   color: #fff;
   min-height: 250px;
