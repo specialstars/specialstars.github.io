@@ -451,12 +451,12 @@ a {
   padding: 2rem;
   background-color: #0099c0;
   color: #fff;
-  min-height: 250px;
+  min-height: 300px;
 }
 .__footer .__attribution {
   width: 100%;
   padding: 1rem 2rem;
-  padding-bottom: 0;
+  padding-top: 2rem;
   background-color: #0085a6;
   color: #fff;
 }
