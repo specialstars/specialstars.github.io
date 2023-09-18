@@ -251,7 +251,7 @@ a {
  .__faq-section {
   padding: 1rem 2rem 5rem 2rem;
   .row {
-   &>div:first-child {
+   & > div:first-child {
     display: flex;
     justify-content: center;
     img {
@@ -454,21 +454,31 @@ a {
 /* __ Footer __ */
 .__footer {
  width: 100%;
- padding: 3rem 2rem;
- background-color: $secondary-color;
- color: $secondary-text-color;
- p {
-  font-size: 0.85rem;
-  padding: 0.5rem 0;
-  line-height: 1.5rem;
+ .__section {
+    width: 100%;
+    padding: 2rem 0;
+    background-color: lighten($secondary-color, 5%);
+    color: $secondary-text-color;
+    min-height: 250px;
  }
- img {
-  width: 25px;
-  height: 25px;
-  margin-left: 1rem;
- }
- a:first-child img {
-  margin-left: 0;
+ .__attribution {
+  width: 100%;
+  padding: 1rem 2rem;
+  padding-bottom: 0;
+  background-color: $secondary-color;
+  color: $secondary-text-color;
+  p {
+   font-size: 0.85rem;
+   line-height: 1.5rem;
+  }
+  img {
+   width: 25px;
+   height: 25px;
+   margin-left: 1rem;
+  }
+  a:first-child img {
+   margin-left: 0;
+  }
  }
 }
 

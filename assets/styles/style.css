@@ -448,21 +448,31 @@ a {
 /* __ Footer __ */
 .__footer {
   width: 100%;
-  padding: 3rem 2rem;
+}
+.__footer .__section {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #0099c0;
+  color: #fff;
+  min-height: 250px;
+}
+.__footer .__attribution {
+  width: 100%;
+  padding: 1rem 2rem;
+  padding-bottom: 0;
   background-color: #0085a6;
   color: #fff;
 }
-.__footer p {
+.__footer .__attribution p {
   font-size: 0.85rem;
-  padding: 0.5rem 0;
   line-height: 1.5rem;
 }
-.__footer img {
+.__footer .__attribution img {
   width: 25px;
   height: 25px;
   margin-left: 1rem;
 }
-.__footer a:first-child img {
+.__footer .__attribution a:first-child img {
   margin-left: 0;
 }
 
