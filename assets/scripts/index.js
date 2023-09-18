@@ -33,6 +33,7 @@
    ];
 
    function fadeIn(elem) {
+    if (elem == null) return;
     var distInView = elem.getBoundingClientRect().top - window.innerHeight;
     if (distInView) {
      elem.classList.add("__animation");

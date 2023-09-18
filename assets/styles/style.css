@@ -59,7 +59,7 @@ a {
   height: 60px;
   max-height: 60px;
   padding: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #434d5b;
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -424,7 +424,6 @@ a {
   padding: 2.5rem;
   background-color: #0085a6;
   color: #ffffff;
-  margin-top: 2rem;
 }
 .__team-page .__list-section .__title h3 {
   font-size: 1.4rem;
