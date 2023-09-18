@@ -34,8 +34,8 @@ a {
 }
 
 .__animation {
-  -webkit-transform: translateY(100px);
-  transform: translateY(100px);
+  -webkit-transform: translateY(100px) scale(0.9);
+  transform: translateY(100px) scale(0.9);
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
@@ -46,8 +46,8 @@ a {
 }
 .__animation.active {
   opacity: 1;
-  -webkit-transform: translateY(0px);
-  transform: translateY(0px);
+  -webkit-transform: translateY(0px) scale(1);
+  transform: translateY(0px) scale(1);
 }
 
 /* __ Navigation Bar __ */

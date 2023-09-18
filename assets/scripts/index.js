@@ -28,6 +28,7 @@
     ),
     ...document.querySelectorAll(".__home-page .__b-section .__card"),
     document.querySelector(".__home-page .__media-section"),
+    document.querySelector(".__home-page .__media-section .__media"),
     document.querySelector(".__home-page .__faq-section"),
    ];
 
