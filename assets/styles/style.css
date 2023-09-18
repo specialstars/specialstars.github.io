@@ -48,15 +48,6 @@ a {
   transform: translateY(0px);
 }
 
-.tawk-icon-right,
-iframe img {
-  visibility: hidden !important;
-  opacity: 0 !important;
-  display: none !important;
-  transform: scale(0) !important;
-  background-color: red !important;
-}
-
 /* __ Navigation Bar __ */
 .__navbar {
   position: sticky;
@@ -239,8 +230,15 @@ iframe img {
 .__home-page .__faq-section {
   padding: 1rem 2rem 5rem 2rem;
 }
-.__home-page .__faq-section .row img {
-  width: 100%;
+.__home-page .__faq-section .row > div:first-child {
+  display: flex;
+  justify-content: center;
+}
+.__home-page .__faq-section .row > div:first-child img {
+  width: 45%;
+  height: fit-content;
+  object-fit: cover;
+  object-position: center;
 }
 .__home-page .__faq-section .row .__faq-lists button {
   font-weight: 600;

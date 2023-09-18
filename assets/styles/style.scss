@@ -57,15 +57,6 @@ a {
  }
 }
 
-.tawk-icon-right,
-iframe img {
- visibility: hidden !important;
- opacity: 0 !important;
- display: none !important;
- transform: scale(0) !important;
- background-color: red !important;
-}
-
 /* __ Navigation Bar __ */
 .__navbar {
  position: sticky;
@@ -260,8 +251,15 @@ iframe img {
  .__faq-section {
   padding: 1rem 2rem 5rem 2rem;
   .row {
-   img {
-    width: 100%;
+   &>div:first-child {
+    display: flex;
+    justify-content: center;
+    img {
+     width: 45%;
+     height: fit-content;
+     object-fit: cover;
+     object-position: center;
+    }
    }
    .__faq-lists {
     button {
