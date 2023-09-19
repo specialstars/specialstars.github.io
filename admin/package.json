@@ -1,7 +1,6 @@
 {
-  "homepage":  "https://specialstars.github.io/admin/",
   "name": "special-stars-admin",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
