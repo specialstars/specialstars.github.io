@@ -77,6 +77,7 @@ a {
  background-color: #ffffff;
  color: $primary-text-color;
  backdrop-filter: blur(10px);
+ -webkit-backdrop-filter: blur(10px);
  z-index: 1000;
  user-select: none;
  &.scrolled {
@@ -210,6 +211,7 @@ a {
   padding: 4rem 2rem;
   background: rgba(#333, 0.05);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   .__features {
    div {
     display: flex;
