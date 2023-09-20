@@ -158,16 +158,17 @@ a {
   width: 100%;
   background: radial-gradient(
    circle at center,
-   rgba($secondary-color, 0.05),
-   #fff
+   rgba($secondary-color, 0.1),
+   #ffffff
   );
  }
  /* > Hero Section */
  .__hero-section {
   position: relative;
   width: 100%;
-  padding: 3.5rem 1rem;
-  background: transparent;
+  padding: 6rem 1rem 7rem 1rem;
+  background: rgba(#fff, 0.1);
+  backdrop-filter: blur(16px);
   .__details {
    display: flex;
    flex-direction: column;
@@ -199,13 +200,15 @@ a {
    }
   }
   .__designs {
+   display: flex;
+   align-items: center;
+   justify-content: center;
    img {
     width: 100%;
-    height: 100%;
+    height: 80%;
     object-fit: cover;
     background-color: rgba($secondary-color, 0.1);
     border-radius: 0.8rem;
-    padding: 0 1.5rem;
    }
   }
  }
@@ -246,13 +249,14 @@ a {
       margin-bottom: 0.5rem;
      }
      p:first-child {
-        font-weight: 700;
+      font-weight: 700;
      }
      p:last-child {
       font-size: 0.9rem;
       font-weight: 300;
       line-height: 1.8;
       text-align: center;
+      margin-top: 1rem;
      }
     }
    }
@@ -264,44 +268,45 @@ a {
   padding: 6rem 2rem 3rem 2rem;
   min-height: 100vh;
   .__intro {
-    span {
-        color: $secondary-color;
-    }
-    h2 {
-        margin: 0;
-        padding: 1rem 0 2rem 0;
-    }
+   span {
+    color: $secondary-color;
+   }
+   h2 {
+    margin: 0;
+    padding: 1rem 0 2rem 0;
+   }
   }
   .__switch {
-    section {
-        background-color: rgba($secondary-color, 0.1);
-        border-radius: 16px;
-        margin: 2rem 0;
-        padding: 2rem;
-        h5{
-            font-size: 1.2rem;
-        }
-        p, a {
-            font-size: 0.85rem;
-            line-height: 1.8;
-            padding: 1rem 0;
-            margin: 0;
-        }
-        a {
-            color: $third-color;
-            &:hover {
-                text-decoration: underline;
-            }
-        }
+   section {
+    background-color: rgba($secondary-color, 0.1);
+    border-radius: 16px;
+    margin: 2rem 0;
+    padding: 2rem;
+    h5 {
+     font-size: 1.2rem;
     }
+    p,
+    a {
+     font-size: 0.85rem;
+     line-height: 1.8;
+     padding: 1rem 0;
+     margin: 0;
+    }
+    a {
+     color: $third-color;
+     &:hover {
+      text-decoration: underline;
+     }
+    }
+   }
   }
   .__images {
-    img {
-        width: 100%;
-        height: 100%;
-        min-height: 300px;
-        object-fit: cover;
-    }
+   img {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+   }
   }
  }
  /* > Details Section */
@@ -471,7 +476,7 @@ a {
   position: relative;
   width: 100%;
   padding: 3rem 1rem;
-  background-color: darken($primary-color, 4%);
+  background-color: rgba($secondary-color, 0.1);
   h1 {
    font-family: "PT Sans", sans-serif;
   }

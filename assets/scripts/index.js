@@ -26,8 +26,11 @@
     ...document.querySelectorAll(
      ".__team-page .__list-section .__lists .__list"
     ),
+    ...document.querySelectorAll(".__home-page .__feature-section .main"),
+    ...document.querySelectorAll(".__home-page .__feature-section .main p"),
+    document.querySelector(".__home-page .__about-section .__images"),
+    ...document.querySelectorAll(".__home-page .__about-section .__switch section"),
     ...document.querySelectorAll(".__home-page .__details-section .__card"),
-    document.querySelector(".__home-page .__media-section"),
     document.querySelector(".__home-page .__media-section .__media"),
     document.querySelector(".__home-page .__faq-section"),
    ];

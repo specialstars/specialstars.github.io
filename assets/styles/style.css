@@ -146,13 +146,14 @@ a {
 }
 .__home-page .__hero-and-feature-binding-color {
   width: 100%;
-  background: radial-gradient(circle at center, rgba(0, 133, 166, 0.05), #fff);
+  background: radial-gradient(circle at center, rgba(0, 133, 166, 0.1), #ffffff);
 }
 .__home-page .__hero-section {
   position: relative;
   width: 100%;
-  padding: 3.5rem 1rem;
-  background: transparent;
+  padding: 6rem 1rem 7rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
 }
 .__home-page .__hero-section .__details {
   display: flex;
@@ -184,13 +185,17 @@ a {
   padding: 0.6rem 2rem;
   font-size: 1rem;
 }
+.__home-page .__hero-section .__designs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .__home-page .__hero-section .__designs img {
   width: 100%;
-  height: 100%;
+  height: 80%;
   object-fit: cover;
   background-color: rgba(0, 133, 166, 0.1);
   border-radius: 0.8rem;
-  padding: 0 1.5rem;
 }
 .__home-page .__feature-section {
   width: 100%;
@@ -237,6 +242,7 @@ a {
   font-weight: 300;
   line-height: 1.8;
   text-align: center;
+  margin-top: 1rem;
 }
 .__home-page .__about-section {
   width: 100%;
@@ -259,7 +265,8 @@ a {
 .__home-page .__about-section .__switch section h5 {
   font-size: 1.2rem;
 }
-.__home-page .__about-section .__switch section p, .__home-page .__about-section .__switch section a {
+.__home-page .__about-section .__switch section p,
+.__home-page .__about-section .__switch section a {
   font-size: 0.85rem;
   line-height: 1.8;
   padding: 1rem 0;
@@ -453,7 +460,7 @@ a {
   position: relative;
   width: 100%;
   padding: 3rem 1rem;
-  background-color: #cff5ff;
+  background-color: rgba(0, 133, 166, 0.1);
 }
 .__about-page .__hero-section h1,
 .__team-page .__hero-section h1,
