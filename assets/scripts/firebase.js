@@ -137,18 +137,20 @@ function startDatabaseQueries() {
    if (document.querySelector(".__home-page"))
     posts = Object.values(posts).slice(0, 2);
 
-   // Iterate through posts.
-   for (var post in posts) {
-    var title = posts[post].title || "Untitled";
-    var body = posts[post].body || "No Description is provided.";
-    var author = posts[post].author || "A Member";
-    var picture = posts[post].picture || "assets/images/banner.jpg";
-    var tags = posts[post].tags || "0";
-    var date = new Date(posts[post].date).toDateString();
+   if (posts.length >= 1) {
+    // Iterate through posts.
+    for (var post in posts) {
+     var title = posts[post].title || "Untitled";
+     var body = posts[post].body || "No Description is provided.";
+     var author = posts[post].author || "A Member";
+     var picture = posts[post].picture || "assets/images/banner.jpg";
+     var tags = posts[post].tags || "0";
+     var date = new Date(posts[post].date).toDateString();
 
-    // Create element for each post.
-    if (__mediaLoading) __mediaLoading.style.display = "none";
-    createPostElement(post, title, body, author, picture, tags, date);
+     // Create element for each post.
+     if (__mediaLoading) __mediaLoading.style.display = "none";
+     createPostElement(post, title, body, author, picture, tags, date);
+    }
    }
   });
  };

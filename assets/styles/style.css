@@ -11,6 +11,10 @@ body {
   color: #434d5b;
 }
 
+p {
+  line-height: 1.8rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -136,7 +140,8 @@ a {
   /* > Hero and Feature Section */
   /* > Hero Section */
   /* > Feature Section */
-  /* > B Section */
+  /* > About Section */
+  /* > Details Section */
   /* > FAQ Section */
 }
 .__home-page .__hero-and-feature-binding-color {
@@ -200,13 +205,19 @@ a {
   align-items: center;
   justify-content: center;
 }
+.__home-page .__feature-section .__features div .main {
+  padding: 2.5rem;
+  border-radius: 13px;
+}
 .__home-page .__feature-section .__features div .main .icon {
   width: 6rem;
   height: 6rem;
   padding: 2rem 0;
-  background-color: rgba(0, 133, 166, 0.2);
+  border: 1px solid rgba(0, 133, 166, 0.2);
+  background-color: rgba(0, 133, 166, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   border-radius: 50%;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .__home-page .__feature-section .__features div .main .icon svg {
   width: 2.5rem;
@@ -218,20 +229,68 @@ a {
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-.__home-page .__b-section {
+.__home-page .__feature-section .__features div .main p:first-child {
+  font-weight: 700;
+}
+.__home-page .__feature-section .__features div .main p:last-child {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.8;
+  text-align: center;
+}
+.__home-page .__about-section {
+  width: 100%;
+  padding: 6rem 2rem 3rem 2rem;
+  min-height: 100vh;
+}
+.__home-page .__about-section .__intro span {
+  color: #0085a6;
+}
+.__home-page .__about-section .__intro h2 {
+  margin: 0;
+  padding: 1rem 0 2rem 0;
+}
+.__home-page .__about-section .__switch section {
+  background-color: rgba(0, 133, 166, 0.1);
+  border-radius: 16px;
+  margin: 2rem 0;
+  padding: 2rem;
+}
+.__home-page .__about-section .__switch section h5 {
+  font-size: 1.2rem;
+}
+.__home-page .__about-section .__switch section p, .__home-page .__about-section .__switch section a {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  padding: 1rem 0;
+  margin: 0;
+}
+.__home-page .__about-section .__switch section a {
+  color: #007fff;
+}
+.__home-page .__about-section .__switch section a:hover {
+  text-decoration: underline;
+}
+.__home-page .__about-section .__images img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+}
+.__home-page .__details-section {
   width: 100%;
   padding: 4rem 2rem;
 }
-.__home-page .__b-section .__card {
+.__home-page .__details-section .__card {
   width: 100%;
   padding: 2rem;
   border-radius: 0.7rem;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 }
-.__home-page .__b-section .__card h3 {
+.__home-page .__details-section .__card h3 {
   font-family: "PT Sans", sans-serif;
 }
-.__home-page .__b-section .__card p {
+.__home-page .__details-section .__card p {
   font-size: 0.9rem;
   padding: 1rem 0;
 }
@@ -474,6 +533,25 @@ a {
   background-color: #0099c0;
   color: #ffffff;
   min-height: 300px;
+  padding-bottom: 5rem;
+}
+.__footer .__section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+}
+.__footer .__section .links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.__footer .__section .links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.__footer .__section .links a:hover {
+  text-decoration: underline;
 }
 .__footer .__attribution {
   width: 100%;
