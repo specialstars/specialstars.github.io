@@ -233,8 +233,42 @@
         <!-- > Update Section -->
         <div class="__update-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-6 order-md-2">
+                <div class="row gap-5" style="row-gap: 10rem !important;">
+                    <div class="col-md-5">
+                        <div class="__posts-carousel carousel slide" id="__postsCarousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="card">
+                                        <div class="w-100 p-0 bg-secondary" style="min-height: 250px;"></div>
+                                        <div class="card-body">
+                                            <h5 class="placeholder-glow mb-4 text-dark-emphasis">
+                                                <span class="placeholder col-6"></span>
+                                            </h5>
+                                            <p class="placeholder-glow mb-4">
+                                                <span class="placeholder col-7"></span>
+                                                <span class="placeholder col-4"></span>
+                                                <span class="placeholder col-4"></span>
+                                                <span class="placeholder col-6"></span>
+                                                <span class="placeholder col-8"></span>
+                                                <span class="placeholder col-12"></span>
+                                            </p>
+                                            <a class="btn btn-primary disabled placeholder col-6"
+                                                aria-disabled="true"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-indicators mt-5">
+                                <button type="button" data-bs-target="#__postsCarousel" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#__postsCarousel" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#__postsCarousel" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
                         <span>Latest Events</span>
                         <h2>Events Calender</h2>
                         <div id='calendar'></div>
@@ -249,52 +283,6 @@
                                     </div>
                                     <div class="modal-body"></div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="__posts-carousel carousel slide" id="__postsCarousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="card">
-                                        <img src="assets/images/banner.jpg"
-                                            alt="Assisting Individual Children with Special Needs">
-                                        <div class="card-body">
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-                                                sapiente soluta
-                                                facere
-                                                est
-                                                nisi, enim corrupti tenetur ut nobis accusamus quod perspiciatis
-                                                reprehenderit
-                                                assumenda,
-                                                earum, mollitia porro voluptatem. Sit, expedita?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="card">
-                                        <img src="assets/images/banner.jpg"
-                                            alt="Assisting Individual Children with Special Needs">
-                                        <div class="card-body">
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
-                                                sapiente soluta
-                                                facere
-                                                est
-                                                nisi, enim corrupti tenetur ut nobis accusamus quod perspiciatis
-                                                reprehenderit
-                                                assumenda,
-                                                earum, mollitia porro voluptatem. Sit, expedita?</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-indicators mt-5">
-                                <button type="button" data-bs-target="#__postsCarousel" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#__postsCarousel" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#__postsCarousel" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
                             </div>
                         </div>
                     </div>
@@ -319,9 +307,9 @@
                         <div class="bg-white shadow-sm" style="height: 250px;"></div>
                     </div>
                     <div class="row gap-4 row-gap-4 opacity-75" id="__mediaLoading">
-                        <div class="col-md-6" style="height: fit-content;">
+                        <div class="col-md-6" style="min-height: 300px;">
                             <div class="row">
-                                <div class="col-md-6 p-0 h-100 bg-secondary" style="min-height: 300px;"></div>
+                                <div class="col-md-6 p-0 h-100 bg-secondary"></div>
                                 <div class="col-md-6 p-4">
                                     <h5 class="placeholder-glow mb-4">
                                         <span class="placeholder col-6"></span>
@@ -340,9 +328,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6" style="height: fit-content;">
+                        <div class="col-md-6" style="min-height: 300px;">
                             <div class="row">
-                                <div class="col-md-6 p-0 h-100 bg-secondary" style="min-height: 300px;"></div>
+                                <div class="col-md-6 p-0 h-100 bg-secondary"></div>
                                 <div class="col-md-6 p-4">
                                     <h5 class="placeholder-glow mb-4">
                                         <span class="placeholder col-6"></span>

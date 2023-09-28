@@ -325,7 +325,7 @@ a {
  .__update-section {
   position: relative;
   width: 100%;
-  padding: 8rem 1rem 9rem 1rem;
+  padding: 8rem 1rem 2rem 1rem;
   .__posts-carousel {
    max-width: 450px;
    .carousel-indicators {
@@ -339,7 +339,8 @@ a {
     }
    }
   }
-  div {
+  .row {
+   align-items: center;
    span {
     color: $secondary-color;
    }
@@ -348,8 +349,6 @@ a {
     padding: 1rem 0 0.5rem 0;
    }
    #calendar {
-    max-width: 550px;
-    max-height: 350px;
     h2 {
      font-size: 1rem;
      padding: 0;
@@ -365,8 +364,10 @@ a {
       color: $secondary-text-color;
      }
     }
-    tr[role="row"] td {
+    tr {
      background-color: rgba($secondary-color, 0.01);
+    }
+    tr[role="row"] td {
      &:hover {
       background-color: rgba($secondary-color, 0.1);
      }

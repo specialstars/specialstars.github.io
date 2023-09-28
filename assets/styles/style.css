@@ -299,7 +299,7 @@ a {
 .__home-page .__update-section {
   position: relative;
   width: 100%;
-  padding: 8rem 1rem 9rem 1rem;
+  padding: 8rem 1rem 2rem 1rem;
 }
 .__home-page .__update-section .__posts-carousel {
   max-width: 450px;
@@ -314,42 +314,41 @@ a {
 .__home-page .__update-section .__posts-carousel .carousel-indicators [data-bs-target].active {
   background-color: #0073e6;
 }
-.__home-page .__update-section div span {
+.__home-page .__update-section .row {
+  align-items: center;
+}
+.__home-page .__update-section .row span {
   color: #0073e6;
 }
-.__home-page .__update-section div h2 {
+.__home-page .__update-section .row h2 {
   margin: 0;
   padding: 1rem 0 0.5rem 0;
 }
-.__home-page .__update-section div #calendar {
-  max-width: 550px;
-  max-height: 350px;
-}
-.__home-page .__update-section div #calendar h2 {
+.__home-page .__update-section .row #calendar h2 {
   font-size: 1rem;
   padding: 0;
   font-weight: 300;
 }
-.__home-page .__update-section div #calendar button {
+.__home-page .__update-section .row #calendar button {
   font-size: 0.9rem;
   padding: 0.3rem 0.5rem;
   background-color: #0073e6;
   border: 0;
   color: #ffffff;
 }
-.__home-page .__update-section div #calendar button span {
+.__home-page .__update-section .row #calendar button span {
   color: #ffffff;
 }
-.__home-page .__update-section div #calendar tr[role=row] td {
+.__home-page .__update-section .row #calendar tr {
   background-color: rgba(0, 115, 230, 0.01);
 }
-.__home-page .__update-section div #calendar tr[role=row] td:hover {
+.__home-page .__update-section .row #calendar tr[role=row] td:hover {
   background-color: rgba(0, 115, 230, 0.1);
 }
-.__home-page .__update-section div #calendar tr td .fc-event {
+.__home-page .__update-section .row #calendar tr td .fc-event {
   cursor: pointer;
 }
-.__home-page .__update-section div #calendar tr td a {
+.__home-page .__update-section .row #calendar tr td a {
   text-align: center;
   width: 100%;
 }
