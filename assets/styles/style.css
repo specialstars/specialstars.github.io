@@ -421,7 +421,7 @@ a {
 }
 .__home-page .__media-section .__media > .row > div .__body p,
 .__updates-page .__media-section .__media > .row > div .__body p {
-  max-height: 6rem;
+  max-height: 8rem;
   margin: 1rem 0;
   font-size: 0.88rem;
   overflow: hidden;
