@@ -20,7 +20,10 @@ import {
  getDatabase,
  ref,
  onValue,
+ update,
+ increment,
 } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
 let $firebase_init = initializeApp;
 let $firebase_database = getDatabase;
@@ -79,9 +82,17 @@ function writeNewPost(username, picture, title, body) {
 /**
  * Creates a post element.
  */
-function createPostElement(data, title, body, author, picture, tags, date) {
+function createPostElement(i, data) {
  let postElement = document.createElement("div");
  postElement.classList.add("col-md-6");
+ postElement.id = data.id || "";
+
+ var title = data.title || "Untitled";
+ var body = data.body || "No Description is provided.";
+ var author = data.author || "A Member";
+ var picture = data.picture || "assets/images/banner.jpg";
+ var tags = data.tags || "0";
+ var date = new Date(data.date).toDateString();
 
  // Put <br/> when there is a 1. 2. 3. lists
  body = body.replace(
@@ -103,7 +114,6 @@ function createPostElement(data, title, body, author, picture, tags, date) {
   /#([a-z0-9_]+)/gi,
   '<a class="text-primary" href="https://www.google.com/search?q=%23$1" target="_blank">#$1</a>'
  );
-
  postElement.innerHTML = `
         <div class="row" onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.parentElement.querySelector('h5').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreImage').src = this.querySelector('.__header > img').src; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.parentElement.querySelector('span.tags').innerHTML;" title="Click here to see the full post" data-bs-toggle="modal" data-bs-target="#modalMediaShowMore">
             <div class="__header col-md-6">
@@ -121,7 +131,13 @@ function createPostElement(data, title, body, author, picture, tags, date) {
             </div>
         </div>
     `;
- __media.appendChild(postElement);
+ if (document.querySelector(".__home-page")) {
+  if (data.type == "post") {
+   __media.appendChild(postElement);
+  }
+ } else if (document.querySelector(".__updates-page")) {
+  __media.appendChild(postElement);
+ }
 }
 
 /**
@@ -129,10 +145,12 @@ function createPostElement(data, title, body, author, picture, tags, date) {
  */
 function startDatabaseQueries() {
  let recentPostsRef = $firebase_database_ref($firebase_database, "posts");
- var fetchPosts = function (postsRef) {
-  $firebase_database_then(postsRef, function (data) {
+
+ var fetchPosts = async function (postsRef) {
+  await $firebase_database_then(postsRef, function (data) {
    var posts = data.val();
    if (__media) __media.innerHTML = "";
+
    // limit to top 1 post only
    if (document.querySelector(".__home-page"))
     posts = Object.values(posts).slice(0, 2);
@@ -140,16 +158,8 @@ function startDatabaseQueries() {
    if (posts.length >= 1) {
     // Iterate through posts.
     for (var post in posts) {
-     var title = posts[post].title || "Untitled";
-     var body = posts[post].body || "No Description is provided.";
-     var author = posts[post].author || "A Member";
-     var picture = posts[post].picture || "assets/images/banner.jpg";
-     var tags = posts[post].tags || "0";
-     var date = new Date(posts[post].date).toDateString();
-
-     // Create element for each post.
      if (__mediaLoading) __mediaLoading.style.display = "none";
-     createPostElement(post, title, body, author, picture, tags, date);
+     createPostElement(post, posts[post]);
     }
    }
   });
@@ -166,6 +176,7 @@ window.addEventListener("load", () => {
  if (__mediaSection) {
   // Start listening for posts.
   startDatabaseQueries();
+
   // Loading Effect on Scroll
   if (window.IntersectionObserver) {
    const observer = new IntersectionObserver((entries) => {

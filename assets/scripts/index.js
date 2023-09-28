@@ -32,7 +32,7 @@
     ...document.querySelectorAll(".__home-page .__about-section .__switch section"),
     ...document.querySelectorAll(".__home-page .__details-section .__card"),
     document.querySelector(".__home-page .__media-section .__media"),
-    document.querySelector(".__home-page .__faq-section"),
+    document.querySelector(".__home-page .__faq-section > div"),
    ];
 
    function fadeIn(elem) {
