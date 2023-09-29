@@ -118,7 +118,7 @@ function createPostElement(i, data) {
  postElement.innerHTML = `
         <div class="row" onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.parentElement.querySelector('h5').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreImage').src = this.querySelector('.__header > img').src; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.parentElement.querySelector('span.tags').innerHTML;" title="Click here to see the full post" data-bs-toggle="modal" data-bs-target="#modalMediaShowMore">
             <div class="__header col-md-6">
-                <img src=${picture} alt="&nbsp;">
+                <img src=${picture} alt="Cover Photo">
             </div>
             <div class="__body col-md-6">
                 <h5>${title}</h5>
