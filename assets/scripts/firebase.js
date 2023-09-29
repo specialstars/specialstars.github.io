@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 "use strict";
+let isLoaded = false;
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 import {
@@ -149,19 +150,18 @@ function startDatabaseQueries() {
  var fetchPosts = async function (postsRef) {
   await $firebase_database_then(postsRef, function (data) {
    var posts = data.val();
-   if (__media) __media.innerHTML = "";
-
-   // limit to top 1 post only
-   if (document.querySelector(".__home-page"))
-    posts = Object.values(posts).slice(0, 2);
-
    if (posts.length >= 1) {
+    if (__media) __media.innerHTML = "";
+    // limit to top 1 post only
+    if (document.querySelector(".__home-page"))
+     posts = Object.values(posts).slice(0, 2);
     // Iterate through posts.
     for (var post in posts) {
      if (__mediaLoading) __mediaLoading.style.display = "none";
      createPostElement(post, posts[post]);
     }
    }
+   isLoaded = true;
   });
  };
 
@@ -184,10 +184,13 @@ window.addEventListener("load", () => {
      if (entry.isIntersecting) {
       __media.classList.add("d-none");
       __mediaLoading.style.display = "flex";
-      setTimeout(() => {
-       __media.classList.remove("d-none");
-       __mediaLoading.style.display = "none";
-      }, 500);
+      setTimeout(
+       () => {
+        __media.classList.remove("d-none");
+        __mediaLoading.style.display = "none";
+       },
+       isLoaded == true ? 0 : 1000
+      );
      }
     });
    });

@@ -27,7 +27,7 @@ a {
 .btn-primary {
   background-color: #0073e6 !important;
   background-image: linear-gradient(rgba(102, 178, 255, 0.5) 0%, rgba(0, 114, 229, 0.5) 100%);
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   border: 0 !important;
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
@@ -76,7 +76,7 @@ a {
 }
 .__navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__navbar .__logo {
   display: flex;
@@ -90,7 +90,7 @@ a {
 .__navbar .__logo h1 {
   font-size: 1.2rem;
   margin: 0 0.2rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 .__navbar .__logo h1 span {
   color: #0073e6;
@@ -116,6 +116,7 @@ a {
   padding: 3px 15px;
   border-radius: 1rem;
   font-size: 0.9rem;
+  border: 1px solid transparent;
 }
 .__navbar .__menu > ul > li.active {
   background-color: rgba(0, 115, 230, 0.8);
@@ -137,6 +138,10 @@ a {
 }
 .__navbar .__menu .dropdown-item:hover:not(.active) {
   background-color: rgba(0, 115, 230, 0.2);
+}
+
+body:not(.__home-page) .navbar {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 /* __ Home Page __ */
@@ -175,7 +180,8 @@ a {
   line-height: 1.9;
   color: #6f7f95;
 }
-.__home-page .__hero-section .__details .btn {
+.__home-page .__hero-section .__details .__action .btn {
+  width: fit-content;
   font-weight: 500;
   padding: 0.6rem 2rem;
   font-size: 1rem;
@@ -245,7 +251,7 @@ a {
   width: 100%;
   padding: 2rem;
   border-radius: 0.7rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__home-page .__details-section .__card h3 {
   font-family: "PT Sans", sans-serif;
@@ -278,7 +284,7 @@ a {
   padding: 2rem 0;
   border: 1px solid rgba(0, 115, 230, 0.2);
   background-color: rgba(0, 115, 230, 0.1);
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   margin-bottom: 2rem;
 }
@@ -319,8 +325,8 @@ a {
 .__home-page .__update-section .__posts-carousel .carousel-indicators [data-bs-target].active {
   background-color: #0073e6;
 }
-.__home-page .__update-section p > *,
-.__home-page .__update-section h5 > * {
+.__home-page .__update-section .card p > *,
+.__home-page .__update-section .card h5 > * {
   background-color: #434d5b;
 }
 .__home-page .__update-section .row {
@@ -426,6 +432,7 @@ a {
 }
 .__home-page .__media-section .__media,
 .__updates-page .__media-section .__media {
+  position: relative;
   padding-top: 2rem;
 }
 .__home-page .__media-section .__media #mediaLoading > div,
@@ -443,12 +450,16 @@ a {
 .__home-page .__media-section .__media > .row > div,
 .__updates-page .__media-section .__media > .row > div {
   background-color: #fff;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__home-page .__media-section .__media > .row > div > .row,
 .__updates-page .__media-section .__media > .row > div > .row {
   height: 100%;
   cursor: pointer;
+}
+.__home-page .__media-section .__media > .row > div > .row > div:last-child,
+.__updates-page .__media-section .__media > .row > div > .row > div:last-child {
+  background-color: #fff;
 }
 .__home-page .__media-section .__media > .row > div .__header,
 .__updates-page .__media-section .__media > .row > div .__header {
@@ -463,18 +474,16 @@ a {
 }
 .__home-page .__media-section .__media > .row > div .__header::after,
 .__updates-page .__media-section .__media > .row > div .__header::after {
-  content: "Click here to view more";
+  content: "View more";
   display: block;
   position: absolute;
-  width: 100%;
-  background-color: #0180ff;
-  opacity: 0.9;
+  background-color: #1a8dff;
   color: #ffffff;
-  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   bottom: 0;
   left: 0;
-  padding: 0.7rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
 }
 .__home-page .__media-section .__media > .row > div .__header::before,
 .__updates-page .__media-section .__media > .row > div .__header::before {
@@ -483,7 +492,7 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(67, 77, 91, 0.4);
   bottom: 0;
   left: 0;
 }
@@ -525,14 +534,16 @@ a {
 .__team-page,
 .__contact-page,
 .__updates-page,
-.__gallery-page {
+.__gallery-page,
+.__donate-page {
   /* > Hero section */
 }
 .__about-page .__hero-section,
 .__team-page .__hero-section,
 .__contact-page .__hero-section,
 .__updates-page .__hero-section,
-.__gallery-page .__hero-section {
+.__gallery-page .__hero-section,
+.__donate-page .__hero-section {
   position: relative;
   width: 100%;
   padding: 3rem 1rem;
@@ -542,17 +553,20 @@ a {
 .__team-page .__hero-section h1,
 .__contact-page .__hero-section h1,
 .__updates-page .__hero-section h1,
-.__gallery-page .__hero-section h1 {
+.__gallery-page .__hero-section h1,
+.__donate-page .__hero-section h1 {
   font-family: "PT Sans", sans-serif;
 }
 .__about-page .__hero-section p,
 .__team-page .__hero-section p,
 .__contact-page .__hero-section p,
 .__updates-page .__hero-section p,
-.__gallery-page .__hero-section p {
+.__gallery-page .__hero-section p,
+.__donate-page .__hero-section p {
   margin-top: 1rem;
   line-height: 1.7;
   font-size: 0.9rem;
+  color: #6f7f95;
 }
 
 /* __ About Page __ */
@@ -616,6 +630,29 @@ a {
 }
 
 /* __ Contact Page __ */
+/* __ Donate Page __ */
+.__donate-page {
+  /* > Main Section */
+}
+.__donate-page .__main-section {
+  padding: 5rem 2rem;
+}
+.__donate-page .__main-section p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #6f7f95;
+}
+.__donate-page .__main-section .row > div {
+  padding: 0;
+  padding-bottom: 3rem;
+}
+.__donate-page .__main-section .row > div h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+}
+
 /* __ Footer __ */
 .__footer .__section {
   width: 100%;
@@ -672,7 +709,7 @@ a {
   z-index: 1000;
 }
 .__t2b button {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 .__t2b button svg {
@@ -690,7 +727,7 @@ a {
     max-width: 250px;
     border-radius: 0.4rem;
     background-color: #fff;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   }
   .__navbar .__menu > ul > li {
     padding: 0.8rem 1rem;
@@ -713,14 +750,13 @@ a {
     width: 48%;
   }
 }
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 992px) {
   .__home-page .__hero-section {
     padding: 1rem;
     text-align: center;
   }
   .__home-page .__hero-section .__details {
     padding: 0.3rem 1rem 5rem 1rem;
-    order: 2;
   }
   .__home-page .__hero-section .__details h1 {
     width: 100%;
@@ -733,7 +769,8 @@ a {
     line-height: 1.84;
   }
   .__home-page .__hero-section .__details .__action {
-    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
   }
   .__home-page .__hero-section .__details .btn {
     padding: 0.45rem 2rem;
@@ -745,6 +782,8 @@ a {
     max-width: 300px;
     aspect-ratio: 3/2;
   }
+}
+@media screen and (max-width: 766px) {
   .__home-page .__feature-section .container p {
     font-size: 0.9rem;
   }
@@ -757,6 +796,10 @@ a {
     font-size: 1.2rem;
     padding: 0 0.8rem;
     line-height: 1.5;
+  }
+  .__home-page .__media-section .__media,
+  .__updates-page .__media-section .__media {
+    min-height: 600px !important;
   }
   .__home-page .__media-section .__media .row > .col-md-6,
   .__updates-page .__media-section .__media .row > .col-md-6 {

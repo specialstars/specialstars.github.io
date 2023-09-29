@@ -4,7 +4,7 @@ $primary-color: #e3f9ff;
 $primary-text-color: #434d5b;
 $secondary-color: #0073e6;
 $secondary-text-color: #ffffff;
-$box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 
 :root {
  --fc-border-color: rgba(67, 77, 91, 0.116);
@@ -101,7 +101,7 @@ a {
   h1 {
    font-size: 1.2rem;
    margin: 0 0.2rem;
-   font-weight: 300;
+   font-weight: 400;
    span {
     color: $secondary-color;
    }
@@ -127,6 +127,7 @@ a {
    padding: 3px 15px;
    border-radius: 1rem;
    font-size: 0.9rem;
+   border: 1px solid transparent;
    &.active {
     background-color: rgba($secondary-color, 0.8);
     color: $secondary-text-color;
@@ -151,6 +152,9 @@ a {
    }
   }
  }
+}
+body:not(.__home-page) .navbar {
+ box-shadow: $box-shadow;
 }
 
 /* __ Home Page __ */
@@ -185,10 +189,13 @@ a {
     line-height: 1.9;
     color: lighten($primary-text-color, 20%);
    }
-   .btn {
-    font-weight: 500;
-    padding: 0.6rem 2rem;
-    font-size: 1rem;
+   .__action {
+    .btn {
+     width: fit-content;
+     font-weight: 500;
+     padding: 0.6rem 2rem;
+     font-size: 1rem;
+    }
    }
   }
   .__designs {
@@ -344,8 +351,8 @@ a {
     }
    }
   }
-  p > *,
-  h5 > * {
+  .card p > *,
+  .card h5 > * {
    background-color: $primary-text-color;
   }
   .row {
@@ -454,6 +461,7 @@ a {
    }
   }
   .__media {
+   position: relative;
    padding-top: 2rem;
    #mediaLoading > div {
     min-height: 300px;
@@ -469,6 +477,9 @@ a {
      & > .row {
       height: 100%;
       cursor: pointer;
+      & > div:last-child {
+       background-color: #fff;
+      }
      }
      .__header {
       padding: 0;
@@ -479,18 +490,16 @@ a {
        object-fit: cover;
       }
       &::after {
-       content: "Click here to view more";
+       content: "View more";
        display: block;
        position: absolute;
-       width: 100%;
-       background-color: lighten($secondary-color, 5%);
-       opacity: 0.9;
+       background-color: lighten($secondary-color, 10%);
        color: $secondary-text-color;
-       text-shadow: $box-shadow;
+       box-shadow: $box-shadow;
        bottom: 0;
        left: 0;
-       padding: 0.7rem;
-       font-size: 0.8rem;
+       padding: 0.5rem 1rem;
+       font-size: 0.75rem;
       }
       &::before {
        content: "";
@@ -498,7 +507,7 @@ a {
        position: absolute;
        width: 100%;
        height: 100%;
-       background-color: rgba(0, 0, 0, 0.2);
+       background-color: rgba($primary-text-color, 0.4);
        bottom: 0;
        left: 0;
       }
@@ -549,7 +558,8 @@ a {
 .__team-page,
 .__contact-page,
 .__updates-page,
-.__gallery-page {
+.__gallery-page,
+.__donate-page {
  /* > Hero section */
  .__hero-section {
   position: relative;
@@ -563,6 +573,7 @@ a {
    margin-top: 1rem;
    line-height: 1.7;
    font-size: 0.9rem;
+   color: lighten($primary-text-color, 20%);
   }
  }
 }
@@ -632,6 +643,29 @@ a {
 
 /* __ Contact Page __ */
 .__contact-page {
+}
+
+/* __ Donate Page __ */
+.__donate-page {
+ /* > Main Section */
+ .__main-section {
+  padding: 5rem 2rem;
+  p {
+   font-size: 0.9rem;
+   line-height: 1.8;
+   color: lighten($primary-text-color, 20%);
+  }
+  .row > div {
+   padding: 0;
+   padding-bottom: 3rem;
+   h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-top: 3rem;
+   }
+  }
+ }
 }
 
 /* __ Footer __ */
@@ -735,14 +769,13 @@ a {
   width: 48%;
  }
 }
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 992px) {
  .__home-page {
   .__hero-section {
    padding: 1rem;
    text-align: center;
    .__details {
     padding: 0.3rem 1rem 5rem 1rem;
-    order: 2;
     h1 {
      width: 100%;
      font-size: 2rem;
@@ -754,7 +787,8 @@ a {
      line-height: 1.84;
     }
     .__action {
-     justify-content: center;
+     align-items: center;
+     padding: 0 2rem;
     }
     .btn {
      padding: 0.45rem 2rem;
@@ -768,6 +802,10 @@ a {
     }
    }
   }
+ }
+}
+@media screen and (max-width: 766px) {
+ .__home-page {
   .__feature-section {
    .container {
     p {
@@ -776,7 +814,6 @@ a {
    }
   }
  }
-
  .__home-page,
  .__updates-page {
   .__media-section {
@@ -791,13 +828,13 @@ a {
     }
    }
    .__media {
+     min-height: 600px !important;
     .row > .col-md-6 {
      width: 100% !important;
     }
    }
   }
  }
-
  .__team-page {
   .__hero-section {
    h1 {
