@@ -173,6 +173,7 @@ a {
   font-weight: 300;
   margin-bottom: 2rem;
   line-height: 1.9;
+  color: #6f7f95;
 }
 .__home-page .__hero-section .__details .btn {
   font-weight: 500;
@@ -201,6 +202,9 @@ a {
 .__home-page .__about-section .__intro h2 {
   margin: 0;
   padding: 1rem 0 2rem 0;
+}
+.__home-page .__about-section .__intro p {
+  color: #6f7f95;
 }
 .__home-page .__about-section .__switch section {
   background-color: rgba(0, 115, 230, 0.1);
@@ -249,10 +253,11 @@ a {
 .__home-page .__details-section .__card p {
   font-size: 0.9rem;
   padding: 1rem 0;
+  color: #6f7f95;
 }
 .__home-page .__feature-section {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem 4rem 2rem;
   background: rgba(51, 51, 51, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -314,6 +319,10 @@ a {
 .__home-page .__update-section .__posts-carousel .carousel-indicators [data-bs-target].active {
   background-color: #0073e6;
 }
+.__home-page .__update-section p > *,
+.__home-page .__update-section h5 > * {
+  background-color: #434d5b;
+}
 .__home-page .__update-section .row {
   align-items: center;
 }
@@ -328,6 +337,7 @@ a {
   font-size: 1rem;
   padding: 0;
   font-weight: 300;
+  color: #6f7f95;
 }
 .__home-page .__update-section .row #calendar button {
   font-size: 0.9rem;
@@ -368,8 +378,14 @@ a {
   object-fit: cover;
   object-position: center;
 }
+.__home-page .__faq-section .row .__faq-lists .accordion-body {
+  color: #6f7f95;
+  line-height: 1.7rem;
+  font-size: 0.9rem;
+}
 .__home-page .__faq-section .row .__faq-lists button {
   font-weight: 600;
+  color: #596678;
 }
 .__home-page .__faq-section .row .__faq-lists button:focus {
   box-shadow: none !important;
@@ -411,6 +427,10 @@ a {
 .__home-page .__media-section .__media,
 .__updates-page .__media-section .__media {
   padding-top: 2rem;
+}
+.__home-page .__media-section .__media #mediaLoading > div,
+.__updates-page .__media-section .__media #mediaLoading > div {
+  min-height: 300px;
 }
 .__home-page .__media-section .__media > .row,
 .__updates-page .__media-section .__media > .row {
@@ -475,11 +495,13 @@ a {
 }
 .__home-page .__media-section .__media > .row > div .__body p,
 .__updates-page .__media-section .__media > .row > div .__body p {
+  line-height: 1.5rem;
   max-height: 8rem;
   margin: 1rem 0;
   font-size: 0.88rem;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #6f7f95;
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
   -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
@@ -580,10 +602,17 @@ a {
   font-family: "PT Sans", sans-serif;
 }
 .__team-page .__list-section .__lists .__list p {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
+  margin-bottom: 0;
   margin-top: -0.5rem;
   font-weight: 500;
   color: #0073e6;
+}
+.__team-page .__list-section .__lists .__list span {
+  display: block;
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: #434d5b;
 }
 
 /* __ Contact Page __ */
@@ -634,6 +663,24 @@ a {
   margin-left: 0;
 }
 
+/* __ Top to Bottom __ */
+.__t2b {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+.__t2b button {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  cursor: pointer;
+}
+.__t2b button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: #ffffff;
+}
+
 /* Media Queries */
 @media screen and (max-width: 1199px) {
   .__navbar .__menu {
@@ -658,6 +705,12 @@ a {
   }
   .__navbar .__menu > ul > li:last-child {
     border-radius: 0 0 0.4rem 0.4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .__media .col-lg-6 {
+    flex: 0 0 auto;
+    width: 48%;
   }
 }
 @media screen and (max-width: 766px) {

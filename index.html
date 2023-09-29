@@ -153,7 +153,7 @@
         <div class="__details-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 p-2">
+                    <div class="col-lg-4 p-2">
                         <div class="__card bg-white text-dark">
                             <h3>Lorem Ipsum</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ex, perspiciatis
@@ -162,7 +162,7 @@
                             <a href="#" class="btn btn-primary p-2 px-3">See Lorem Ipsum</a>
                         </div>
                     </div>
-                    <div class="col-md-4 p-2">
+                    <div class="col-lg-4 p-2">
                         <div class="__card bg-white text-dark">
                             <h3>Lorem Ipsum</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ex, perspiciatis
@@ -171,7 +171,7 @@
                             <a href="#" class="btn btn-primary p-2 px-3">See Lorem Ipsum</a>
                         </div>
                     </div>
-                    <div class="col-md-4 p-2">
+                    <div class="col-lg-4 p-2">
                         <div class="__card bg-white text-dark">
                             <h3>Lorem Ipsum</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ex, perspiciatis
@@ -186,7 +186,7 @@
         <!-- > Feature Section -->
         <div class="__feature-section">
             <div class="container">
-                <div class="__features row row-gap-5">
+                <div class="__features row row-gap-4">
                     <div class="col-md-4">
                         <div class="main">
                             <div class="icon">
@@ -272,19 +272,17 @@
                         <span>Latest Events</span>
                         <h2>Events Calender</h2>
                         <div id='calendar'></div>
-                        <div id="__modalOfEvent" class="modal fade" tabindex="-1" aria-labelledby="title"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="title"></h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body"></div>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modalOfEvent" class="modal fade" tabindex="-1" aria-labelledby="title" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="title"></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
+                        <div class="modal-body"></div>
                     </div>
                 </div>
             </div>
@@ -304,10 +302,15 @@
                 </div>
                 <div class="__media" style="min-height: 250px;">
                     <div class="row gap-4 row-gap-4 d-none" id="__mediaResults">
-                        <div class="bg-white shadow-sm" style="height: 250px;"></div>
+                        <div class="col-lg-6" style="height: fit-content;">
+                            <div class="row" title="Loading...">
+                                <div class="col-md-6 p-0 h-100 bg-secondary" style="min-height: 300px;"></div>
+                                <div class="__body col-md-6"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="row gap-4 row-gap-4 opacity-75" id="__mediaLoading">
-                        <div class="col-md-6" style="min-height: 300px;">
+                        <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-6 p-0 h-100 bg-secondary"></div>
                                 <div class="col-md-6 p-4">
@@ -328,7 +331,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6" style="min-height: 300px;">
+                        <div class="col-md-6">
                             <div class="row">
                                 <div class="col-md-6 p-0 h-100 bg-secondary"></div>
                                 <div class="col-md-6 p-4">
@@ -499,6 +502,17 @@
         </div>
     </div>
 
+    <!-- __ Top to bottom -->
+    <div class="__t2b">
+        <button class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+            </svg>
+        </button>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
@@ -517,11 +531,11 @@
                     },
                 ],
                 eventClick: function (info) {
-                    const myModal = new bootstrap.Modal('#__modalOfEvent', {
+                    const myModal = new bootstrap.Modal('#modalOfEvent', {
                         keyboard: false
                     })
-                    const modalBody = document.querySelector('#__modalOfEvent .modal-body');
-                    const modalTitle = document.querySelector('#__modalOfEvent .modal-title');
+                    const modalBody = document.querySelector('#modalOfEvent .modal-body');
+                    const modalTitle = document.querySelector('#modalOfEvent .modal-title');
                     modalTitle.innerHTML = info.event.title;
                     modalBody.innerHTML = `
                         <p><b>Place:</b> ${info.event.extendedProps.place}</p>

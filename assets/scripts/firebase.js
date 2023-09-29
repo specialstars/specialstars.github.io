@@ -84,7 +84,7 @@ function writeNewPost(username, picture, title, body) {
  */
 function createPostElement(i, data) {
  let postElement = document.createElement("div");
- postElement.classList.add("col-md-6");
+ postElement.classList.add("col-lg-6");
  postElement.id = data.id || "";
 
  var title = data.title || "Untitled";

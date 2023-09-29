@@ -183,6 +183,7 @@ a {
     font-weight: 300;
     margin-bottom: 2rem;
     line-height: 1.9;
+    color: lighten($primary-text-color, 20%);
    }
    .btn {
     font-weight: 500;
@@ -216,6 +217,9 @@ a {
    h2 {
     margin: 0;
     padding: 1rem 0 2rem 0;
+   }
+   p {
+    color: lighten($primary-text-color, 20%);
    }
   }
   .__switch {
@@ -269,13 +273,14 @@ a {
    p {
     font-size: 0.9rem;
     padding: 1rem 0;
+    color: lighten($primary-text-color, 20%);
    }
   }
  }
  /* > Feature Section */
  .__feature-section {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 0rem 2rem 4rem 2rem;
   background: rgba(#333, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -339,6 +344,10 @@ a {
     }
    }
   }
+  p > *,
+  h5 > * {
+   background-color: $primary-text-color;
+  }
   .row {
    align-items: center;
    span {
@@ -353,6 +362,7 @@ a {
      font-size: 1rem;
      padding: 0;
      font-weight: 300;
+     color: lighten($primary-text-color, 20%);
     }
     button {
      font-size: 0.9rem;
@@ -400,8 +410,14 @@ a {
     }
    }
    .__faq-lists {
+    .accordion-body {
+     color: lighten($primary-text-color, 20%);
+     line-height: 1.7rem;
+     font-size: 0.9rem;
+    }
     button {
      font-weight: 600;
+     color: lighten($primary-text-color, 10%);
     }
     button:focus {
      box-shadow: none !important;
@@ -439,6 +455,9 @@ a {
   }
   .__media {
    padding-top: 2rem;
+   #mediaLoading > div {
+    min-height: 300px;
+   }
    & > .row {
     height: 100%;
     & > .col-md-6 {
@@ -489,11 +508,13 @@ a {
       display: flex;
       flex-direction: column;
       p {
+       line-height: 1.5rem;
        max-height: 8rem;
        margin: 1rem 0;
        font-size: 0.88rem;
        overflow: hidden;
        text-overflow: ellipsis;
+       color: lighten($primary-text-color, 20%);
        mask-image: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 1),
@@ -592,10 +613,17 @@ a {
      font-family: "PT Sans", sans-serif;
     }
     p {
-     font-size: 0.7rem;
+     font-size: 0.75rem;
+     margin-bottom: 0;
      margin-top: -0.5rem;
      font-weight: 500;
      color: $secondary-color;
+    }
+    span {
+     display: block;
+     font-size: 0.6rem;
+     font-weight: 300;
+     color: $primary-text-color;
     }
    }
   }
@@ -655,6 +683,24 @@ a {
  }
 }
 
+/* __ Top to Bottom __ */
+.__t2b {
+ display: none;
+ position: fixed;
+ bottom: 1rem;
+ right: 1rem;
+ z-index: 1000;
+ button {
+  box-shadow: $box-shadow;
+  cursor: pointer;
+  svg {
+   width: 1.1rem;
+   height: 1.1rem;
+   fill: $secondary-text-color;
+  }
+ }
+}
+
 /* Media Queries */
 @media screen and (max-width: 1199px) {
  .__navbar {
@@ -681,6 +727,12 @@ a {
     }
    }
   }
+ }
+}
+@media screen and (min-width: 992px) {
+ .__media .col-lg-6 {
+  flex: 0 0 auto;
+  width: 48%;
  }
 }
 @media screen and (max-width: 766px) {

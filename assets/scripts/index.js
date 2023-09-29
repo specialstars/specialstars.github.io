@@ -7,6 +7,7 @@
   @ Navbar Scroll Effect
   @ Fading Effect
   @ Tawk.to API for Conversation
+  @ Top2Bottom Implementation
   */
   /////
   const $scroll = function () {
@@ -29,7 +30,9 @@
     ...document.querySelectorAll(".__home-page .__feature-section .main"),
     ...document.querySelectorAll(".__home-page .__feature-section .main p"),
     document.querySelector(".__home-page .__about-section .__images"),
-    ...document.querySelectorAll(".__home-page .__about-section .__switch section"),
+    ...document.querySelectorAll(
+     ".__home-page .__about-section .__switch section"
+    ),
     ...document.querySelectorAll(".__home-page .__details-section .__card"),
     ...document.querySelectorAll(".__home-page .__update-section .row > div"),
     document.querySelector(".__home-page .__media-section .__media"),
@@ -77,10 +80,30 @@
   }
   // End of Tawk.to Script
 
+  const $t2b = function () {
+   let btn = document.querySelector(".__t2b");
+   if (btn) {
+    window.addEventListener("scroll", () => {
+     if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+     ) {
+      btn.style.display = "block";
+     } else {
+      btn.style.display = "none";
+     }
+    });
+    btn.addEventListener("click", () => {
+     window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+   }
+  };
+
   /////
   const $main = function () {
    $scroll();
    $fade();
+   $t2b();
   };
   window.addEventListener("load", $main);
 
