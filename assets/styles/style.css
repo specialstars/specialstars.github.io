@@ -158,7 +158,7 @@ body:not(.__home-page) .navbar {
   width: 100%;
   padding: 6rem 1rem 7rem 1rem;
   backdrop-filter: blur(16px);
-  background: radial-gradient(circle at center, rgba(0, 115, 230, 0.1), #ffffff);
+  background: radial-gradient(circle at center, rgba(0, 115, 230, 0.2), rgba(67, 77, 91, 0.05));
 }
 .__home-page .__hero-section .__details {
   display: flex;
@@ -645,6 +645,8 @@ body:not(.__home-page) .navbar {
 .__donate-page .__main-section .row > div {
   padding: 0;
   padding-bottom: 3rem;
+  border: 0;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 .__donate-page .__main-section .row > div h3 {
   font-size: 1.2rem;

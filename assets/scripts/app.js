@@ -56,6 +56,7 @@ $firebase_database = $firebase_database($firebase_init);
 /**
  * Saves a new post to the Firebase DB.
  */
+/*
 function writeNewPost(username, picture, title, body) {
  // A post entry.
  var postData = {
@@ -78,7 +79,7 @@ function writeNewPost(username, picture, title, body) {
  updates["/posts/" + newPostKey] = postData;
 
  return $firebase_database.ref().update(updates);
-}
+}*/
 
 /**
  * Creates a post element.
@@ -90,7 +91,6 @@ function createPostElement(i, data) {
 
  var title = data.title || "Untitled";
  var body = data.body || "No Description is provided.";
- var author = data.author || "A Member";
  var picture = data.picture || "assets/images/banner.jpg";
  var tags = data.tags || "0";
  var date = new Date(data.date).toDateString();
@@ -117,16 +117,36 @@ function createPostElement(i, data) {
  );
  postElement.innerHTML = `
         <div class="row" onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.parentElement.querySelector('h5').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreImage').src = this.querySelector('.__header > img').src; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.parentElement.querySelector('span.tags').innerHTML;" title="Click here to see the full post" data-bs-toggle="modal" data-bs-target="#modalMediaShowMore">
-            <div class="__header col-md-6">
+            <div class="__header col-md-6 ${data.type == "event" && "d-none"}">
                 <img src=${picture} alt="Cover Photo">
             </div>
-            <div class="__body col-md-6">
-                <h5>${title}</h5>
+            <div class="__body col-md-6 ${data.type == "event" && `col-md-12`}">
+                <h5>${
+                 data.type == "event"
+                  ? `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-calendar-event-fill me-2 mb-1" viewBox="0 0 16 16">
+                <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+              </svg>`
+                  : ""
+                } ${
+  title.indexOf(")") == -1
+   ? title
+   : title.split(")")[1] + " " + title.split(")")[0] + ")"
+ }</h5>
                 <p>${body}</p>
                 <div class="mt-auto">
                     <div class="d-flex">
-                        <span class="date me-2">${date}</span>
-                        <span class="tags">${tags}</span>
+                        <span class="date me-2 ${
+                         data.type == "event" && "bg-primary text-white"
+                        }">${
+  data.type != "event"
+   ? date
+   : new Date(data.start).toDateString() +
+     " - " +
+     new Date(data.end).toDateString()
+ }</span>
+                        <span class="tags">${
+                         data.type != "event" ? tags : "EVENT"
+                        }</span>
                     </div>
                 </div>
             </div>
@@ -149,7 +169,8 @@ function startDatabaseQueries() {
 
  var fetchPosts = async function (postsRef) {
   await $firebase_database_then(postsRef, function (data) {
-   var posts = data.val();
+   let posts = data.val();
+   let allEvents = [];
    if (posts.length >= 1) {
     if (__media) __media.innerHTML = "";
     // limit to top 1 post only
@@ -158,9 +179,73 @@ function startDatabaseQueries() {
     // Iterate through posts.
     for (var post in posts) {
      if (__mediaLoading) __mediaLoading.style.display = "none";
+     if (posts[post].type == "event") {
+      allEvents.push({
+       title: posts[post].title,
+       start: posts[post].start,
+       end: posts[post].end,
+       time: posts[post].time,
+       place: posts[post].place,
+       body: posts[post].body,
+       status: posts[post].status,
+       display: posts[post].status == "upcoming" ? "" : "list-item",
+      });
+     }
      createPostElement(post, posts[post]);
     }
    }
+
+   /** Calender Starts */
+   var calendarEl = document.getElementById("calendar");
+   var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: "dayGridMonth",
+    events: allEvents,
+    eventClick: function (info) {
+     const myModal = new bootstrap.Modal("#modalOfEvent", {
+      keyboard: false,
+     });
+     const modalBody = document.querySelector("#modalOfEvent .modal-body");
+     const modalTitle = document.querySelector("#modalOfEvent .modal-title");
+     const duration = info.event.end
+      ? (new Date(info.event.end).getTime() -
+         new Date(info.event.start).getTime()) /
+        (1000 * 3600 * 24)
+      : 1;
+     modalTitle.innerHTML = info.event.title;
+     modalBody.innerHTML = `
+                    <p><b>Status:</b> ${
+                     info.event.extendedProps.status == "Completed"
+                      ? `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                  </svg> Completed`
+                      : `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                  <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                  <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                  <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+                </svg> Upcoming`
+                    }</p>
+                    <p><b>Place:</b> ${info.event.extendedProps.place}</p>
+                    <p><b>Start:</b> ${new Date(
+                     info.event.start
+                    ).toDateString()}</p>
+                    ${
+                     info.event.end
+                      ? "<p><b>End:</b> " +
+                        new Date(info.event.end).toDateString() +
+                        "</p>"
+                      : ""
+                    }
+                    <p><b>Time:</b> ${info.event.extendedProps.time}</p>
+                    <p><b>Duration:</b> ${duration} day${
+      duration > 1 ? "s" : ""
+     }</p>
+                    <p><b>Description:</b> ${info.event.extendedProps.body}</p>
+                `;
+     myModal.show();
+    },
+   });
+   calendar.render();
+   /** Calender Ends */
    isLoaded = true;
   });
  };

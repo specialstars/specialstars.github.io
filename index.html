@@ -499,38 +499,8 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                events: [
-                    {
-                        title: 'Test Event',
-                        place: 'Dhaka, Bangladesh',
-                        start: '2023-09-01',
-                    },
-                ],
-                eventClick: function (info) {
-                    const myModal = new bootstrap.Modal('#modalOfEvent', {
-                        keyboard: false
-                    })
-                    const modalBody = document.querySelector('#modalOfEvent .modal-body');
-                    const modalTitle = document.querySelector('#modalOfEvent .modal-title');
-                    modalTitle.innerHTML = info.event.title;
-                    modalBody.innerHTML = `
-                        <p><b>Place:</b> ${info.event.extendedProps.place}</p>
-                        <p><b>Start:</b> ${info.event.start}</p>
-                        <p><b>End:</b> ${info.event.end}</p>
-                    `;
-                    myModal.show();
-                }
-            });
-            calendar.render();
-        });
-    </script>
     <script src="assets/scripts/index.js"></script>
-    <script src="assets/scripts/firebase.js" type="module"></script>
+    <script src="assets/scripts/app.js" type="module"></script>
 </body>
 
 </html>
