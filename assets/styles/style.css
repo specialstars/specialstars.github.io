@@ -58,6 +58,14 @@ a {
   transform: translateY(0px) scale(1);
 }
 
+.modal {
+  z-index: 1000000000;
+}
+
+.modal-backdrop {
+  z-index: 999999999;
+}
+
 /* __ Navigation Bar __ */
 .__navbar {
   position: sticky;

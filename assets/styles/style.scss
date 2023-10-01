@@ -71,6 +71,14 @@ a {
  }
 }
 
+.modal {
+ z-index: 1000000000;
+}
+
+.modal-backdrop {
+ z-index: 999999999;
+}
+
 /* __ Navigation Bar __ */
 .__navbar {
  position: sticky;
@@ -178,7 +186,7 @@ body:not(.__home-page) .navbar {
     line-height: 1.4;
     font-family: "PT Sans", sans-serif;
     span {
-        color: $secondary-color;
+     color: $secondary-color;
     }
    }
    p {
