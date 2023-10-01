@@ -181,6 +181,9 @@ body:not(.__home-page) .navbar {
     margin-bottom: 2rem;
     line-height: 1.4;
     font-family: "PT Sans", sans-serif;
+    span {
+        color: $secondary-color;
+    }
    }
    p {
     font-size: 1.1rem;
