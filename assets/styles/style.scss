@@ -168,7 +168,7 @@ body:not(.__home-page) .navbar {
   background: radial-gradient(
    circle at center,
    rgba($secondary-color, 0.2),
-    rgba($primary-text-color, 0.05)
+   rgba($primary-text-color, 0.05)
   );
   .__details {
    display: flex;
@@ -551,6 +551,12 @@ body:not(.__home-page) .navbar {
    }
   }
  }
+ .__media-show-more-box {
+  img {
+   width: 100%;
+   object-fit: cover;
+  }
+ }
 }
 
 /* __ (About + Team + Contact + Updates + Gallery) Pages __ */
@@ -830,7 +836,7 @@ body:not(.__home-page) .navbar {
     }
    }
    .__media {
-     min-height: 600px !important;
+    min-height: 600px !important;
     .row > .col-md-6 {
      width: 100% !important;
     }

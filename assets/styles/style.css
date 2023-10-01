@@ -528,6 +528,11 @@ body:not(.__home-page) .navbar {
   border-radius: 0.5rem;
   margin: 0.2rem 0;
 }
+.__home-page .__media-show-more-box img,
+.__updates-page .__media-show-more-box img {
+  width: 100%;
+  object-fit: cover;
+}
 
 /* __ (About + Team + Contact + Updates + Gallery) Pages __ */
 .__about-page,
