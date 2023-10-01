@@ -71,7 +71,7 @@ a {
   color: #434d5b;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 100000000;
   user-select: none;
 }
 .__navbar.scrolled {

@@ -84,7 +84,7 @@ a {
  color: $primary-text-color;
  backdrop-filter: blur(10px);
  -webkit-backdrop-filter: blur(10px);
- z-index: 1000;
+ z-index: 100000000;
  user-select: none;
  &.scrolled {
   background-color: rgba(255, 255, 255, 0.8);
