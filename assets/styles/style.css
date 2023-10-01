@@ -158,7 +158,7 @@ body:not(.__home-page) .navbar {
   width: 100%;
   padding: 6rem 1rem 7rem 1rem;
   backdrop-filter: blur(16px);
-  background: radial-gradient(circle at center, rgba(0, 115, 230, 0.2), rgba(67, 77, 91, 0.05));
+  background: #fff;
 }
 .__home-page .__hero-section .__details {
   display: flex;
