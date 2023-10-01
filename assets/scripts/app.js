@@ -123,7 +123,7 @@ function createPostElement(i, data) {
                 <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
               </svg>`
       : ""
-    } ${title + " (" + data.tid + ")</span>"
+    } ${title + (data.type == "event" ? " (" + data.tid + ")" : "")
     }</h5>
                 <p>${body}</p>
                 <div class="mt-auto">
@@ -183,9 +183,9 @@ function startDatabaseQueries() {
               ).replace(/([.?!])\s*(?=[A-Z])/g, "$1|")
                 .split("|")
                 .join("<p></p>").replace(/@([a-z0-9_]+)/gi, '<span class="text-danger">$&</span>').replace(
-                /#([a-z0-9_]+)/gi,
-                '<a class="text-primary" href="https://www.google.com/search?q=%23$1" target="_blank">#$1</a>'
-              ),
+                  /#([a-z0-9_]+)/gi,
+                  '<a class="text-primary" href="https://www.google.com/search?q=%23$1" target="_blank">#$1</a>'
+                ),
               status: p.status,
               display: p.status == "upcoming" ? "" : "list-item",
             });
