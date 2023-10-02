@@ -513,6 +513,10 @@ body:not(.__home-page) .navbar {
   display: flex;
   flex-direction: column;
 }
+.__home-page .__media-section .__media > .row > div .__body h5,
+.__updates-page .__media-section .__media > .row > div .__body h5 {
+  line-height: 1.8rem;
+}
 .__home-page .__media-section .__media > .row > div .__body p,
 .__updates-page .__media-section .__media > .row > div .__body p {
   line-height: 1.5rem;

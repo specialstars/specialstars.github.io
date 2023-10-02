@@ -526,6 +526,9 @@ body:not(.__home-page) .navbar {
       padding: 1.4rem;
       display: flex;
       flex-direction: column;
+      h5 {
+      line-height: 1.8rem;
+      }
       p {
        line-height: 1.5rem;
        max-height: 8rem;
