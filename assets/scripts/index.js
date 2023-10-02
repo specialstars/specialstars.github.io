@@ -7,8 +7,7 @@
         @ Navbar Scroll Effect
         @ Fading Effect
         @ Tawk.to API for Conversation
-        @ Top2Bottom Implementation
-        @ Google Translator Bar
+        @ Top to Bottom Implementation
         */
         /////
         const $scroll = function () {
@@ -100,16 +99,11 @@
             }
         };
 
-        const $gtranslator = function () {
-            new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
-        }
-
         /////
         const $main = function () {
             $scroll();
             $fade();
             $t2b();
-            $gtranslator();
         };
         window.addEventListener("load", $main);
 

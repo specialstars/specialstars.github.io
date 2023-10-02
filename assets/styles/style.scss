@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=PT+Sans:wght@700&display=swap");
 
 $primary-color: #e3f9ff;
 $primary-text-color: #434d5b;
@@ -17,9 +17,12 @@ $box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 body {
- font-family: "Poppins", sans-serif;
  background-color: $primary-color;
  color: $primary-text-color;
+ font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system,
+  BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans,
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol,
+  "Noto Color Emoji";
 }
 
 p {
@@ -85,8 +88,8 @@ a {
  top: 0;
  left: 0;
  width: 100%;
- height: 60px;
- max-height: 60px;
+ height: 65px;
+ max-height: 65px;
  padding: 0;
  background-color: #ffffff;
  color: $primary-text-color;
@@ -191,7 +194,7 @@ body:not(.__home-page) .navbar {
    }
    p {
     font-size: 1.1rem;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 2rem;
     line-height: 1.9;
     color: lighten($primary-text-color, 20%);
@@ -332,7 +335,7 @@ body:not(.__home-page) .navbar {
      }
      p:last-child {
       font-size: 0.9rem;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.8;
       text-align: center;
      }
@@ -375,7 +378,7 @@ body:not(.__home-page) .navbar {
     h2 {
      font-size: 1rem;
      padding: 0;
-     font-weight: 300;
+     font-weight: 400;
      color: lighten($primary-text-color, 20%);
     }
     button {
@@ -646,7 +649,7 @@ body:not(.__home-page) .navbar {
     span {
      display: block;
      font-size: 0.6rem;
-     font-weight: 300;
+     font-weight: 400;
      color: $primary-text-color;
     }
    }
@@ -766,7 +769,7 @@ body:not(.__home-page) .navbar {
     margin: 0;
     border-radius: 0;
     a {
-     font-weight: 300;
+     font-weight: 400;
     }
     &:first-child {
      border-radius: 0.4rem 0.4rem 0 0;
