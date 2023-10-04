@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #e3f9ff;
+  background-color: #f7f7f7;
   color: #434d5b;
   font-family: "Open Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
@@ -77,6 +77,7 @@ a {
   padding: 0;
   background-color: #ffffff;
   color: #434d5b;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100000000;
@@ -146,10 +147,6 @@ a {
 }
 .__navbar .__menu .dropdown-item:hover:not(.active) {
   background-color: rgba(0, 115, 230, 0.2);
-}
-
-body:not(.__home-page) .navbar {
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 /* __ Home Page __ */
@@ -367,7 +364,7 @@ body:not(.__home-page) .navbar {
   color: #ffffff;
 }
 .__home-page .__update-section .row #calendar tr {
-  background-color: rgba(0, 115, 230, 0.01);
+  background-color: #fff;
 }
 .__home-page .__update-section .row #calendar tr[role=row] td:hover {
   background-color: rgba(0, 115, 230, 0.1);
@@ -381,7 +378,7 @@ body:not(.__home-page) .navbar {
 }
 .__home-page .__faq-section {
   padding: 5rem 2rem 5rem 2rem;
-  background: rgba(51, 51, 51, 0.05);
+  background: #fff;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -395,10 +392,17 @@ body:not(.__home-page) .navbar {
   object-fit: cover;
   object-position: center;
 }
+.__home-page .__faq-section .row .__faq-lists {
+  background-color: red !important;
+}
+.__home-page .__faq-section .row .__faq-lists .accordion-button {
+  line-height: 1.5rem;
+}
 .__home-page .__faq-section .row .__faq-lists .accordion-body {
   color: #6f7f95;
   line-height: 1.7rem;
   font-size: 0.9rem;
+  margin-bottom: 2rem;
 }
 .__home-page .__faq-section .row .__faq-lists button {
   font-weight: 600;
@@ -425,7 +429,7 @@ body:not(.__home-page) .navbar {
 .__home-page .__media-section .__title h3,
 .__updates-page .__media-section .__title h3 {
   width: fit-content;
-  background-color: #e3f9ff;
+  background-color: #f7f7f7;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -595,7 +599,7 @@ body:not(.__home-page) .navbar {
   /* > List section */
 }
 .__team-page .__list-section {
-  background-color: #f2fcff;
+  background-color: white;
 }
 .__team-page .__list-section .__title {
   width: 100%;
@@ -626,7 +630,7 @@ body:not(.__home-page) .navbar {
   object-fit: cover;
   aspect-ratio: 3/3;
   border-radius: 0.7rem;
-  background-color: #e3f9ff;
+  background-color: #f7f7f7;
   border: 1px solid rgba(0, 115, 230, 0.1);
 }
 .__team-page .__list-section .__lists .__list h3 {

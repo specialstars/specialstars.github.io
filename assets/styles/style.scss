@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=PT+Sans:wght@700&display=swap");
 
-$primary-color: #e3f9ff;
+// $primary-color: #e3f9ff;
+$primary-color: #f7f7f7;
 $primary-text-color: #434d5b;
 $secondary-color: #0073e6;
 $secondary-text-color: #ffffff;
@@ -93,6 +94,7 @@ a {
  padding: 0;
  background-color: #ffffff;
  color: $primary-text-color;
+ box-shadow: $box-shadow;
  backdrop-filter: blur(10px);
  -webkit-backdrop-filter: blur(10px);
  z-index: 100000000;
@@ -163,9 +165,6 @@ a {
    }
   }
  }
-}
-body:not(.__home-page) .navbar {
- box-shadow: $box-shadow;
 }
 
 /* __ Home Page __ */
@@ -392,7 +391,7 @@ body:not(.__home-page) .navbar {
      }
     }
     tr {
-     background-color: rgba($secondary-color, 0.01);
+     background-color: #fff;
     }
     tr[role="row"] td {
      &:hover {
@@ -412,7 +411,7 @@ body:not(.__home-page) .navbar {
  /* > FAQ Section */
  .__faq-section {
   padding: 5rem 2rem 5rem 2rem;
-  background: rgba(#333, 0.05);
+  background: #fff;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   .row {
@@ -427,10 +426,15 @@ body:not(.__home-page) .navbar {
     }
    }
    .__faq-lists {
+    background-color: red !important;
+    .accordion-button {
+     line-height: 1.5rem;
+    }
     .accordion-body {
      color: lighten($primary-text-color, 20%);
      line-height: 1.7rem;
      font-size: 0.9rem;
+     margin-bottom: 2rem;
     }
     button {
      font-weight: 600;
@@ -527,7 +531,7 @@ body:not(.__home-page) .navbar {
       display: flex;
       flex-direction: column;
       h5 {
-      line-height: 1.8rem;
+       line-height: 1.8rem;
       }
       p {
        line-height: 1.5rem;
