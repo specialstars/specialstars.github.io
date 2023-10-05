@@ -88,7 +88,7 @@ function createPostElement(i, data) {
 
   var title = data.title || "Untitled";
   var body = data.body || "No Description is provided.";
-  var picture = data.type != "event" ? data.picture || "assets/images/banner.jpg" : data.picture || "assets/images/icons/banner-event.png";
+  var picture = data.type != "event" ? data.picture || "assets/images/banner.jpg" : data.picture || "assets/images/banner-event.png";
   var tags = data.tags || "0";
   var date = new Date(data.date).toDateString();
 
