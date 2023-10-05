@@ -175,7 +175,8 @@ a {
   width: 100%;
   padding: 6rem 1rem 7rem 1rem;
   backdrop-filter: blur(16px);
-  background: #fff;
+  background: rgba($secondary-color, 0.1);
+  background-image: linear-gradient(120deg, #c9d8f8, #f7eff6);
   .__details {
    display: flex;
    flex-direction: column;
@@ -225,6 +226,7 @@ a {
  .__about-section {
   width: 100%;
   padding: 6rem 2rem 3rem 2rem;
+  background: #fff;
   min-height: 100vh;
   .__intro {
    span {
@@ -275,7 +277,6 @@ a {
  .__details-section {
   width: 100%;
   padding: 6rem 2rem;
-  background: rgba(#333, 0.05);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   .__card {
@@ -296,8 +297,8 @@ a {
  /* > Feature Section */
  .__feature-section {
   width: 100%;
-  padding: 0rem 2rem 4rem 2rem;
-  background: rgba(#333, 0.05);
+  padding: 4rem 2rem 4rem 2rem;
+  background: #fff;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   .__features {
@@ -426,7 +427,6 @@ a {
     }
    }
    .__faq-lists {
-    background-color: red !important;
     .accordion-button {
      line-height: 1.5rem;
     }
