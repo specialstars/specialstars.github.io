@@ -592,6 +592,25 @@ a {
 }
 
 /* __ About Page __ */
+.__about-page .__hero-section .row {
+  align-items: center;
+}
+.__about-page .__hero-section .row img {
+  object-fit: cover;
+  height: 80vh;
+  border-radius: 0.8rem;
+}
+.__about-page .__hero-section .row h1 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.__about-page .__hero-section .row p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #6f7f95;
+}
+
 /* __ Team Page __ */
 .__team-page {
   /* > List section */
@@ -766,6 +785,13 @@ a {
   }
   .__navbar .__menu > ul > li:last-child {
     border-radius: 0 0 0.4rem 0.4rem;
+  }
+  .__about-page .__hero-section .row {
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  .__about-page .__hero-section .row img {
+    height: 100%;
   }
 }
 @media screen and (min-width: 992px) {

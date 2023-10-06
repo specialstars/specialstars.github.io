@@ -603,6 +603,26 @@ a {
 
 /* __ About Page __ */
 .__about-page {
+ .__hero-section {
+  .row {
+   align-items: center;
+   img {
+    object-fit: cover;
+    height: 80vh;
+    border-radius: 0.8rem;
+   }
+   h1 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+   }
+   p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: lighten($primary-text-color, 20%);
+   }
+  }
+ }
 }
 
 /* __ Team Page __ */
@@ -783,6 +803,17 @@ a {
     }
     &:last-child {
      border-radius: 0 0 0.4rem 0.4rem;
+    }
+   }
+  }
+ }
+ .__about-page {
+  .__hero-section {
+   .row {
+    max-width: 650px;
+    margin: 0 auto;
+    img {
+      height: 100%;
     }
    }
   }
