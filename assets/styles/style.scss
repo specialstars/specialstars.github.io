@@ -604,6 +604,7 @@ a {
 /* __ About Page __ */
 .__about-page {
  .__hero-section {
+  min-height: 100vh;
   .row {
    align-items: center;
    img {
@@ -684,8 +685,60 @@ a {
  }
 }
 
+/* __ Gallery Page __ */
+.__gallery-page {
+  /* > Show section */
+  .__show-section {
+    padding: 2rem 0;
+    .__show-item {
+      img {
+        width: 100%;
+        border-radius: 0.7rem;
+      }
+    }
+  }
+}
+
 /* __ Contact Page __ */
 .__contact-page {
+ /* __ Form Section __ */
+ .__form-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  padding-bottom: 6rem;
+  .row {
+   justify-content: center;
+   .md-form {
+    width: 100%;
+    max-width: 635px;
+    margin-bottom: 1rem;
+    input,
+    textarea {
+     width: 100%;
+     padding: 0.5rem 1rem;
+     border-radius: 5px;
+     font-size: 0.9rem;
+     font-weight: 500;
+     &:focus {
+      outline: none;
+      border-color: #4183c4;
+     }
+    }
+    label {
+     margin-bottom: 0.5rem;
+    }
+    textarea {
+     resize: none;
+     height: 150px;
+    }
+   }
+   .btn {
+    font-size: 1rem;
+    font-weight: 500;
+   }
+  }
+ }
 }
 
 /* __ Donate Page __ */
@@ -813,7 +866,7 @@ a {
     max-width: 650px;
     margin: 0 auto;
     img {
-      height: 100%;
+     height: 100%;
     }
    }
   }

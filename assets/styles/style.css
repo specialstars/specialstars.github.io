@@ -592,6 +592,9 @@ a {
 }
 
 /* __ About Page __ */
+.__about-page .__hero-section {
+  min-height: 100vh;
+}
 .__about-page .__hero-section .row {
   align-items: center;
 }
@@ -670,7 +673,61 @@ a {
   color: #434d5b;
 }
 
+/* __ Gallery Page __ */
+.__gallery-page {
+  /* > Show section */
+}
+.__gallery-page .__show-section {
+  padding: 2rem 0;
+}
+.__gallery-page .__show-section .__show-item img {
+  width: 100%;
+  border-radius: 0.7rem;
+}
+
 /* __ Contact Page __ */
+.__contact-page {
+  /* __ Form Section __ */
+}
+.__contact-page .__form-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 1rem;
+  padding-bottom: 6rem;
+}
+.__contact-page .__form-section .row {
+  justify-content: center;
+}
+.__contact-page .__form-section .row .md-form {
+  width: 100%;
+  max-width: 635px;
+  margin-bottom: 1rem;
+}
+.__contact-page .__form-section .row .md-form input,
+.__contact-page .__form-section .row .md-form textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.__contact-page .__form-section .row .md-form input:focus,
+.__contact-page .__form-section .row .md-form textarea:focus {
+  outline: none;
+  border-color: #4183c4;
+}
+.__contact-page .__form-section .row .md-form label {
+  margin-bottom: 0.5rem;
+}
+.__contact-page .__form-section .row .md-form textarea {
+  resize: none;
+  height: 150px;
+}
+.__contact-page .__form-section .row .btn {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
 /* __ Donate Page __ */
 .__donate-page {
   /* > Main Section */
