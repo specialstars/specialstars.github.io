@@ -1,5 +1,10 @@
 {
-    "admins": ["saadalamin2004@gmail.com", "mosefatullah@gmail.com", "specialstars.org@gmail.com"],
+    "admins": [
+        "saadalamin2004@gmail.com",
+        "mosefatullah@gmail.com",
+        "specialstars.org@gmail.com",
+        "example@gmail.com"
+    ],
     "posts": [
         {
             "id": "MhWJ6Nv7n-4M6Bz7VzF7",
@@ -22,6 +27,15 @@
             "place": "Wari, Dhaka, Bangladesh",
             "status": "Completed",
             "type": "event"
+        },
+        {
+            "id": "KjWJ9Sv7n-3N6Ez7VxF5",
+            "body": "hgjghjj",
+            "date": "Sat Oct 07 2023",
+            "picture": "https://firebasestorage.googleapis.com/v0/b/specialstars-dev.appspot.com/o/posts%2FUntiaaatled-2.jpg?alt=media&token=94b1fab0-b5bd-4149-b09b-8936406f2680",
+            "tags": "hjghjghj",
+            "title": "ghnvhgjnmghj",
+            "type": "post"
         }
     ]
 }
