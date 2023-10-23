@@ -65,7 +65,8 @@
                         <div id="__heroCarousel" class="carousel slide">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="assets/images/hero-banner.gif" alt="Assisting Individual Children with Special Needs">
+                                    <img src="assets/images/hero-banner.gif"
+                                        alt="Assisting Individual Children with Special Needs">
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#__heroCarousel"
@@ -107,7 +108,10 @@
                         <div class="col-md-8">
                             <span>Our Supports</span>
                             <h2>We Support</h2>
-                            <p>We're dedicated to making a positive impact on the lives of individuals with disabilities and autism. Our supports empower and guide individuals towards a brighter future. We recognize that every person has their unique dreams, and our tailored range of supports provides the guidance and help needed along the way.</p>
+                            <p>We're dedicated to making a positive impact on the lives of individuals with disabilities
+                                and autism. Our supports empower and guide individuals towards a brighter future. We
+                                recognize that every person has their unique dreams, and our tailored range of supports
+                                provides the guidance and help needed along the way.</p>
                         </div>
                     </div>
                 </div>
@@ -116,17 +120,26 @@
                         <div class="__switch">
                             <section>
                                 <h5>Compassion</h5>
-                                <p>Compassion is the heartbeat of our organization. We approach our work with unwavering empathy, recognizing the unique challenges and triumphs of each individual. Our team listens, understands, and supports with genuine care and consideration.</p>
+                                <p>Compassion is the heartbeat of our organization. We approach our work with unwavering
+                                    empathy, recognizing the unique challenges and triumphs of each individual. Our team
+                                    listens, understands, and supports with genuine care and consideration.</p>
                                 <a href="#">Learn More ></a>
                             </section>
                             <section>
                                 <h5>Dedication</h5>
-                                <p>Dedication fuels our commitment to our mission. We are steadfast in our pursuit of creating a more inclusive society. Our team of dedicated professionals works tirelessly to ensure that our supports are not only effective but also tailored to the specific needs and goals of each individual.</p>
+                                <p>Dedication fuels our commitment to our mission. We are steadfast in our pursuit of
+                                    creating a more inclusive society. Our team of dedicated professionals works
+                                    tirelessly to ensure that our supports are not only effective but also tailored to
+                                    the specific needs and goals of each individual.</p>
                                 <a href="#">Learn More ></a>
                             </section>
                             <section>
                                 <h5>Inclusivity</h5>
-                                <p>Inclusivity is the cornerstone of our approach. We believe in a world where everyone, regardless of their abilities, has the opportunity to shine. Our supports are designed to break down barriers and foster an inclusive environment where all individuals can thrive, celebrate their uniqueness, and reach their full potential.</p>
+                                <p>Inclusivity is the cornerstone of our approach. We believe in a world where everyone,
+                                    regardless of their abilities, has the opportunity to shine. Our supports are
+                                    designed to break down barriers and foster an inclusive environment where all
+                                    individuals can thrive, celebrate their uniqueness, and reach their full potential.
+                                </p>
                                 <a href="#">Learn More ></a>
                             </section>
                         </div>
@@ -146,20 +159,26 @@
                     <div class="col-lg-4 p-2">
                         <div class="__card bg-white text-dark">
                             <h3>About Us</h3>
-                            <p>Special Stars is a compassionate and dedicated organization established to bring positive change and support to individuals who face challenges related to disabilities and autism.</p>
+                            <p>Special Stars is a compassionate and dedicated organization established to bring positive
+                                change and support to individuals who face challenges related to disabilities and
+                                autism.</p>
                             <!-- <a href="about.html" class="btn btn-primary p-2 px-3">Read More</a> -->
                         </div>
                     </div>
                     <div class="col-lg-4 p-2">
                         <div class="__card bg-white text-dark">
                             <h3>Our Missions</h3>
-                            <p>Empowering abilities, embracing dreams. At Special Stars, we're dedicated to creating an inclusive society where everyone, regardless of their abilities, can thrive and achieve their potential.</p>
+                            <p>Empowering abilities, embracing dreams. At Special Stars, we're dedicated to creating an
+                                inclusive society where everyone, regardless of their abilities, can thrive and achieve
+                                their potential.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 p-2">
                         <div class="__card bg-white text-dark">
                             <h3>Our Achievements</h3>
-                            <p>Our achievements reflect the transformative impact of our commitment. We've empowered individuals, driven positive change, and broken barriers to create a more inclusive society. These successes inspire us to do even more.</p>
+                            <p>Our achievements reflect the transformative impact of our commitment. We've empowered
+                                individuals, driven positive change, and broken barriers to create a more inclusive
+                                society. These successes inspire us to do even more.</p>
                         </div>
                     </div>
                 </div>
@@ -486,6 +505,37 @@
             </svg>
         </button>
     </div>
+
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "106131139212056");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
