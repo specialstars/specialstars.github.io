@@ -42,7 +42,10 @@ a {
 }
 
 .__animation {
+  -webkit-transform: translateY(100px) scale(0.9);
   transform: translateY(100px) scale(0.9);
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
   -webkit-transition: 0.4s;
   -o-transition: 0.4s;
@@ -51,6 +54,7 @@ a {
 }
 .__animation.active {
   opacity: 1;
+  -webkit-transform: translateY(0px) scale(1);
   transform: translateY(0px) scale(1);
 }
 
@@ -77,9 +81,7 @@ a {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100000000;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 .__navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.8);
@@ -90,8 +92,7 @@ a {
   align-items: center;
 }
 .__navbar .__logo img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 50px;
   border-radius: 0.5rem;
 }
@@ -161,8 +162,7 @@ a {
   position: relative;
   width: 100%;
   padding: 6rem 1rem 7rem 1rem;
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   background: rgba(0, 115, 230, 0.1);
   background-image: linear-gradient(120deg, #c9d8f8, #f7eff6);
 }
@@ -190,7 +190,6 @@ a {
   color: #6f7f95;
 }
 .__home-page .__hero-section .__details .__action .btn {
-  width: -moz-fit-content;
   width: fit-content;
   font-weight: 500;
   padding: 0.6rem 2rem;
@@ -203,8 +202,7 @@ a {
   width: 100%;
   max-height: 400px;
   aspect-ratio: 3/3;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-color: rgba(0, 115, 230, 0.1);
   border-radius: 0.8rem;
 }
@@ -250,8 +248,7 @@ a {
   width: 100%;
   height: 100%;
   min-height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .__home-page .__details-section {
   width: 100%;
@@ -393,12 +390,9 @@ a {
 }
 .__home-page .__faq-section .row > div:first-child img {
   width: 45%;
-  height: -moz-fit-content;
   height: fit-content;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 .__home-page .__faq-section .row .__faq-lists .accordion-button {
   line-height: 1.5rem;
@@ -433,7 +427,6 @@ a {
 }
 .__home-page .__media-section .__title h3,
 .__updates-page .__media-section .__title h3 {
-  width: -moz-fit-content;
   width: fit-content;
   background-color: #f7f7f7;
   margin: 0 auto;
@@ -491,8 +484,7 @@ a {
 .__updates-page .__media-section .__media > .row > div .__header img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .__home-page .__media-section .__media > .row > div .__header::after,
 .__updates-page .__media-section .__media > .row > div .__header::after {
@@ -542,7 +534,6 @@ a {
 }
 .__home-page .__media-section .__media > .row > div .__body .btn,
 .__updates-page .__media-section .__media > .row > div .__body .btn {
-  width: -moz-fit-content;
   width: fit-content;
 }
 .__home-page .__media-section .__media > .row > div .__body .date,
@@ -559,8 +550,7 @@ a {
 .__updates-page .__media-show-more-box img {
   width: 100%;
   max-height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 /* __ (About + Team + Contact + Updates + Gallery) Pages __ */
@@ -611,8 +601,7 @@ a {
   align-items: center;
 }
 .__about-page .__hero-section .row img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 80vh;
   border-radius: 0.8rem;
 }
@@ -660,8 +649,7 @@ a {
 }
 .__team-page .__list-section .__lists .__list img {
   width: 85%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   aspect-ratio: 3/3;
   border-radius: 0.7rem;
   background-color: #f7f7f7;
@@ -819,7 +807,7 @@ a {
   display: none;
   position: fixed;
   bottom: 1rem;
-  right: 1rem;
+  left: 1rem;
   z-index: 1000;
 }
 .__t2b button {

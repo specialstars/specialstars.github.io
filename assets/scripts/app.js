@@ -266,6 +266,9 @@ function startDatabaseQueries() {
     },
    });
    calendar.render();
+   window.onscroll = function () {
+    calendar.render();
+   };
    /** Calender Ends */
    isLoaded = true;
   });

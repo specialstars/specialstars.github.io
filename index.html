@@ -273,7 +273,6 @@
                         <span>All Kind of Events</span>
                         <h2>Upcoming Events</h2>
                         <div id='calendar' style="min-height: 300px;" class="notranslate">
-                            <!-- Loading bar -->
                             <div class="spinner spinner-grow mt-5 me-2"></div>
                         </div>
                     </div>
@@ -477,18 +476,20 @@
             </div>
         </div>
         <div class="__attribution">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>Copyright &copy; <span id="copyrightYear">2023</span> | All rights reserved.</p>
-                </div>
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-md-end">
-                        <a href="https://www.facebook.com/specialstarsorg"><img src="assets/images/icons/media/2.png"
-                                alt="Facebook" /></a>
-                        <a href="https://www.linkedin.com/company/special-stars/"><img
-                                src="assets/images/icons/media/1.png" alt="Linkedin" /></a>
-                        <a href="https://www.instagram.com/specialstars23/"><img src="assets/images/icons/media/3.png"
-                                alt="Instagram" /></a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Copyright &copy; <span id="copyrightYear">2023</span> | All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-md-end">
+                            <a href="https://www.facebook.com/specialstarsorg"><img
+                                    src="assets/images/icons/media/2.png" alt="Facebook" /></a>
+                            <a href="https://www.linkedin.com/company/special-stars/"><img
+                                    src="assets/images/icons/media/1.png" alt="Linkedin" /></a>
+                            <a href="https://www.instagram.com/specialstars23/"><img
+                                    src="assets/images/icons/media/3.png" alt="Instagram" /></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -506,36 +507,9 @@
         </button>
     </div>
 
-    <!-- Messenger Chat plugin Code -->
+    <!-- __ Messenger Chat plugin Code -->
     <div id="fb-root"></div>
-
-    <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
-    <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "106131139212056");
-        chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                xfbml: true,
-                version: 'v18.0'
-            });
-        };
-
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <div id="messenger-chat" class="fb-customerchat"></div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
