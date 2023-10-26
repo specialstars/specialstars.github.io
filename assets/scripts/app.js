@@ -95,26 +95,13 @@ function createPostElement(i, data) {
  var tags = data.tags || "0";
  var date = new Date(data.date).toDateString();
 
- // Put <br/> when there is a 1. 2. 3. lists
- body = body.replace(
-  /\d\.\s/g,
-  "<br/><br/><br/><mark class='text-success'>$&</mark> "
- );
-
- // Put <br/> grammatically
  body = body
-  .replace(/([.?!])\s*(?=[A-Z])/g, "$1|")
-  .split("|")
-  .join("<br/><br/>");
-
- // set class text-danger to all words that starts with @
- body = body.replace(/@([a-z0-9_]+)/gi, '<span class="text-danger">$&</span>');
-
- // replace all hashtags with links
- body = body.replace(
-  /#([a-z0-9_]+)/gi,
-  '<a class="text-primary" href="https://www.google.com/search?q=%23$1" target="_blank">#$1</a>'
- );
+  .replaceAll("\\n", "<br/>")
+  .replace(/@([a-z0-9_]+)/gi, '<span class="text-danger">$&</span>')
+  .replace(
+   /#([a-z0-9_]+)/gi,
+   '<a class="text-primary" href="https://www.google.com/search?q=%23$1" target="_blank">#$1</a>'
+  );
  postElement.innerHTML = `
         <div class="row" ${
          data.type != "event"
@@ -179,13 +166,7 @@ function startDatabaseQueries() {
        time: p.time,
        place: p.place,
        body: p.body
-        .replace(
-         /\d\.\s/g,
-         "<br/><br/><br/><mark class='text-success'>$&</mark> "
-        )
-        .replace(/([.?!])\s*(?=[A-Z])/g, "$1|")
-        .split("|")
-        .join("<p></p>")
+        .replaceAll("\\n", "<br/>")
         .replace(/@([a-z0-9_]+)/gi, '<span class="text-danger">$&</span>')
         .replace(
          /#([a-z0-9_]+)/gi,
@@ -260,7 +241,9 @@ function startDatabaseQueries() {
                     <p><b>Duration:</b> ${duration} day${
       duration > 1 ? "s" : ""
      }</p>
-                    <p><b>Message:</b><br/> ${info.event.extendedProps.body}</p>
+                    <p><b>Message:</b><br/> <pre style="white-space: pre-wrap">${
+                     info.event.extendedProps.body
+                    }</pre></p>
                 `;
      myModal.show();
     },
