@@ -51,34 +51,6 @@ $firebase_init = $firebase_init($firebase_config);
 $firebase_database = $firebase_database($firebase_init);
 
 /**
- * Saves a new post to the Firebase DB.
- */
-/*
-function writeNewPost(username, picture, title, body) {
- // A post entry.
- var postData = {
-  author: username,
-  picture: picture,
-  title: title,
-  body: body,
-  tags: [...new Set(body.match(/#[a-z]+/gi))],
-  date: Date.now(),
- };
-
- // Get a key for a new Post.
- var newPostKey = $firebase_database
-  .ref($firebase_database)
-  .child("posts")
-  .push().key;
-
- // Write the new post's data simultaneously in the posts list and the user's post list.
- var updates = {};
- updates["/posts/" + newPostKey] = postData;
-
- return $firebase_database.ref().update(updates);
-}*/
-
-/**
  * Creates a post element.
  */
 function createPostElement(i, data) {
