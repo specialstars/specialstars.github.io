@@ -167,7 +167,6 @@ a {
   backdrop-filter: blur(16px);
   background: rgba(0, 115, 230, 0.1);
   background-image: linear-gradient(120deg, #c9d8f8, #f7eff6);
-  min-height: 100vh;
 }
 .__home-page .__hero-section .__details {
   display: flex;
