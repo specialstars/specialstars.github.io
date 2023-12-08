@@ -244,28 +244,15 @@ a {
    }
   }
   .__switch {
-    padding-top: 2rem;
+   padding-top: 2rem;
    section {
     position: relative;
-    background-color: #f2f2f2;
-    border-radius: 16px;
     margin: 2rem 0;
     padding: 2rem;
-    &::before {
-      /* Shadow box with -2rem */
-      content: "";
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: -1rem;
-      left: -1rem;
-      background-color: #fff;
-      border: 1px solid rgba($secondary-color, 0.1);
-      border-radius: 16px;
-      box-shadow: $box-shadow;
-      z-index: -1;
-    }
+    border-radius: 0.7rem;
+    background-color: lighten($secondary-color, 50%);
+    border: 1px solid rgba($secondary-color, 0.1);
+    box-shadow: $box-shadow;
     h5 {
      font-size: 1.2rem;
     }

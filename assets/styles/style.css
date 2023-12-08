@@ -230,25 +230,12 @@ a {
 }
 .__home-page .__about-section .__switch section {
   position: relative;
-  background-color: #f2f2f2;
-  border-radius: 16px;
   margin: 2rem 0;
   padding: 2rem;
-}
-.__home-page .__about-section .__switch section::before {
-  /* Shadow box with -2rem */
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -1rem;
-  left: -1rem;
-  background-color: #fff;
+  border-radius: 0.7rem;
+  background-color: #e6f3ff;
   border: 1px solid rgba(0, 115, 230, 0.1);
-  border-radius: 16px;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
-  z-index: -1;
 }
 .__home-page .__about-section .__switch section h5 {
   font-size: 1.2rem;
