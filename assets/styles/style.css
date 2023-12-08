@@ -7,6 +7,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -222,11 +224,30 @@ a {
 .__home-page .__about-section .__intro p {
   color: #6f7f95;
 }
+.__home-page .__about-section .__switch {
+  padding-top: 2rem;
+}
 .__home-page .__about-section .__switch section {
+  position: relative;
   background-color: #f2f2f2;
   border-radius: 16px;
   margin: 2rem 0;
   padding: 2rem;
+}
+.__home-page .__about-section .__switch section::before {
+  /* Shadow box with -2rem */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -1rem;
+  left: -1rem;
+  background-color: #fff;
+  border: 1px solid rgba(0, 115, 230, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  z-index: -1;
 }
 .__home-page .__about-section .__switch section h5 {
   font-size: 1.2rem;
@@ -447,7 +468,6 @@ a {
 .__home-page .__media-section .__media,
 .__updates-page .__media-section .__media {
   position: relative;
-  padding-top: 2rem;
 }
 .__home-page .__media-section .__media #mediaLoading > div,
 .__updates-page .__media-section .__media #mediaLoading > div {
@@ -460,6 +480,7 @@ a {
 .__home-page .__media-section .__media > .row > .col-md-6,
 .__updates-page .__media-section .__media > .row > .col-md-6 {
   width: 48% !important;
+  max-height: 300px;
 }
 .__home-page .__media-section .__media > .row > div,
 .__updates-page .__media-section .__media > .row > div {
@@ -485,6 +506,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  aspect-ratio: 3/2 !important;
 }
 .__home-page .__media-section .__media > .row > div .__header::after,
 .__updates-page .__media-section .__media > .row > div .__header::after {
@@ -515,6 +537,7 @@ a {
   padding: 1.4rem;
   display: flex;
   flex-direction: column;
+  max-height: 350px;
 }
 .__home-page .__media-section .__media > .row > div .__body h5,
 .__updates-page .__media-section .__media > .row > div .__body h5 {
@@ -536,10 +559,18 @@ a {
 .__updates-page .__media-section .__media > .row > div .__body .btn {
   width: fit-content;
 }
-.__home-page .__media-section .__media > .row > div .__body .date,
-.__home-page .__media-section .__media > .row > div .__body .tags,
-.__updates-page .__media-section .__media > .row > div .__body .date,
-.__updates-page .__media-section .__media > .row > div .__body .tags {
+.__home-page .__media-section .__media > .row > div .__body .bottom-box,
+.__updates-page .__media-section .__media > .row > div .__body .bottom-box {
+  overflow-y: hidden;
+}
+.__home-page .__media-section .__media > .row > div .__body .bottom-box .tags,
+.__updates-page .__media-section .__media > .row > div .__body .bottom-box .tags {
+  text-transform: capitalize;
+}
+.__home-page .__media-section .__media > .row > div .__body .bottom-box .date,
+.__home-page .__media-section .__media > .row > div .__body .bottom-box .tags,
+.__updates-page .__media-section .__media > .row > div .__body .bottom-box .date,
+.__updates-page .__media-section .__media > .row > div .__body .bottom-box .tags {
   font-size: 0.7rem;
   background-color: rgba(0, 115, 230, 0.1);
   padding: 0.2rem 0.5rem;

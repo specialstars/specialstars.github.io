@@ -15,6 +15,8 @@ $box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
  margin: 0;
  padding: 0;
  box-sizing: border-box;
+ scrollbar-width: thin;
+ scroll-behavior: smooth;
 }
 
 body {
@@ -241,11 +243,28 @@ a {
    }
   }
   .__switch {
+    padding-top: 2rem;
    section {
-    background-color:#f2f2f2;
+    position: relative;
+    background-color: #f2f2f2;
     border-radius: 16px;
     margin: 2rem 0;
     padding: 2rem;
+    &::before {
+      /* Shadow box with -2rem */
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: -1rem;
+      left: -1rem;
+      background-color: #fff;
+      border: 1px solid rgba($secondary-color, 0.1);
+      border-radius: 16px;
+      box-shadow: $box-shadow;
+      z-index: -1;
+    }
     h5 {
      font-size: 1.2rem;
     }
@@ -477,7 +496,6 @@ a {
   }
   .__media {
    position: relative;
-   padding-top: 2rem;
    #mediaLoading > div {
     min-height: 300px;
    }
@@ -485,6 +503,7 @@ a {
     height: 100%;
     & > .col-md-6 {
      width: 48% !important;
+     max-height: 300px;
     }
     & > div {
      background-color: #fff;
@@ -503,6 +522,7 @@ a {
        width: 100%;
        height: 100%;
        object-fit: cover;
+       aspect-ratio: 3 / 2 !important;
       }
       &::after {
        content: "View more";
@@ -531,6 +551,7 @@ a {
       padding: 1.4rem;
       display: flex;
       flex-direction: column;
+      max-height: 350px;
       h5 {
        line-height: 1.8rem;
       }
@@ -556,13 +577,19 @@ a {
       .btn {
        width: fit-content;
       }
-      .date,
-      .tags {
-       font-size: 0.7rem;
-       background-color: rgba($secondary-color, 0.1);
-       padding: 0.2rem 0.5rem;
-       border-radius: 0.5rem;
-       margin: 0.2rem 0;
+      .bottom-box {
+       overflow-y: hidden;
+       .tags {
+        text-transform: capitalize;
+       }
+       .date,
+       .tags {
+        font-size: 0.7rem;
+        background-color: rgba($secondary-color, 0.1);
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+        margin: 0.2rem 0;
+       }
       }
      }
     }
@@ -689,16 +716,16 @@ a {
 
 /* __ Gallery Page __ */
 .__gallery-page {
-  /* > Show section */
-  .__show-section {
-    padding: 2rem 0;
-    .__show-item {
-      img {
-        width: 100%;
-        border-radius: 0.7rem;
-      }
-    }
+ /* > Show section */
+ .__show-section {
+  padding: 2rem 0;
+  .__show-item {
+   img {
+    width: 100%;
+    border-radius: 0.7rem;
+   }
   }
+ }
 }
 
 /* __ Contact Page __ */

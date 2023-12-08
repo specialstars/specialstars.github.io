@@ -64,7 +64,8 @@ function createPostElement(i, data) {
   data.type != "event"
    ? data.picture || "assets/images/banner.jpg"
    : data.picture || "assets/images/banner-event.png";
- var tags = data.tags || "0";
+ var tags = typeof data.tags == "string" ? data.tags : data.tags || "0";
+ console.log(tags);
  var date = new Date(data.date).toDateString();
 
  body = body
@@ -88,23 +89,21 @@ function createPostElement(i, data) {
   title + (data.type == "event" ? " (" + data.tid + ")" : "")
  }</h5>
                 <p>${body}</p>
-                <div class="mt-auto">
-                    <div class="d-flex">
-                        <span class="date me-2 ${
-                         data.type == "event" && "bg-primary text-white"
-                        }">${
+                <div class="bottom-box mt-auto d-flex overflow-x-scroll" style="white-space: pre !important;">
+                    <div class="date me-2 ${
+                     data.type == "event" && "bg-primary text-white"
+                    }">${
   data.type != "event"
    ? date
    : new Date(data.start).toDateString() +
      " - " +
      new Date(data.end).toDateString()
- }</span>
-                        <span class="tags">${
-                         data.type != "event" ? tags : "EVENT"
-                        }</span>
-                    </div>
+ }</div>
+                    <div class="tags">${
+                     data.type != "event" ? tags : "EVENT"
+                    }</div>
                 </div>
-            </div>
+           </div>
         </div>
     `;
  if (document.querySelector(".__home-page")) {
@@ -154,6 +153,9 @@ function startDatabaseQueries() {
       .filter((post) => {
        if (post.type == "post") return true;
        return false;
+      })
+      .sort((a, b) => {
+       return new Date(b.date) - new Date(a.date);
       })
       .slice(0, 4);
     }
