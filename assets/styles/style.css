@@ -571,6 +571,10 @@ a {
   object-fit: cover;
 }
 
+.__home-page .__media-section .__title {
+  margin-bottom: 2rem;
+}
+
 /* __ (About + Team + Contact + Updates + Gallery) Pages __ */
 .__about-page,
 .__team-page,
