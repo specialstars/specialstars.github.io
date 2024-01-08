@@ -78,7 +78,12 @@ function createPostElement(i, data) {
    /#([a-z0-9_]+)/gi,
    '<a class="text-primary" href="https://www.google.com/search?q=%23$1" target="_blank">#$1</a>'
   )
-  .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+  .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
+  .replace(/\*(.*?)\*/g, "<i>$1</i>")
+  .replace(/~~(.*?)~~/g, "<del>$1</del>")
+  .replace(/__(.*?)__/g, "<u>$1</u>")
+  .replace(/--(.*?)--/g, "<s>$1</s>")
+  .replace(/`(.*?)`/g, "<code>$1</code>");
 
  postElement.innerHTML = `
         <div class="row" ${
