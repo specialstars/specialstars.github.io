@@ -227,8 +227,7 @@ a {
  .__about-section {
   width: 100%;
   padding: 6rem 2rem 3rem 2rem;
-  background: #fff;
-  background-image: linear-gradient(-90deg, #c9d8f8, #dceafa);
+  background: rgba($secondary-color, 0.05);
   min-height: 100vh;
   .__intro {
    span {
@@ -253,11 +252,11 @@ a {
     border: 1px solid rgba($secondary-color, 0.1);
     box-shadow: $box-shadow;
     img {
-      width: 60px;
-      height: 60px;
-      object-fit: cover;
-      padding: 0.3rem;
-      margin-bottom: 0.7rem;
+     width: 60px;
+     height: 60px;
+     object-fit: cover;
+     padding: 0.3rem;
+     margin-bottom: 0.7rem;
     }
     h5 {
      font-size: 1.2rem;
@@ -298,14 +297,14 @@ a {
    padding: 2rem;
    border-radius: 0.7rem;
    box-shadow: $box-shadow;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     border-radius: 0.5rem;
-    padding: 0.3rem;
-    background-color: rgba($secondary-color, 0.1);
-    border: 1px solid rgba($secondary-color, 0.1);
     margin-bottom: 1rem;
    }
    h3 {
@@ -610,6 +609,11 @@ a {
 }
 .__home-page .__media-section .__title {
  margin-bottom: 2rem;
+}
+.__updates-page {
+  .__media-section {
+    padding-top: 3.5rem !important;
+  }
 }
 
 /* __ (About + Team + Contact + Updates + Gallery) Pages __ */
