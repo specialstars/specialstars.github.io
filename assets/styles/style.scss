@@ -955,6 +955,11 @@ a {
 }
 @media screen and (max-width: 766px) {
  .__home-page {
+  .__about-section {
+    .__intro p {
+      font-size: 0.85rem;
+    }
+  }
   .__feature-section {
    .container {
     p {

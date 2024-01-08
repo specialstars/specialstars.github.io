@@ -51,6 +51,10 @@ $firebase_init = $firebase_init($firebase_config);
 $firebase_database = $firebase_database($firebase_init);
 
 /**
+ * Converts markdown to HTML.
+ */
+
+/**
  * Creates a post element.
  */
 function createPostElement(i, data) {
@@ -65,7 +69,6 @@ function createPostElement(i, data) {
    ? data.picture || "assets/images/banner.jpg"
    : data.picture || "assets/images/banner-event.png";
  var tags = typeof data.tags == "string" ? data.tags : data.tags || "0";
- console.log(tags);
  var date = new Date(data.date).toDateString();
 
  body = body
@@ -74,11 +77,13 @@ function createPostElement(i, data) {
   .replace(
    /#([a-z0-9_]+)/gi,
    '<a class="text-primary" href="https://www.google.com/search?q=%23$1" target="_blank">#$1</a>'
-  );
+  )
+  .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+
  postElement.innerHTML = `
         <div class="row" ${
          data.type != "event"
-          ? `onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.querySelector('h5').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreImage').src = this.querySelector('.__header > img').src; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.querySelector('span.tags').innerHTML;"`
+          ? `onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.querySelector('h5').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = this.parentElement.querySelector('p').innerHTML;document.getElementById('modalMediaShowMoreImage').src = this.querySelector('.__header > img').src; document.getElementById('modalMediaShowMoreAuthor').innerHTML = this.parentElement.parentElement.querySelector('span.date').innerHTML; document.getElementById('modalMediaShowMoreTags').innerHTML = this.parentElement.querySelector('span.tags').innerHTML;"`
           : `onclick="document.getElementById('modalMediaShowMoreTitle').innerHTML = this.parentElement.querySelector('h5').innerHTML; document.getElementById('modalMediaShowMoreBody').innerHTML = '<b>Place:</b> ' + '${data.place}' + '<br/><b>Time: </b>'+ '${data.time}' +'<hr/><br/>' + this.parentElement.querySelector('p').innerHTML; document.getElementById('modalMediaShowMoreImage').src = this.querySelector('.__header > img').src;"`
         } data-bs-target="#modalMediaShowMore" data-bs-toggle="modal" title="Click here to see the full post">
             <div class="__header col-md-6 ${data.type == "event" && "d-none"}">
