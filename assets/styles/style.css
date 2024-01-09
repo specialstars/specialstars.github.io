@@ -165,7 +165,6 @@ a {
   width: 100%;
   padding: 6rem 1rem 7rem 1rem;
   backdrop-filter: blur(16px);
-  background: rgba(0, 115, 230, 0.1);
 }
 .__home-page .__hero-section .__details {
   display: flex;
@@ -342,15 +341,9 @@ a {
   flex-direction: column;
   align-items: center;
 }
-.__home-page .__details-section .__card img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
 .__home-page .__details-section .__card h3 {
   font-family: "PT Sans", sans-serif;
+  margin-top: 1rem;
 }
 .__home-page .__details-section .__card p {
   font-size: 0.9rem;
@@ -994,6 +987,12 @@ a {
   .__home-page .__hero-section .__designs img {
     max-width: 300px;
     aspect-ratio: 3/2;
+  }
+  .__home-page .__about-section {
+    padding: 4rem 1rem 6rem 1rem;
+  }
+  .__home-page .__about-section .ap {
+    margin-top: 4rem !important;
   }
 }
 @media screen and (max-width: 766px) {
