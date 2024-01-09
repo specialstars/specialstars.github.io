@@ -208,7 +208,7 @@ a {
 }
 .__home-page .__about-section {
   width: 100%;
-  padding: 8rem 2rem 8rem 2rem;
+  padding: 8rem 0 8rem 0;
   background: #fff;
   min-height: 100vh;
 }
@@ -221,40 +221,48 @@ a {
   color: #6f7f95;
 }
 .__home-page .__about-section .__switch {
-  padding-top: 2rem;
-  row-gap: 1.8rem;
+  padding-top: 4rem;
 }
 .__home-page .__about-section .__switch section {
   position: relative;
-  height: 100%;
-  padding: 2rem;
-  border-radius: 0.7rem;
+  width: 100%;
   background-color: #fff;
-  border: 1px solid rgba(0, 115, 230, 0.1);
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
-.__home-page .__about-section .__switch section img {
+.__home-page .__about-section .__switch section .cover {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  background-color: rgba(0, 115, 230, 0.1);
+}
+.__home-page .__about-section .__switch section .body {
+  padding: 1rem 2rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.__home-page .__about-section .__switch section .body .icon {
   width: 60px;
   height: 60px;
   object-fit: cover;
   padding: 0.3rem;
   margin-bottom: 0.7rem;
 }
-.__home-page .__about-section .__switch section h5 {
+.__home-page .__about-section .__switch section .body h5 {
   font-size: 1.2rem;
 }
-.__home-page .__about-section .__switch section p,
-.__home-page .__about-section .__switch section a {
+.__home-page .__about-section .__switch section .body p,
+.__home-page .__about-section .__switch section .body a {
   font-size: 0.85rem;
   line-height: 1.8;
   padding: 1rem 0;
   margin: 0;
   color: #68778d;
 }
-.__home-page .__about-section .__switch section a {
+.__home-page .__about-section .__switch section .body a {
   color: #0073e6;
 }
-.__home-page .__about-section .__switch section a:hover {
+.__home-page .__about-section .__switch section .body a:hover {
   text-decoration: underline;
 }
 .__home-page .__about-section .__switch .__service {
@@ -993,6 +1001,12 @@ a {
   }
   .__home-page .__about-section .ap {
     margin-top: 4rem !important;
+  }
+  .__home-page .__about-section .__switch section .body {
+    order: 2;
+  }
+  .__home-page .__about-section .__switch section .cover {
+    min-height: 300px;
   }
 }
 @media screen and (max-width: 766px) {

@@ -31,7 +31,7 @@
     ...document.querySelectorAll(".__home-page .__feature-section .main"),
     ...document.querySelectorAll(".__home-page .__feature-section .main p"),
     ...document.querySelectorAll(
-     ".__home-page .__about-section .__switch section"
+     ".__home-page .__about-section .__switch section .body"
     ),
     ...document.querySelectorAll(".__home-page .__details-section .__card"),
     ...document.querySelectorAll(".__home-page .__update-section .row > div"),

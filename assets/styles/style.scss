@@ -225,7 +225,7 @@ a {
  /* > About Section */
  .__about-section {
   width: 100%;
-  padding: 8rem 2rem 8rem 2rem;
+  padding: 8rem 0 8rem 0;
   background: #fff;
   min-height: 100vh;
   .__intro {
@@ -239,38 +239,46 @@ a {
    }
   }
   .__switch {
-   padding-top: 2rem;
-   row-gap: 1.8rem;
+   padding-top: 4rem;
    section {
     position: relative;
-    height: 100%;
-    padding: 2rem;
-    border-radius: 0.7rem;
+    width: 100%;
     background-color: #fff;
-    border: 1px solid rgba($secondary-color, 0.1);
-    box-shadow: $box-shadow;
-    img {
-     width: 60px;
-     height: 60px;
-     object-fit: cover;
-     padding: 0.3rem;
-     margin-bottom: 0.7rem;
+    margin-bottom: 2rem;
+    .cover {
+     width: 100%;
+     height: 100%;
+     min-height: 400px;
+     background-color: rgba($secondary-color, 0.1);
     }
-    h5 {
-     font-size: 1.2rem;
-    }
-    p,
-    a {
-     font-size: 0.85rem;
-     line-height: 1.8;
-     padding: 1rem 0;
-     margin: 0;
-     color: lighten($primary-text-color, 17%);
-    }
-    a {
-     color: $secondary-color;
-     &:hover {
-      text-decoration: underline;
+    .body {
+     padding: 1rem 2rem !important;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     .icon {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      padding: 0.3rem;
+      margin-bottom: 0.7rem;
+     }
+     h5 {
+      font-size: 1.2rem;
+     }
+     p,
+     a {
+      font-size: 0.85rem;
+      line-height: 1.8;
+      padding: 1rem 0;
+      margin: 0;
+      color: lighten($primary-text-color, 17%);
+     }
+     a {
+      color: $secondary-color;
+      &:hover {
+       text-decoration: underline;
+      }
      }
     }
    }
@@ -1010,6 +1018,16 @@ a {
    padding: 4rem 1rem 6rem 1rem;
    .ap {
     margin-top: 4rem !important;
+   }
+   .__switch {
+    section {
+      .body {
+        order: 2;
+      }
+      .cover {
+        min-height: 300px;
+      }
+    }
    }
   }
  }
