@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=PT+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=PT+Sans:wght@400;700&display=swap");
 
 // $primary-color: #e3f9ff;
 $primary-color: #f7f7f7;
@@ -226,16 +226,14 @@ a {
  /* > About Section */
  .__about-section {
   width: 100%;
-  padding: 6rem 2rem 3rem 2rem;
-  background: rgba($secondary-color, 0.05);
+  padding: 8rem 2rem 8rem 2rem;
+  background: #fff;
   min-height: 100vh;
   .__intro {
-   span {
-    color: $secondary-color;
-   }
    h2 {
     margin: 0;
-    padding: 1rem 0 2rem 0;
+    padding: 1rem 0 1rem 0;
+    color: $secondary-color;
    }
    p {
     color: lighten($primary-text-color, 20%);
@@ -243,12 +241,13 @@ a {
   }
   .__switch {
    padding-top: 2rem;
+   row-gap: 1.8rem;
    section {
     position: relative;
-    margin: 2rem 0;
+    height: 100%;
     padding: 2rem;
     border-radius: 0.7rem;
-    background-color: lighten($secondary-color, 50%);
+    background-color: #fff;
     border: 1px solid rgba($secondary-color, 0.1);
     box-shadow: $box-shadow;
     img {
@@ -267,11 +266,74 @@ a {
      line-height: 1.8;
      padding: 1rem 0;
      margin: 0;
+     color: lighten($primary-text-color, 17%);
     }
     a {
      color: $secondary-color;
      &:hover {
       text-decoration: underline;
+     }
+    }
+   }
+   .__service {
+    position: relative;
+    background-color: #fff;
+    border-radius: 0.7rem;
+    border: 1px solid rgba($secondary-color, 0.1);
+    img {
+     width: 100%;
+     object-fit: cover;
+     aspect-ratio: 3 / 2;
+     border-radius: 0.7rem 0.7rem 0 0;
+     background-color: rgba($secondary-color, 0.1);
+    }
+    .badge {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      background-color: $secondary-color;
+      color: $secondary-text-color;
+      padding: 0.6rem 0.8rem;
+      border-radius: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+    }
+    .body {
+     padding: 1rem 2rem;
+     padding-bottom: 2rem;
+     h3 {
+      font-weight: 400;
+      margin: 1rem 0;
+      font-family: "PT Sans", sans-serif;
+     }
+     p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: lighten($primary-text-color, 20%);
+     }
+     ul {
+      padding: 1rem 0;
+      li {
+       font-size: 0.9rem;
+       line-height: 1;
+       color: lighten($primary-text-color, 20%);
+       padding: 0.5rem 0;
+       input[type="checkbox"] {
+        margin-right: 0.5rem;
+       }
+       &:last-child {
+        padding-bottom: 0;
+       }
+      }
+     }
+     a {
+      font-size: 0.85rem;
+      line-height: 1.8;
+      padding: 1rem 0;
+      color: $secondary-color;
+      &:hover {
+       text-decoration: underline;
+      }
      }
     }
    }
@@ -611,9 +673,9 @@ a {
  margin-bottom: 2rem;
 }
 .__updates-page {
-  .__media-section {
-    padding-top: 3.5rem !important;
-  }
+ .__media-section {
+  padding-top: 3.5rem !important;
+ }
 }
 
 /* __ (About + Team + Contact + Updates + Gallery) Pages __ */
@@ -956,9 +1018,9 @@ a {
 @media screen and (max-width: 766px) {
  .__home-page {
   .__about-section {
-    .__intro p {
-      font-size: 0.85rem;
-    }
+   .__intro p {
+    font-size: 0.85rem;
+   }
   }
   .__feature-section {
    .container {

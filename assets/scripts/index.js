@@ -30,7 +30,6 @@
     ),
     ...document.querySelectorAll(".__home-page .__feature-section .main"),
     ...document.querySelectorAll(".__home-page .__feature-section .main p"),
-    document.querySelector(".__home-page .__about-section .__images"),
     ...document.querySelectorAll(
      ".__home-page .__about-section .__switch section"
     ),
