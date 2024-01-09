@@ -33,6 +33,9 @@
     ...document.querySelectorAll(
      ".__home-page .__about-section .__switch section .body"
     ),
+    ...document.querySelectorAll(
+     ".__home-page .__about-section .__switch .__service"
+    ),
     ...document.querySelectorAll(".__home-page .__details-section .__card"),
     ...document.querySelectorAll(".__home-page .__update-section .row > div"),
     document.querySelector(".__home-page .__media-section .__media"),

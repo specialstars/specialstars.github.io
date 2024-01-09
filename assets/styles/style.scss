@@ -177,6 +177,7 @@ a {
   width: 100%;
   padding: 6rem 1rem 7rem 1rem;
   backdrop-filter: blur(16px);
+  background-color: rgba($secondary-color, 0.1);
   .__details {
    display: flex;
    flex-direction: column;
@@ -233,6 +234,7 @@ a {
     margin: 0;
     padding: 1rem 0 1rem 0;
     color: $secondary-color;
+    font-weight: 600;
    }
    p {
     color: lighten($primary-text-color, 20%);
@@ -265,6 +267,7 @@ a {
      }
      h5 {
       font-size: 1.2rem;
+      font-weight: 400;
      }
      p,
      a {
@@ -694,6 +697,7 @@ a {
   background-color: rgba($secondary-color, 0.1);
   h1 {
    font-family: "PT Sans", sans-serif;
+   font-weight: 700;
   }
   p {
    margin-top: 1rem;
@@ -849,6 +853,7 @@ a {
  /* > Main Section */
  .__main-section {
   padding: 5rem 2rem;
+  background-color: #fff;
   p {
    font-size: 0.9rem;
    line-height: 1.8;
@@ -1021,12 +1026,12 @@ a {
    }
    .__switch {
     section {
-      .body {
-        order: 2;
-      }
-      .cover {
-        min-height: 300px;
-      }
+     .body {
+      order: 2;
+     }
+     .cover {
+      min-height: 300px;
+     }
     }
    }
   }

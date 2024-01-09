@@ -165,6 +165,7 @@ a {
   width: 100%;
   padding: 6rem 1rem 7rem 1rem;
   backdrop-filter: blur(16px);
+  background-color: rgba(0, 115, 230, 0.1);
 }
 .__home-page .__hero-section .__details {
   display: flex;
@@ -216,6 +217,7 @@ a {
   margin: 0;
   padding: 1rem 0 1rem 0;
   color: #0073e6;
+  font-weight: 600;
 }
 .__home-page .__about-section .__intro p {
   color: #6f7f95;
@@ -250,6 +252,7 @@ a {
 }
 .__home-page .__about-section .__switch section .body h5 {
   font-size: 1.2rem;
+  font-weight: 400;
 }
 .__home-page .__about-section .__switch section .body p,
 .__home-page .__about-section .__switch section .body a {
@@ -685,6 +688,7 @@ a {
 .__gallery-page .__hero-section h1,
 .__donate-page .__hero-section h1 {
   font-family: "PT Sans", sans-serif;
+  font-weight: 700;
 }
 .__about-page .__hero-section p,
 .__team-page .__hero-section p,
@@ -841,6 +845,7 @@ a {
 }
 .__donate-page .__main-section {
   padding: 5rem 2rem;
+  background-color: #fff;
 }
 .__donate-page .__main-section p {
   font-size: 0.9rem;
