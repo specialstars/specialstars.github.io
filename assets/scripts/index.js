@@ -36,6 +36,7 @@
     ...document.querySelectorAll(
      ".__home-page .__about-section .__switch .__service"
     ),
+    ...document.querySelectorAll(".__home-page .__about-section .__intro p"),
     ...document.querySelectorAll(".__home-page .__details-section .__card"),
     ...document.querySelectorAll(".__home-page .__update-section .row > div"),
     document.querySelector(".__home-page .__media-section .__media"),
