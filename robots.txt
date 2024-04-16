@@ -1,0 +1,3 @@
+User-agent: *
+Allow: *
+Sitemap: https://specialstars.github.io/sitemap.xml
