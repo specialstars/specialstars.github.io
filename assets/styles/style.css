@@ -74,8 +74,8 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 65px;
-  max-height: 65px;
+  height: 70px;
+  max-height: 70px;
   padding: 0;
   background-color: #ffffff;
   color: #434d5b;
@@ -165,7 +165,7 @@ a {
   width: 100%;
   padding: 6rem 1rem 7rem 1rem;
   backdrop-filter: blur(16px);
-  background-color: rgba(0, 115, 230, 0.1);
+  background-color: rgba(0, 115, 230, 0.046);
 }
 .__home-page .__hero-section .__details {
   display: flex;
@@ -241,7 +241,7 @@ a {
   height: 100%;
   min-height: 400px;
   object-fit: cover;
-  max-height: 500px;
+  aspect-ratio: 3/2;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.7rem;
 }
@@ -1029,6 +1029,11 @@ a {
   }
 }
 @media screen and (max-width: 766px) {
+  .__navbar .__menu {
+    position: absolute;
+    right: 0;
+    min-width: 190px;
+  }
   .__home-page .__about-section .__intro p {
     font-size: 0.85rem;
   }
